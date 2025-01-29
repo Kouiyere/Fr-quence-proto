@@ -1,0 +1,55 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+public class WaveMiniGameManager : MonoBehaviour
+{
+    public bool[] answer;
+    public GameObject[] buttons;
+    public bool[] buttonsBool;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        buttons = GameObject.FindGameObjectsWithTag("Button");
+
+        GenerateAnswer();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        buttonsBool = new bool[buttons.Length];
+        int index = 0;
+        foreach (var button in buttons)
+        {
+            buttonsBool[index] = buttons[index].GetComponent<ButtonScript>().toggled;
+            index++;
+        }
+
+        if (ArrayUtility.ArrayEquals(answer, buttonsBool))
+        {
+            Debug.Log("Correct");
+        }
+    }
+
+    void GenerateAnswer()
+    {
+        answer = new bool[buttons.Length];
+
+        for (int i = 0; i < answer.Length; i++)
+        {
+            float rand = UnityEngine.Random.Range(-1.0f, 1.0f);
+            if (rand > 0)
+            {
+                answer[i] = true;
+            }
+            else
+            {
+                answer[i] = false;
+            }
+        }
+    }
+}
