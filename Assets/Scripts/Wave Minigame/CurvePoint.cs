@@ -1,18 +1,30 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CurvePoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [HideInInspector] public bool showGizmo = true;
+    [HideInInspector] public float gizmoSize = 0.1f;
+    [HideInInspector] public Color gizmoColor = new Color(1, 0, 0, 0.5f);
+
+    private void OnDrawGizmos()
     {
-        
+        if (showGizmo == true)
+        {
+            Gizmos.color = gizmoColor;
+
+            Gizmos.DrawSphere(transform.position, gizmoSize);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    //update parent curve when this point moved
+    private void OnDrawGizmosSelected()
     {
-        
+        CurveRenderer curvedLine = transform.parent.GetComponent<CurveRenderer>();
+
+        if (curvedLine != null)
+        {
+            curvedLine.Update();
+        }
     }
 }
