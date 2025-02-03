@@ -303,11 +303,115 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -8, y: 0, z: 0}
-  - {x: -4, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 4, y: 0, z: 0}
-  - {x: 8, y: 0, z: 0}
+  - {x: -8, y: 0.84, z: 0}
+  - {x: -8, y: 0.84, z: 0}
+  - {x: -7.8461537, y: 0.84, z: 0}
+  - {x: -7.6923075, y: 0.84, z: 0}
+  - {x: -7.5384617, y: 0.84, z: 0}
+  - {x: -7.3846154, y: 0.84, z: 0}
+  - {x: -7.230769, y: 0.84, z: 0}
+  - {x: -7.076923, y: 0.84, z: 0}
+  - {x: -6.9230766, y: 0.84, z: 0}
+  - {x: -6.769231, y: 0.84, z: 0}
+  - {x: -6.6153846, y: 0.84, z: 0}
+  - {x: -6.4615383, y: 0.84, z: 0}
+  - {x: -6.3076925, y: 0.84, z: 0}
+  - {x: -6.1538463, y: 0.84, z: 0}
+  - {x: -6, y: 0.84, z: 0}
+  - {x: -5.8461537, y: 0.84, z: 0}
+  - {x: -5.6923075, y: 0.84, z: 0}
+  - {x: -5.5384617, y: 0.84, z: 0}
+  - {x: -5.3846154, y: 0.84, z: 0}
+  - {x: -5.230769, y: 0.84, z: 0}
+  - {x: -5.0769234, y: 0.84, z: 0}
+  - {x: -4.9230766, y: 0.84, z: 0}
+  - {x: -4.769231, y: 0.84, z: 0}
+  - {x: -4.6153846, y: 0.84, z: 0}
+  - {x: -4.4615383, y: 0.84, z: 0}
+  - {x: -4.3076925, y: 0.84, z: 0}
+  - {x: -4.1538463, y: 0.84, z: 0}
+  - {x: -4, y: 0.84, z: 0}
+  - {x: -4, y: 0.84, z: 0}
+  - {x: -3.8461537, y: 0.84, z: 0}
+  - {x: -3.6923075, y: 0.84, z: 0}
+  - {x: -3.5384617, y: 0.84, z: 0}
+  - {x: -3.3846154, y: 0.84, z: 0}
+  - {x: -3.2307692, y: 0.84, z: 0}
+  - {x: -3.076923, y: 0.84, z: 0}
+  - {x: -2.923077, y: 0.84, z: 0}
+  - {x: -2.7692308, y: 0.84, z: 0}
+  - {x: -2.6153846, y: 0.84, z: 0}
+  - {x: -2.4615383, y: 0.84, z: 0}
+  - {x: -2.3076925, y: 0.84, z: 0}
+  - {x: -2.1538463, y: 0.84, z: 0}
+  - {x: -2, y: 0.84, z: 0}
+  - {x: -1.8461537, y: 0.84, z: 0}
+  - {x: -1.6923075, y: 0.84, z: 0}
+  - {x: -1.5384617, y: 0.84, z: 0}
+  - {x: -1.3846154, y: 0.84, z: 0}
+  - {x: -1.2307692, y: 0.84, z: 0}
+  - {x: -1.0769229, y: 0.84, z: 0}
+  - {x: -0.9230771, y: 0.84, z: 0}
+  - {x: -0.76923084, y: 0.84, z: 0}
+  - {x: -0.6153846, y: 0.84, z: 0}
+  - {x: -0.4615383, y: 0.84, z: 0}
+  - {x: -0.30769253, y: 0.84, z: 0}
+  - {x: -0.15384626, y: 0.84, z: 0}
+  - {x: 0, y: 0.84, z: 0}
+  - {x: 0, y: 0.84, z: 0}
+  - {x: 0.15384579, y: 0.84, z: 0}
+  - {x: 0.30769253, y: 0.84, z: 0}
+  - {x: 0.4615383, y: 0.84, z: 0}
+  - {x: 0.61538506, y: 0.84, z: 0}
+  - {x: 0.76923084, y: 0.84, z: 0}
+  - {x: 0.9230766, y: 0.84, z: 0}
+  - {x: 1.0769234, y: 0.84, z: 0}
+  - {x: 1.2307692, y: 0.84, z: 0}
+  - {x: 1.384615, y: 0.84, z: 0}
+  - {x: 1.5384617, y: 0.84, z: 0}
+  - {x: 1.6923075, y: 0.84, z: 0}
+  - {x: 1.8461542, y: 0.84, z: 0}
+  - {x: 2, y: 0.84, z: 0}
+  - {x: 2.1538458, y: 0.84, z: 0}
+  - {x: 2.3076925, y: 0.84, z: 0}
+  - {x: 2.4615383, y: 0.84, z: 0}
+  - {x: 2.615385, y: 0.84, z: 0}
+  - {x: 2.7692308, y: 0.84, z: 0}
+  - {x: 2.9230766, y: 0.84, z: 0}
+  - {x: 3.0769234, y: 0.84, z: 0}
+  - {x: 3.2307692, y: 0.84, z: 0}
+  - {x: 3.384615, y: 0.84, z: 0}
+  - {x: 3.5384617, y: 0.84, z: 0}
+  - {x: 3.6923075, y: 0.84, z: 0}
+  - {x: 3.8461542, y: 0.84, z: 0}
+  - {x: 4, y: 0.84, z: 0}
+  - {x: 4, y: 0.84, z: 0}
+  - {x: 4.153846, y: 0.84, z: 0}
+  - {x: 4.3076925, y: 0.84, z: 0}
+  - {x: 4.4615383, y: 0.84, z: 0}
+  - {x: 4.615385, y: 0.84, z: 0}
+  - {x: 4.769231, y: 0.84, z: 0}
+  - {x: 4.9230766, y: 0.84, z: 0}
+  - {x: 5.0769234, y: 0.84, z: 0}
+  - {x: 5.230769, y: 0.84, z: 0}
+  - {x: 5.384615, y: 0.84, z: 0}
+  - {x: 5.5384617, y: 0.84, z: 0}
+  - {x: 5.6923075, y: 0.84, z: 0}
+  - {x: 5.846154, y: 0.84, z: 0}
+  - {x: 6, y: 0.84, z: 0}
+  - {x: 6.153846, y: 0.84, z: 0}
+  - {x: 6.3076925, y: 0.84, z: 0}
+  - {x: 6.4615383, y: 0.84, z: 0}
+  - {x: 6.615385, y: 0.84, z: 0}
+  - {x: 6.769231, y: 0.84, z: 0}
+  - {x: 6.9230766, y: 0.84, z: 0}
+  - {x: 7.0769234, y: 0.84, z: 0}
+  - {x: 7.230769, y: 0.84, z: 0}
+  - {x: 7.384615, y: 0.84, z: 0}
+  - {x: 7.5384617, y: 0.84, z: 0}
+  - {x: 7.6923075, y: 0.84, z: 0}
+  - {x: 7.846154, y: 0.84, z: 0}
+  - {x: 8, y: 0.84, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -316,6 +420,15 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -376,7 +489,7 @@ Transform:
   m_GameObject: {fileID: 141143679}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -399,6 +512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4032a4442d6154d852526437538fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curveSegmentSize: 0.15
+  curveWidth: 0.1
+  showGizmos: 1
+  gizmoSize: 0.1
+  gizmoColor: {r: 1, g: 0, b: 0, a: 0.5}
 --- !u!1 &399566378
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +775,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede8bd04d71edfb43b9f89784320ebb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showGizmo: 1
+  gizmoSize: 0.1
+  gizmoColor: {r: 1, g: 0, b: 0, a: 0.5}
 --- !u!1 &798562515
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +989,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede8bd04d71edfb43b9f89784320ebb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showGizmo: 1
+  gizmoSize: 0.1
+  gizmoColor: {r: 1, g: 0, b: 0, a: 0.5}
 --- !u!1 &978886329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,6 +1128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede8bd04d71edfb43b9f89784320ebb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showGizmo: 1
+  gizmoSize: 0.1
+  gizmoColor: {r: 1, g: 0, b: 0, a: 0.5}
 --- !u!1 &1185404804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede8bd04d71edfb43b9f89784320ebb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showGizmo: 1
+  gizmoSize: 0.1
+  gizmoColor: {r: 1, g: 0, b: 0, a: 0.5}
 --- !u!1 &1354495408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,6 +1222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede8bd04d71edfb43b9f89784320ebb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showGizmo: 1
+  gizmoSize: 0.1
+  gizmoColor: {r: 1, g: 0, b: 0, a: 0.5}
 --- !u!1 &1593239941
 GameObject:
   m_ObjectHideFlags: 0
