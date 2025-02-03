@@ -16,6 +16,12 @@ public class WaveMiniGameManager : MonoBehaviour
         buttons = GameObject.FindGameObjectsWithTag("Button");
 
         GenerateAnswer();
+
+        //Checking for edge cases
+        if (EdgeCases())
+        {
+            GenerateAnswer();
+        }
     }
 
     // Update is called once per frame
@@ -50,6 +56,30 @@ public class WaveMiniGameManager : MonoBehaviour
             {
                 answer[i] = false;
             }
+        }
+    }
+
+    bool EdgeCases()
+    {
+        bool[] allFalse = new bool[buttons.Length];
+        for (int i = 0; i < allFalse.Length; i++)
+        {
+            allFalse[i] = false;
+        }
+
+        bool[] allTrue = new bool[buttons.Length];
+        for(int i = 0;i < allTrue.Length; i++)
+        {
+            allTrue[i] = true;
+        }
+
+        if (ArrayUtility.ArrayEquals(answer, allFalse) || ArrayUtility.ArrayEquals(answer, allTrue))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
