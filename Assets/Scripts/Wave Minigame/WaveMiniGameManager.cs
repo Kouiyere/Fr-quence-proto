@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -10,10 +11,11 @@ public class WaveMiniGameManager : MonoBehaviour
     public GameObject[] buttons;
     public bool[] buttonsBool;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         buttons = GameObject.FindGameObjectsWithTag("Button");
+        //Reordering array Button
+        buttons = buttons.Reverse().ToArray();
 
         GenerateAnswer();
 

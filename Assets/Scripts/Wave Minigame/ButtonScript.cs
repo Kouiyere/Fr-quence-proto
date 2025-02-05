@@ -8,7 +8,7 @@ public class ButtonScript : MonoBehaviour
     public bool toggled = false;
     public float[] yValues;
 
-    private void Start()
+    private void Awake()
     {
         yValues = new float[5];
         for (int i = 0; i < yValues.Length; i++)
