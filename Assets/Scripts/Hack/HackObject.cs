@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HackObject : MonoBehaviour
+{
+    public Material defaultMaterial;
+    public Material activatedMaterial;
+
+    public Renderer objRenderer;
+    public bool isActivated = false;
+
+    protected void Start()
+    {
+        objRenderer = GetComponent<Renderer>();
+
+        if (objRenderer != null && defaultMaterial != null)
+        {
+            objRenderer.material = defaultMaterial;
+        }
+    }
+
+    void OnMouseDown()
+    {
+        if (objRenderer != null)
+        {
+            isActivated = !isActivated;
+            objRenderer.material = isActivated ? activatedMaterial : defaultMaterial;
+        }
+    }
+}
