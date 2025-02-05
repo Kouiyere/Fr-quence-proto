@@ -8,8 +8,8 @@ using UnityEngine;
 public class WaveMiniGameManager : MonoBehaviour
 {
     public bool[] answer;
-    public GameObject[] buttons;
-    public bool[] buttonsBool;
+    private GameObject[] buttons;
+    private bool[] buttonsBool;
 
     private void Awake()
     {

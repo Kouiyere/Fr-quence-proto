@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class TargetCurve : MonoBehaviour
 {
-    public bool[] answer;
-    public Transform[] points;
-    public ButtonScript[] buttonsScripts;
-    public float[] finalYValues;
+    private bool[] answer;
+    private Transform[] points;
+    private ButtonScript[] buttonsScripts;
+    private float[] finalYValues;
 
     // Start is called before the first frame update
     void Start()
