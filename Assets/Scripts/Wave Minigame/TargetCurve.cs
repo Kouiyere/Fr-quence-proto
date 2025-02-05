@@ -42,7 +42,7 @@ public class TargetCurve : MonoBehaviour
                 rightAnswers++;
                 for (int j = 0; j < finalYValues.Length; j++)
                 {
-                    finalYValues[j] += buttons[i].GetComponent<ButtonScript>().yValues[j];
+                    finalYValues[j] = buttonsScripts[i].yValues[j];
                 }
             }
         }
