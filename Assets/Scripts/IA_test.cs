@@ -1,28 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class IA_test : MonoBehaviour
 {
     public Transform pointA;
     public Transform pointB;
+    public Transform alertPoint;
 
     public Material defaultMaterial;
     public Material frozenMaterial;
     public Renderer objRenderer;
 
     private HackDiversion currentTarget = null;
+    public HackFireAlarm alarm;
+    private NavMeshAgent agent;
 
-    public float speed = 3f;
     public float detectionRange = 5f;
     public float stopDistance = 1f;
     private bool movingToB = true;
     private bool isChasing = false;
     private bool isFrozen = false;
+    public bool isGuard = false;
+
+    void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = 3f;
+        Patrol();
+    }
 
     void Update()
     {
         if (isFrozen) return;
+
+        if (alarm.isActivated)
+        {
+            if(isGuard)
+            {
+                ChaseTarget(alarm.transform);
+                return;
+            }
+            else
+            {
+                ChaseTarget(alertPoint.transform);
+                return;
+            }
+        }
 
         if (currentTarget == null || !currentTarget.diversion)
         {
@@ -39,7 +64,8 @@ public class IA_test : MonoBehaviour
                 currentTarget.objRenderer.material = currentTarget.defaultMaterial;
                 currentTarget = null;
                 isChasing = false;
-                movingToB = !movingToB; 
+                movingToB = !movingToB;
+                Patrol();
             }
             else
             {
@@ -49,24 +75,34 @@ public class IA_test : MonoBehaviour
             return;
         }
 
-        isChasing = false;
-        Patrol();
+        if(alarm.isActivated)
+        {
+            float distanceToTarget = Vector3.Distance(transform.position, alarm.transform.position);
+
+            if (distanceToTarget <= stopDistance)
+            {
+                alarm.isActivated = false;
+                alarm.objRenderer.material = currentTarget.defaultMaterial;
+                Patrol();
+            }
+        }
+
+        if (!isChasing && !agent.pathPending && agent.remainingDistance < 0.5f)
+        {
+            movingToB = !movingToB;
+            Patrol();
+        }
     }
 
     void Patrol()
     {
         Transform targetPoint = movingToB ? pointB : pointA;
-        transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, targetPoint.position) < 0.1f)
-        {
-            movingToB = !movingToB;
-        }
+        agent.SetDestination(targetPoint.position);
     }
 
     void ChaseTarget(Transform target)
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        agent.SetDestination(target.position);
     }
 
     HackDiversion FindClosestActiveTarget()
@@ -95,7 +131,7 @@ public class IA_test : MonoBehaviour
         if (other.CompareTag("Trap"))
         {
             HackElecticity electricalZone = other.GetComponent<HackElecticity>();
-            if(electricalZone.isActivated)
+            if (electricalZone.isActivated)
             {
                 StartCoroutine(FreezeForSeconds(3f));
             }
@@ -105,21 +141,12 @@ public class IA_test : MonoBehaviour
     public IEnumerator FreezeForSeconds(float seconds)
     {
         isFrozen = true;
+        agent.isStopped = true;
+        objRenderer.material = frozenMaterial;
         yield return new WaitForSeconds(seconds);
         isFrozen = false;
-    }
-
-    public void FrozenState()
-    {
-        if(isFrozen)
-        {
-            objRenderer.material = frozenMaterial;
-        }
-        else
-        {
-            objRenderer.material = defaultMaterial;
-        }
+        agent.isStopped = false;
+        objRenderer.material = defaultMaterial;
+        Patrol();
     }
 }
-
-

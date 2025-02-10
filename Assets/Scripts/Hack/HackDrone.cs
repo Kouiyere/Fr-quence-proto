@@ -19,11 +19,11 @@ public class HackDrone : HackObject
             }
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                transform.position += transform.TransformDirection(Vector3.left) * Time.deltaTime * movementSpeed * 2.5f;
+                transform.Rotate(0, -1, 0);
             }
             if (Input.GetKey(KeyCode.RightArrow))
             {
-                transform.position += transform.TransformDirection(Vector3.right) * Time.deltaTime * movementSpeed * 2.5f;
+                transform.Rotate(0, 1, 0);
             }
         }
     }
