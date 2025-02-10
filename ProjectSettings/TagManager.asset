@@ -4,13 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Trap
+  - Button
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Floor
+  - 
   - Water
   - UI
   - 
