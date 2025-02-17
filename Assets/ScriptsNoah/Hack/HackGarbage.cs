@@ -7,6 +7,11 @@ public class Hack : HackObject
     public ParticleSystem particles;
     public GameObject sprite;
 
+    private void Awake()
+    {
+        sprite.SetActive(false);
+    }
+
     private void Update()
     {
         if(isActivated)
@@ -17,7 +22,6 @@ public class Hack : HackObject
         else
         {
             particles.Emit(0);
-            sprite.SetActive(false);
         }
     }
 }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Button
+  - Trap
+  - Enemy
+  - Trash
   layers:
   - Default
   - TransparentFX

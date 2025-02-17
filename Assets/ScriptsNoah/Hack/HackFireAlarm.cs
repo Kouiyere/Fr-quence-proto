@@ -6,6 +6,7 @@ public class HackFireAlarm : HackObject
 {
 
     public GameObject fireAlarm;
+    public HackComputer[] computers;
     public Material fireAlarmActivated;
     public Material fireAlarmDefault;
 
@@ -37,6 +38,17 @@ public class HackFireAlarm : HackObject
         else
         {
             fireAlarm.GetComponent<MeshRenderer>().material = fireAlarmDefault;
+        }
+        for(int i = 0; i < computers.Length; i++)
+        {
+            if (computers[i].isOnFire)
+            {
+                isActivated = true;
+            }
+            else
+            {
+                isActivated = false;
+            }
         }
     }
 
