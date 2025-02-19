@@ -5,6 +5,7 @@ using UnityEngine;
 public class HackObject : MonoBehaviour
 {
     public Material defaultMaterial;
+    public Material overMaterial;
     public Material activatedMaterial;
 
     public Renderer objRenderer;
@@ -20,7 +21,27 @@ public class HackObject : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    protected void OnMouseDown()
+    {
+        ActivateOrNotObject();
+    }
+
+    private void OnMouseOver()
+    {
+        if (!isActivated)
+        {
+            objRenderer.material = overMaterial;
+        }
+    }
+    private void OnMouseExit()
+    {
+        if (!isActivated)
+        {
+            objRenderer.material = defaultMaterial;
+        }
+    }
+
+    protected void ActivateOrNotObject()
     {
         if (objRenderer != null)
         {

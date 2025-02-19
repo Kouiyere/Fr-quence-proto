@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraSwitch : MonoBehaviour
+public class CameraSwitch : HackObject
 {
     public Camera[] cameras;
     public GameObject[] cameraMeshes;
     private int currentCameraIndex;
 
-    void Start()
+    protected new void Start()
     {
+        base.Start();
         currentCameraIndex = 0;
         ActivateCamera(currentCameraIndex);
     }
