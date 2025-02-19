@@ -6,19 +6,19 @@ public class HackComputer : HackObject
 {
     public ParticleSystem fireEffect;
     public int hackIndex = 0;
+    public float timer = 5f;
+
     public Transform workPoint;
     public bool isOnFire = false;
 
-    protected new void Start()
+    private void Update()
     {
-        base.Start();
-        InvokeRepeating(nameof(ParticlesSpawn),0.5f,0.5f);
-
+        ParticlesSpawn();
     }
 
     private void ParticlesSpawn()
     { 
-        if(!fireEffect.isEmitting && isActivated)
+        if(!fireEffect.isEmitting && isOnFire)
         {
             isOnFire = true;
             fireEffect.Emit(1);
@@ -28,5 +28,16 @@ public class HackComputer : HackObject
             isOnFire = false;
             fireEffect.Emit(0);
         }
+    }
+
+    protected new void OnMouseDown()
+    {
+        base.OnMouseDown();
+        Invoke(nameof(ActiveFire), timer);
+    }
+
+    private void ActiveFire()
+    {
+        isOnFire = true;
     }
 }

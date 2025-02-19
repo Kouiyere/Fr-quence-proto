@@ -14,53 +14,58 @@ public class HackFireAlarm : HackObject
     private float timeElapsed;
     private bool alarmOn = false;
 
+    private new void Start()
+    {
+        base.Start();
+        InvokeRepeating(nameof(AlarmVisual), 1f,1f);
+    }
+
     private void Update()
     {
-        if (isActivated)
-        {
-            timeElapsed += Time.deltaTime;
-
-            if (timeElapsed >= delay)
-            {
-                ActivateMat();
-                timeElapsed = 0;
-            }
-        }
-
-        if(alarmOn == true && isActivated)
-        {
-            fireAlarm.GetComponent<MeshRenderer>().material = fireAlarmActivated;
-        }
-        else if (alarmOn == false && isActivated)
-        {
-            fireAlarm.GetComponent<MeshRenderer>().material = fireAlarmDefault;
-        }
-        else
-        {
-            fireAlarm.GetComponent<MeshRenderer>().material = fireAlarmDefault;
-        }
         for(int i = 0; i < computers.Length; i++)
         {
             if (computers[i].isOnFire)
             {
-                isActivated = true;
+                alarmOn = true;
             }
             else
             {
-                isActivated = false;
+                alarmOn = false;
             }
         }
     }
 
-    private void ActivateMat()
+    protected new void ActivateOrNotObject()
     {
-        if (alarmOn)
+        base.ActivateOrNotObject();
+
+        if(isActivated)
+        {
+            alarmOn = true;
+        }
+
+        else
         {
             alarmOn = false;
         }
+    }
+
+    private void AlarmVisual()
+    {
+        if (alarmOn)
+        {
+            if (fireAlarm.GetComponent<MeshRenderer>().material == fireAlarmActivated)
+            {
+                fireAlarm.GetComponent<MeshRenderer>().material = fireAlarmDefault;
+            }
+            else if(fireAlarm.GetComponent<MeshRenderer>().material == fireAlarmDefault)
+            {
+                fireAlarm.GetComponent<MeshRenderer>().material = fireAlarmActivated;
+            }
+        }
         else
         {
-            alarmOn = true;
+            fireAlarm.GetComponent<MeshRenderer>().material = fireAlarmDefault;
         }
     }
 }

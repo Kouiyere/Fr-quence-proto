@@ -21,13 +21,9 @@ public class HackObject : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    protected void OnMouseDown()
     {
-        if (objRenderer != null)
-        {
-            isActivated = !isActivated;
-            objRenderer.material = isActivated ? activatedMaterial : defaultMaterial;
-        }
+        ActivateOrNotObject();
     }
 
     private void OnMouseOver()
@@ -42,6 +38,15 @@ public class HackObject : MonoBehaviour
         if (!isActivated)
         {
             objRenderer.material = defaultMaterial;
+        }
+    }
+
+    protected void ActivateOrNotObject()
+    {
+        if (objRenderer != null)
+        {
+            isActivated = !isActivated;
+            objRenderer.material = isActivated ? activatedMaterial : defaultMaterial;
         }
     }
 }
