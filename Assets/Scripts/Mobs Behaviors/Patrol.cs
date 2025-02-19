@@ -28,7 +28,7 @@ public class Patrol : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Patroling()
     {
         if (agent.remainingDistance < .01f)
         {
@@ -41,7 +41,29 @@ public class Patrol : MonoBehaviour
                 waypointId++;
             }
 
-            //Check if out of array
+            //Check when out of array
+            if (routeType == RouteType.Loop)
+            {
+                if (waypointId > route.waypointArray.Length - 1)
+                {
+                    waypointId = 0;
+                }
+            }
+            else if (routeType == RouteType.BackAndForth)
+            {
+                if (!reverse && waypointId > route.waypointArray.Length - 1)
+                {
+                    reverse = true;
+                    waypointId -= 2;
+                }
+                else if (reverse && waypointId < 0)
+                {
+                    reverse = false;
+                    waypointId = 1;
+                }
+            }
+
+            agent.destination = route.waypointArray[waypointId].position;
         }
     }
 
