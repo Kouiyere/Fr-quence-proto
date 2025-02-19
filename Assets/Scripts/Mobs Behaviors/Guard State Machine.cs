@@ -9,7 +9,8 @@ public class GuardStateMachine : MonoBehaviour
     private Patrol patrol;
     public enum State
     {
-        Patrol
+        Patrol,
+        Alarm
     }
 
     public State currentState = State.Patrol;
@@ -69,5 +70,23 @@ public class GuardStateMachine : MonoBehaviour
     {
 
     }
+    #endregion
+
+    #region Alarm
+    private void EnterAlarm()
+    {
+        agent.speed = runningSpeed;
+    }
+
+    private void UpdateAlarm()
+    {
+
+    }
+
+    private void ExitAlarm()
+    {
+        
+    }
+
     #endregion
 }
