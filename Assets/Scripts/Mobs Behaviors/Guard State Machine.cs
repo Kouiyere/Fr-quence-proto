@@ -7,6 +7,9 @@ public class GuardStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     private Patrol patrol;
+    private GuardAlarm alarm;
+    public HackFireAlarm fireAlarm;
+
     public enum State
     {
         Patrol,
@@ -63,7 +66,14 @@ public class GuardStateMachine : MonoBehaviour
 
     private void UpdatePatrol()
     {
-        patrol.Patroling();
+        if (fireAlarm.isActivated)
+        {
+            changeState(State.Alarm);
+        }
+        else
+        {
+            patrol.Patroling();
+        }
     }
 
     private void ExitPatrol()
@@ -80,7 +90,14 @@ public class GuardStateMachine : MonoBehaviour
 
     private void UpdateAlarm()
     {
-
+        if (fireAlarm.isActivated)
+        {
+            alarm.TurnOfAlarm(alarm.gameObject.transform);
+        }
+        else
+        {
+            changeState(State.Patrol);
+        }
     }
 
     private void ExitAlarm()

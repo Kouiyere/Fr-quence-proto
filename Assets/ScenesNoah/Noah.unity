@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6b095c94ca04c44b789169adc02138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireAlarm: {fileID: 548693321}
   currentState: 0
   walkingSpeed: 3
   runningSpeed: 5
@@ -5503,6 +5504,7 @@ Transform:
   m_Children:
   - {fileID: 532165573}
   - {fileID: 1639923537}
+  - {fileID: 1455600065}
   m_Father: {fileID: 1763208798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &89406576
@@ -7041,6 +7043,7 @@ MonoBehaviour:
   fireAlarmActivated: {fileID: 2100000, guid: 33a8c3ca0ce7f8448b879f12c10b0a96, type: 2}
   fireAlarmDefault: {fileID: 2100000, guid: 16695392f058aad4b8da0d50a4e06d19, type: 2}
   delay: 0.5
+  alarmOn: 0
 --- !u!65 &548693322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14938,6 +14941,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 250542276751843993, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
   m_PrefabInstance: {fileID: 850499111}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1455600064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1455600065}
+  m_Layer: 0
+  m_Name: PointC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1455600065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455600064}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.28, y: -3.9327612, z: 7.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 89406575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1473743222
 GameObject:
   m_ObjectHideFlags: 0

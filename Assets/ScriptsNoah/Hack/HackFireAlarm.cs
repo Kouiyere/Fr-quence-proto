@@ -12,7 +12,7 @@ public class HackFireAlarm : HackObject
 
     public float delay;
     private float timeElapsed;
-    private bool alarmOn = false;
+    public bool alarmOn = false;
 
     private new void Start()
     {

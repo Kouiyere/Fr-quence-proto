@@ -7,15 +7,15 @@ public class GuardAlarm : MonoBehaviour
 {
     NavMeshAgent agent;
 
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TurnOfAlarm(Transform alarmPos)
     {
-        
+        agent.destination = alarmPos.position;
     }
 }
