@@ -25,6 +25,7 @@ public class GuardStateMachine : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         patrol = GetComponent<Patrol>();
+        alarm = GetComponent<GuardAlarm>();
     }
 
     void Update()
@@ -34,6 +35,8 @@ public class GuardStateMachine : MonoBehaviour
         {
             case State.Patrol:
                 UpdatePatrol(); break;
+            case State.Alarm:
+                UpdateAlarm(); break;
         }
     }
 
@@ -66,7 +69,7 @@ public class GuardStateMachine : MonoBehaviour
 
     private void UpdatePatrol()
     {
-        if (fireAlarm.isActivated)
+        if (fireAlarm.alarmOn)
         {
             changeState(State.Alarm);
         }
@@ -90,9 +93,9 @@ public class GuardStateMachine : MonoBehaviour
 
     private void UpdateAlarm()
     {
-        if (fireAlarm.isActivated)
+        if (fireAlarm.alarmOn)
         {
-            alarm.TurnOfAlarm(alarm.gameObject.transform);
+            alarm.TurnOfAlarm(fireAlarm.gameObject.transform);
         }
         else
         {
