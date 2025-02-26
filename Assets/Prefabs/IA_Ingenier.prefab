@@ -115,6 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425359214544751205}
   - component: {fileID: 7773453259101572846}
+  - component: {fileID: 5185649750640868377}
   m_Layer: 0
   m_Name: IA_Ingenier
   m_TagString: Untagged
@@ -160,6 +161,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5185649750640868377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343694588791529249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ed01c422225b44497d9ad960f1ee41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6897307413404248525
 GameObject:
   m_ObjectHideFlags: 0
