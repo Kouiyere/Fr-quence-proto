@@ -5,23 +5,33 @@ using UnityEngine;
 public class HackComputer : HackObject
 {
     public ParticleSystem fireEffect;
+    public HackWind wind;
     public int hackIndex = 0;
     public float timer = 5f;
 
     public Transform workPoint;
     public bool isOnFire = false;
 
-    private void Update()
+    public override void Start()
     {
-        ParticlesSpawn();
+        base.Start();
+        InvokeRepeating(nameof(ParticlesSpawn), 0.25f, 0.25f);
     }
 
     private void ParticlesSpawn()
     { 
         if(!fireEffect.isEmitting && isOnFire)
         {
-            isOnFire = true;
-            fireEffect.Emit(1);
+            if (wind != null && wind.isActivated)
+            {
+                isOnFire = true;
+                fireEffect.Emit(5);
+            }
+            else
+            {
+                isOnFire = true;
+                fireEffect.Emit(1);
+            }
         }
         else
         {

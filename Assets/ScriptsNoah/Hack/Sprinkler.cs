@@ -9,7 +9,7 @@ public class Sprinkler : MonoBehaviour
 
     private void Update()
     {
-        if(fireAlarm.isActivated)
+        if(fireAlarm.alarmOn)
         {
             waterSprinkler.SetActive(true);
         }

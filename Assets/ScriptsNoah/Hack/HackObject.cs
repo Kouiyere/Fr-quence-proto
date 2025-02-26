@@ -11,7 +11,7 @@ public class HackObject : MonoBehaviour
     public Renderer objRenderer;
     public bool isActivated = false;
 
-    protected void Start()
+    public virtual void Start()
     {
         objRenderer = GetComponent<Renderer>();
 
@@ -21,7 +21,7 @@ public class HackObject : MonoBehaviour
         }
     }
 
-    protected void OnMouseDown()
+    public virtual void OnMouseDown()
     {
         ActivateOrNotObject();
     }
@@ -41,7 +41,7 @@ public class HackObject : MonoBehaviour
         }
     }
 
-    protected void ActivateOrNotObject()
+    public virtual void ActivateOrNotObject()
     {
         if (objRenderer != null)
         {

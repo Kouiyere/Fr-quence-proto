@@ -8,7 +8,7 @@ public class CameraSwitch : HackObject
     public GameObject[] cameraMeshes;
     private int currentCameraIndex;
 
-    protected new void Start()
+    public override void Start()
     {
         base.Start();
         currentCameraIndex = 0;
