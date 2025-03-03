@@ -9,7 +9,7 @@ public class HackObject : MonoBehaviour
     public Material activatedMaterial;
 
     public Renderer objRenderer;
-    public bool isActivated = false;
+    public bool isHacked = false;
 
     public virtual void Start()
     {
@@ -28,14 +28,14 @@ public class HackObject : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (!isActivated)
+        if (!isHacked)
         {
             objRenderer.material = overMaterial;
         }
     }
     private void OnMouseExit()
     {
-        if (!isActivated)
+        if (!isHacked)
         {
             objRenderer.material = defaultMaterial;
         }
@@ -45,8 +45,8 @@ public class HackObject : MonoBehaviour
     {
         if (objRenderer != null)
         {
-            isActivated = !isActivated;
-            objRenderer.material = isActivated ? activatedMaterial : defaultMaterial;
+            isHacked = !isHacked;
+            objRenderer.material = isHacked ? activatedMaterial : defaultMaterial;
         }
     }
 }

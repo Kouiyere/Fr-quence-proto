@@ -12,10 +12,10 @@ public class HackDiversion : HackObject
 
     void Update()
     {
-        if(isActivated)
+        if(isHacked)
         {
             diversion = true;
-            if(wind.isActivated)
+            if(wind.isHacked)
             {
                 particlesWithWind.Emit(1);
             }

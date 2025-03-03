@@ -29,7 +29,7 @@ public class HackFireAlarm : HackObject
         bool isFireDetected = false;
         foreach (HackComputer computer in computers)
         {
-            if (computer.isOnFire && !isActivated)
+            if (computer.isOnFire && !isHacked)
             {
                 isFireDetected = true;
                 break;
@@ -42,7 +42,7 @@ public class HackFireAlarm : HackObject
     protected new void ActivateOrNotObject()
     {
         base.ActivateOrNotObject();
-        alarmOn = isActivated;
+        alarmOn = isHacked;
     }
 
     private void AlarmVisual()
