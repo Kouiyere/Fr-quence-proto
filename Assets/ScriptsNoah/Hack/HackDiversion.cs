@@ -9,26 +9,40 @@ public class HackDiversion : HackObject
     public ParticleSystem particlesClassic;
     public ParticleSystem particlesWithWind;
     public HackWind wind;
+    public Paper prefabPaper;
+
+    public override void Start()
+    {
+        base.Start();
+
+        InvokeRepeating(nameof(SpawnPaper), 1f, 1f);
+    }
 
     void Update()
     {
         if(isHacked)
         {
             diversion = true;
-            if(wind.isHacked)
-            {
-                particlesWithWind.Emit(1);
-            }
-            else
-            {
-                particlesClassic.Emit(1);
-            }
         }
         else
         {
             diversion = false;
-            particlesClassic.Emit(0);
-            particlesWithWind.Emit(0);
         }
+    }
+
+    private void SpawnPaper()
+    {
+        if(isHacked)
+        {
+            if (wind.isHacked)
+            {
+                prefabPaper.force = 500f;
+            }
+            else
+            {
+                prefabPaper.force = 50f;
+            }
+        }
+        Instantiate(prefabPaper);
     }
 }

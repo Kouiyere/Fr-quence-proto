@@ -6089,6 +6089,7 @@ MonoBehaviour:
   particlesClassic: {fileID: 1730590581}
   particlesWithWind: {fileID: 2047582434}
   wind: {fileID: 1741334255}
+  prefabPaper: {fileID: 6135734708649311464, guid: 8214ac29f908a2b4a96ee05f3afb9839, type: 3}
 --- !u!1 &275135628
 GameObject:
   m_ObjectHideFlags: 0
