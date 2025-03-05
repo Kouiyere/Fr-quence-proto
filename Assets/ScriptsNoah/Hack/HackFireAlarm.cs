@@ -22,6 +22,8 @@ public class HackFireAlarm : HackObject
         }
 
         InvokeRepeating(nameof(AlarmVisual), 1f, 1f);
+
+        computers = FindObjectsOfType<HackComputer>();
     }
 
     private void Update()

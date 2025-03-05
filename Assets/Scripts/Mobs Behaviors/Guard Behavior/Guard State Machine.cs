@@ -111,13 +111,16 @@ public class GuardStateMachine : MonoBehaviour
 
     private void UpdateAlarm()
     {
-        if (fireAlarm.alarmOn)
+        if (fireAlarm != null)
         {
-            alarm.TurnOfAlarm(fireAlarm.gameObject.transform);
-        }
-        else
-        {
-            changeState(State.Patrol);
+            if (fireAlarm.alarmOn)
+            {
+                alarm.TurnOfAlarm(fireAlarm.gameObject.transform);
+            }
+            else
+            {
+                changeState(State.Patrol);
+            }
         }
     }
 
