@@ -42,7 +42,7 @@ public class HackDiversion : HackObject
             {
                 prefabPaper.force = 50f;
             }
+            Instantiate(prefabPaper);
         }
-        Instantiate(prefabPaper);
     }
 }
