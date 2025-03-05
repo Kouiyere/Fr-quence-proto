@@ -35,7 +35,7 @@ public class IA_test : MonoBehaviour
     {
         if (isFrozen) return;
 
-        if (alarm.isActivated)
+        if (alarm.isHacked)
         {
             if(isGuard)
             {
@@ -60,7 +60,7 @@ public class IA_test : MonoBehaviour
 
             if (distanceToTarget <= stopDistance)
             {
-                currentTarget.isActivated = false;
+                currentTarget.isHacked = false;
                 currentTarget.objRenderer.material = currentTarget.defaultMaterial;
                 currentTarget = null;
                 isChasing = false;
@@ -75,13 +75,13 @@ public class IA_test : MonoBehaviour
             return;
         }
 
-        if(alarm.isActivated)
+        if(alarm.isHacked)
         {
             float distanceToTarget = Vector3.Distance(transform.position, alarm.transform.position);
 
             if (distanceToTarget <= stopDistance)
             {
-                alarm.isActivated = false;
+                alarm.isHacked = false;
                 alarm.objRenderer.material = currentTarget.defaultMaterial;
                 Patrol();
             }
@@ -131,7 +131,7 @@ public class IA_test : MonoBehaviour
         if (other.CompareTag("Trap"))
         {
             HackElecticity electricalZone = other.GetComponent<HackElecticity>();
-            if (electricalZone.isActivated)
+            if (electricalZone.isHacked)
             {
                 StartCoroutine(FreezeForSeconds(3f));
             }

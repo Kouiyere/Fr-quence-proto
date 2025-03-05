@@ -22,7 +22,7 @@ public class HackDrone : HackObject
 
     public void Update()
     {
-        if (isActivated)
+        if (isHacked)
         {
             ManualControl();
         }
@@ -58,7 +58,7 @@ public class HackDrone : HackObject
     {
         agent.isStopped = false;
 
-        if (currentTarget != null && !currentTarget.isActivated)
+        if (currentTarget != null && !currentTarget.isHacked)
         {
             currentTarget = null;
         }
@@ -82,7 +82,7 @@ public class HackDrone : HackObject
 
         foreach (HackWaste waste in wastes)
         {
-            if (waste.isActivated)
+            if (waste.isHacked)
             {
                 float distance = Vector3.Distance(transform.position, waste.transform.position);
                 if (distance < closestDistance)
@@ -99,9 +99,9 @@ public class HackDrone : HackObject
     {
         HackWaste waste = other.GetComponent<HackWaste>();
 
-        if (waste != null && waste.isActivated)
+        if (waste != null && waste.isHacked)
         {
-            waste.isActivated = false;
+            waste.isHacked = false;
             currentTarget = null;
             waste.GetComponent<MeshRenderer>().material = waste.defaultMaterial;
         }

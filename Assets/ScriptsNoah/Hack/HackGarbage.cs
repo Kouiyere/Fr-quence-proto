@@ -14,7 +14,7 @@ public class Hack : HackObject
 
     private void Update()
     {
-        if(isActivated)
+        if(isHacked)
         {
             particles.Emit(1);
             sprite.SetActive(true);

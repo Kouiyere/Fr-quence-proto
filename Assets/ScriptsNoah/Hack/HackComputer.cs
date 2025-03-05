@@ -6,6 +6,7 @@ public class HackComputer : HackObject
 {
     public ParticleSystem fireEffect;
     public HackWind wind;
+    public HackFireAlarm alarm;
     public int hackIndex = 0;
     public float timer = 5f;
 
@@ -22,15 +23,18 @@ public class HackComputer : HackObject
     { 
         if(!fireEffect.isEmitting && isOnFire)
         {
-            if (wind != null && wind.isActivated)
+            if (alarm.isHacked)
             {
-                isOnFire = true;
-                fireEffect.Emit(5);
-            }
-            else
-            {
-                isOnFire = true;
-                fireEffect.Emit(1);
+                if (wind != null && wind.isHacked)
+                {
+                    isOnFire = true;
+                    fireEffect.Emit(5);
+                }
+                else
+                {
+                    isOnFire = true;
+                    fireEffect.Emit(1);
+                }
             }
         }
         else

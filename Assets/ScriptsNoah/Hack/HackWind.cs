@@ -8,7 +8,7 @@ public class HackWind : HackObject
 
     void Update()
     {
-        if(isActivated)
+        if(isHacked)
         {
             palm.transform.Rotate(new Vector3(0,1,0));
         }

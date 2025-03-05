@@ -18,7 +18,7 @@ public class HackDoor : HackObject
     public void Update()
     {
         float targetYPos;
-        if(isActivated)
+        if(isHacked)
         {
             targetYPos = closedYPos;
         }
