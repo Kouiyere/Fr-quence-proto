@@ -5,12 +5,26 @@ using UnityEngine;
 public class CameraSwitch : HackObject
 {
     public Camera[] cameras;
-    public GameObject[] cameraMeshes;
+    public GameObject[] cameraGO;
     private int currentCameraIndex;
 
     public override void Start()
     {
         base.Start();
+
+        cameraGO = new GameObject[transform.childCount];
+        int i = 0;
+        foreach (Transform child in transform)
+        {
+            cameraGO[i++] = child.gameObject;
+        }
+        i = 0;
+        cameras = new Camera[cameraGO.Length];
+        foreach (var go in cameraGO)
+        {
+            cameras[i++] = go.GetComponentInChildren<Camera>();
+        }
+
         currentCameraIndex = 0;
         ActivateCamera(currentCameraIndex);
     }
@@ -29,9 +43,9 @@ public class CameraSwitch : HackObject
 
             if (Physics.Raycast(ray, out hit))
             {
-                for (int i = 0; i < cameraMeshes.Length; i++)
+                for (int i = 0; i < cameraGO.Length; i++)
                 {
-                    if (hit.transform.gameObject == cameraMeshes[i])
+                    if (hit.transform.gameObject == cameraGO[i])
                     {
                         SwitchToCamera(i);
                         break;
