@@ -14,7 +14,8 @@ public class GuardStateMachine : MonoBehaviour
     {
         Patrol,
         Alert,
-        Alarm
+        Alarm,
+        Called
     }
 
     public State currentState = State.Patrol;
@@ -40,6 +41,8 @@ public class GuardStateMachine : MonoBehaviour
                 UpdateAlarm(); break;
             case State.Alert:
                 UpdateAlert(); break;
+            case State.Called:
+                UpdateCalled(); break;
         }
     }
 
@@ -54,6 +57,8 @@ public class GuardStateMachine : MonoBehaviour
                 ExitAlarm(); break;
             case State.Alert:
                 ExitAlert(); break;
+            case State.Called:
+                ExitCalled(); break;
         }
 
         //Change current state to new state
@@ -68,6 +73,8 @@ public class GuardStateMachine : MonoBehaviour
                 EnterAlarm(); break;
             case State.Alert:
                 EnterAlert(); break;
+            case State.Called:
+                EnterCalled(); break;
         }
     }
 
@@ -133,6 +140,23 @@ public class GuardStateMachine : MonoBehaviour
     }
 
     private void ExitAlert()
+    {
+
+    }
+    #endregion
+
+    #region Called
+    private void EnterCalled()
+    {
+
+    }
+
+    private void UpdateCalled()
+    {
+
+    }
+
+    private void ExitCalled()
     {
 
     }

@@ -12,7 +12,8 @@ public class WorkerStateMachine : MonoBehaviour
     {
         Working,
         Alarm,
-        Alert
+        Alert,
+        Cleaning
     }
 
     public State currentState;
@@ -35,6 +36,7 @@ public class WorkerStateMachine : MonoBehaviour
             case State.Working: UpdateWorking(); break;
             case State.Alarm: UpdateAlarm(); break;
             case State.Alert: UpdateAlert(); break;
+            case State.Cleaning: UpdateCleaning(); break;
         }
     }
 
@@ -46,6 +48,7 @@ public class WorkerStateMachine : MonoBehaviour
             case State.Working : ExitWorking(); break;
             case State.Alarm: ExitAlarm(); break;
             case State.Alert: ExitAlert(); break;
+            case State.Cleaning: ExitCleaning(); break;
         }
 
         //Change current state to new state
@@ -57,6 +60,7 @@ public class WorkerStateMachine : MonoBehaviour
             case State.Working : EnterWorking(); break;
             case State.Alarm: EnterAlarm(); break;
             case State.Alert: EnterAlert(); break;
+            case State.Cleaning: EnterCleaning(); break;
         }
     }
 
@@ -106,6 +110,23 @@ public class WorkerStateMachine : MonoBehaviour
     }
 
     private void ExitAlert()
+    {
+
+    }
+    #endregion
+
+    #region Cleaning
+    private void EnterCleaning()
+    {
+
+    }
+
+    private void UpdateCleaning()
+    {
+
+    }
+
+    private void ExitCleaning()
     {
 
     }

@@ -14,7 +14,8 @@ public class IngenierStateMachine : MonoBehaviour
         Called,
         Alarm,
         FireOver,
-        JobDone
+        JobDone,
+        Stuck
     }
 
     public State currentState;
@@ -39,6 +40,7 @@ public class IngenierStateMachine : MonoBehaviour
             case State.Alarm: UpdateAlarm(); break;
             case State.FireOver: UpdateFireOver(); break;
             case State.JobDone: UpdateJobDone(); break;
+            case State.Stuck: UpdateStuck(); break;
         }
     }
 
@@ -52,6 +54,7 @@ public class IngenierStateMachine : MonoBehaviour
             case State.Alarm: ExitAlarm(); break;
             case State.FireOver: ExitFireOver(); break;
             case State.JobDone: ExitJobDone(); break;
+            case State.Stuck: ExitStuck(); break;
         }
 
         //Change current state to new state
@@ -65,6 +68,7 @@ public class IngenierStateMachine : MonoBehaviour
             case State.Alarm: EnterAlarm(); break;
             case State.FireOver: EnterFireOver(); break;
             case State.JobDone: EnterJobDone(); break;
+            case State.Stuck: EnterStuck(); break;
         }
     }
 
@@ -148,6 +152,23 @@ public class IngenierStateMachine : MonoBehaviour
     }
 
     private void ExitJobDone()
+    {
+
+    }
+    #endregion
+
+    #region Stuck
+    private void EnterStuck()
+    {
+
+    }
+
+    private void UpdateStuck()
+    {
+
+    }
+
+    private void ExitStuck()
     {
 
     }
