@@ -17,7 +17,6 @@ public class Patrol : MonoBehaviour
 
     private int waypointId;
 
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -27,7 +26,6 @@ public class Patrol : MonoBehaviour
         agent.destination = route.waypointArray[waypointId].position;
     }
 
-    // Update is called once per frame
     public void Patroling()
     {
         if (agent.remainingDistance < .01f)

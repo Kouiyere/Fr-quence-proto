@@ -236,10 +236,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Printer
       objectReference: {fileID: 0}
-    - target: {fileID: 5193303624301615401, guid: 07edccb201e258b4b9ca4040384884f7, type: 3}
-      propertyPath: paperSpawn
-      value: 
-      objectReference: {fileID: 1212518058}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1256,11 +1252,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 872892690}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1212518058 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3529494852810483833, guid: 07edccb201e258b4b9ca4040384884f7, type: 3}
-  m_PrefabInstance: {fileID: 238772918}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1231009497
 PrefabInstance:
