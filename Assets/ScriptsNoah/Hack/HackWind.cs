@@ -10,7 +10,7 @@ public class HackWind : HackObject
     {
         if(isHacked)
         {
-            palm.transform.Rotate(new Vector3(0,1,0));
+            palm.transform.Rotate(new Vector3(0,10,0));
         }
     }
 }

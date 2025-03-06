@@ -4,7 +4,4 @@ using UnityEngine;
 
 public class HackElecticity : HackObject
 {
-    private void OnTriggerEnter(Collider other)
-    {
-    }
 }
