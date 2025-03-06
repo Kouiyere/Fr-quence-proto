@@ -7,17 +7,12 @@ public class HackObject : MonoBehaviour
     public Material defaultMaterial;
     public Material overMaterial;
     public Material activatedMaterial;
-
     public Renderer objRenderer;
+
     public bool isHacked = false;
+    public bool autoDesactivation = true;
 
-    public enum State
-    {
-        Activate,
-        Desactivate
-    }
-
-    public State currentState = State.Desactivate;
+    public float resetTimer = 10f;
 
     public virtual void Start()
     {
@@ -29,86 +24,39 @@ public class HackObject : MonoBehaviour
         }
     }
 
-    void Update()
+    public virtual void Update()
     {
-        //Update state
-        switch (currentState)
-        {
-            case State.Activate:
-                UpdateActivate(); break;
-            case State.Desactivate:
-                UpdateDesactivate(); break;
-        }
-    }
-
-    public void ChangeState(State newState)
-    {
-        //Exit current state
-        switch (currentState)
-        {
-            case State.Activate:
-                ExitActivate(); break;
-            case State.Desactivate:
-                ExitDesactivate(); break;
-        }
-
-        //Change current state to new state
-        currentState = newState;
-
-        //Enter new state
-        switch (currentState)
-        {
-            case State.Activate:
-                EnterActivate(); break;
-            case State.Desactivate:
-                EnterDesactivate(); break;
-        }
     }
 
     #region Activate
-    private void EnterActivate()
+    private void Activate()
     {
         isHacked = true;
         objRenderer.material = activatedMaterial;
-    }
-
-    private void UpdateActivate()
-    {
-
-    }
-
-    private void ExitActivate()
-    {
-
+        if(autoDesactivation)
+        {
+            Invoke(nameof(Desactivate), resetTimer);
+        }
     }
     #endregion
 
     #region Desactivate
-    private void EnterDesactivate()
+    private void Desactivate()
     {
         isHacked = false;
         objRenderer.material = defaultMaterial;
-    }
-
-    private void UpdateDesactivate()
-    {
-    }
-
-    private void ExitDesactivate()
-    {
-
     }
     #endregion
 
     private void OnMouseDown()
     {
-        if(isHacked == true)
+        if(isHacked)
         {
-            ChangeState(State.Desactivate);
+            Desactivate();
         }
         else
         {
-            ChangeState(State.Activate);
+            Activate();
         }
     }
 
