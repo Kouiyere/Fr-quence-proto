@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114262378487717194}
   - component: {fileID: 4891254497262414609}
   - component: {fileID: 4015913044684682077}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ElecticalPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

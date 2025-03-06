@@ -2933,6 +2933,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElecticalPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 96651891088812525, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185053541853686214, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3491419772542570557, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.8
@@ -2971,6 +2979,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3491419772542570557, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963585227183233566, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
