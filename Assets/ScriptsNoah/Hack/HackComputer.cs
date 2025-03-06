@@ -44,11 +44,13 @@ public class HackComputer : HackObject
         }
     }
 
+    /*
     protected new void OnMouseDown()
     {
         base.OnMouseDown();
         Invoke(nameof(ActiveFire), timer);
     }
+    */
 
     private void ActiveFire()
     {

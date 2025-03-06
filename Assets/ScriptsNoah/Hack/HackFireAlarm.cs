@@ -41,11 +41,13 @@ public class HackFireAlarm : HackObject
         alarmOn = isFireDetected;
     }
 
+    /*
     protected new void ActivateOrNotObject()
     {
         base.ActivateOrNotObject();
         alarmOn = isHacked;
     }
+    */
 
     private void AlarmVisual()
     {
