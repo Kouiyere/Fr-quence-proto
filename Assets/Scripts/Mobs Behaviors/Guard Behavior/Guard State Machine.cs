@@ -9,10 +9,12 @@ public class GuardStateMachine : MonoBehaviour
     private Patrol patrol;
     private GuardAlarm alarm;
     public HackFireAlarm fireAlarm;
+    private float timer;
 
     public enum State
     {
         Patrol,
+        Frozen,
         Alert,
         Alarm,
         Called
@@ -37,6 +39,8 @@ public class GuardStateMachine : MonoBehaviour
         {
             case State.Patrol:
                 UpdatePatrol(); break;
+            case State.Frozen:
+                UpdateFrozen(); break;
             case State.Alarm:
                 UpdateAlarm(); break;
             case State.Alert:
@@ -46,13 +50,15 @@ public class GuardStateMachine : MonoBehaviour
         }
     }
 
-    private void changeState(State newState)
+    public void ChangeState(State newState)
     {
         //Exit current state
         switch (currentState)
         {
             case State.Patrol:
                 ExitPatrol(); break;
+            case State.Frozen:
+                ExitFrozen(); break;
             case State.Alarm:
                 ExitAlarm(); break;
             case State.Alert:
@@ -69,6 +75,8 @@ public class GuardStateMachine : MonoBehaviour
         {
             case State.Patrol:
                 EnterPatrol(); break;
+            case State.Frozen:
+                EnterFrozen(); break;
             case State.Alarm:
                 EnterAlarm(); break;
             case State.Alert:
@@ -89,7 +97,7 @@ public class GuardStateMachine : MonoBehaviour
     {
         if (fireAlarm.alarmOn)
         {
-            changeState(State.Alarm);
+            ChangeState(State.Alarm);
         }
         else
         {
@@ -100,6 +108,29 @@ public class GuardStateMachine : MonoBehaviour
     private void ExitPatrol()
     {
 
+    }
+    #endregion
+
+
+    #region Frozen
+    private void EnterFrozen()
+    {
+        agent.speed = 0;
+        timer = 5f;
+    }
+
+    private void UpdateFrozen()
+    {
+        timer -= Time.deltaTime;
+
+        if(timer<=0)
+        {
+            ChangeState(State.Patrol);
+        }
+    }
+
+    private void ExitFrozen()
+    {
     }
     #endregion
 
@@ -119,7 +150,7 @@ public class GuardStateMachine : MonoBehaviour
             }
             else
             {
-                changeState(State.Patrol);
+                ChangeState(State.Patrol);
             }
         }
     }

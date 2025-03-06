@@ -4423,7 +4423,7 @@ Transform:
   m_GameObject: {fileID: 1676871967}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.54, y: -3.4177108, z: 7.39}
+  m_LocalPosition: {x: 1.54, y: -3.4177108, z: 6.64}
   m_LocalScale: {x: 0.65234, y: 0.65234, z: 0.17007156}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15854,6 +15854,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1763208798}
     m_Modifications:
+    - target: {fileID: 1398537760384420313, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2509383740486809626, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
       propertyPath: route
       value: 
@@ -15861,6 +15865,10 @@ PrefabInstance:
     - target: {fileID: 6023998693942270157, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
       propertyPath: m_Name
       value: IA_Guard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023998693942270157, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6078958640291811121, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
       propertyPath: m_LocalPosition.x

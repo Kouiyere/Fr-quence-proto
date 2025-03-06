@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class HackElecticity : HackObject
 {
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
-            IA_test ai = other.GetComponent<IA_test>();
+            GuardStateMachine ai = other.GetComponentInParent<GuardStateMachine>();
             if (isHacked)
             {
                 print("enter");
+                ai.ChangeState(GuardStateMachine.State.Frozen);
+                isHacked = false;
             }
         }
-        isHacked = false;
         objRenderer.material = defaultMaterial;
 
     }
