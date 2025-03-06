@@ -10,6 +10,7 @@ public class HackDiversion : HackObject
     public ParticleSystem particlesWithWind;
     public HackWind wind;
     public Paper prefabPaper;
+    public Transform paperSpawn;
 
     public override void Start()
     {
@@ -34,7 +35,7 @@ public class HackDiversion : HackObject
     {
         if(isHacked)
         {
-            if (wind.isHacked)
+            if (wind != null && wind.isHacked)
             {
                 prefabPaper.force = 500f;
             }
@@ -42,7 +43,7 @@ public class HackDiversion : HackObject
             {
                 prefabPaper.force = 50f;
             }
-            Instantiate(prefabPaper);
+            Instantiate(prefabPaper, paperSpawn);
         }
     }
 }
