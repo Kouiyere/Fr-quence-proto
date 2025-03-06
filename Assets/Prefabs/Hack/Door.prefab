@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6648682875096153683}
   - component: {fileID: 1648390009593119899}
   - component: {fileID: 1714014333304599800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1030313100919580830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7809445623574762399}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.86171865, y: -1.1435032, z: -1.5067139}
   m_LocalScale: {x: 1.2, y: 1.5, z: 1.2}
   m_ConstrainProportionsScale: 0
