@@ -2016,10 +2016,6 @@ PrefabInstance:
       propertyPath: route
       value: 
       objectReference: {fileID: 373237106}
-    - target: {fileID: 2509383740486809626, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
-      propertyPath: routeType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6023998693942270157, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
       propertyPath: m_Name
       value: IA_Guard
