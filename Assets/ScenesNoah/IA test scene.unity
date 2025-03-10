@@ -952,11 +952,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraBody
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1317091022391663614, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 872892692}
   m_SourcePrefab: {fileID: 100100000, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
+--- !u!1 &872892691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
+  m_PrefabInstance: {fileID: 872892690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &872892692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872892691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &974350362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,11 +1266,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraBody
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1317091022391663614, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1047854243}
   m_SourcePrefab: {fileID: 100100000, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
+--- !u!1 &1047854242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
+  m_PrefabInstance: {fileID: 1047854241}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1047854243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047854242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!4 &1117919067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
@@ -1309,16 +1355,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraBody
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1317091022391663614, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1231009500}
   m_SourcePrefab: {fileID: 100100000, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
 --- !u!4 &1231009498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 1231009497}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1231009499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
+  m_PrefabInstance: {fileID: 1231009497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1231009500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231009499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &1418301227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,16 +1683,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraBody
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1317091022391663614, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1680801398}
   m_SourcePrefab: {fileID: 100100000, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
 --- !u!4 &1680801396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 1680801395}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1680801397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
+  m_PrefabInstance: {fileID: 1680801395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1680801398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680801397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &1761486980
 GameObject:
   m_ObjectHideFlags: 0
