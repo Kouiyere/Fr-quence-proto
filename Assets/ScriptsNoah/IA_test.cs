@@ -126,6 +126,7 @@ public class IA_test : MonoBehaviour
         return closestTarget;
     }
 
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Trap"))
@@ -133,11 +134,12 @@ public class IA_test : MonoBehaviour
             HackElecticity electricalZone = other.GetComponent<HackElecticity>();
             if (electricalZone.isHacked)
             {
-                StartCoroutine(FreezeForSeconds(3f));
+                print("enter");
             }
+            electricalZone.isHacked = false;
         }
     }
-
+    */
     public IEnumerator FreezeForSeconds(float seconds)
     {
         isFrozen = true;
