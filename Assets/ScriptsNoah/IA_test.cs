@@ -60,8 +60,8 @@ public class IA_test : MonoBehaviour
 
             if (distanceToTarget <= stopDistance)
             {
-                currentTarget.isHacked = false;
-                currentTarget.objRenderer.material = currentTarget.defaultMaterial;
+                //currentTarget.isHacked = false;
+                //currentTarget.objRenderer.material = currentTarget.defaultMaterial;
                 currentTarget = null;
                 isChasing = false;
                 movingToB = !movingToB;
@@ -82,7 +82,7 @@ public class IA_test : MonoBehaviour
             if (distanceToTarget <= stopDistance)
             {
                 alarm.isHacked = false;
-                alarm.objRenderer.material = currentTarget.defaultMaterial;
+                //alarm.objRenderer.material = currentTarget.defaultMaterial;
                 Patrol();
             }
         }

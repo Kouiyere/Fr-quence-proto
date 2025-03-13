@@ -25,7 +25,7 @@ public class HackComputer : HackObject
         {
             if (alarm.isHacked)
             {
-                if (wind != null && wind.isHacked)
+                if (wind != null && wind.windActivated)
                 {
                     isOnFire = true;
                     fireEffect.Emit(5);

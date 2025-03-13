@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class HackDrone : HackObject
+public class HackDrone : MonoBehaviour
 {
+    private HackObject hackObject;
     public float movementSpeed = 1f;
     private NavMeshAgent agent;
     private HackWaste currentTarget;
@@ -12,9 +13,9 @@ public class HackDrone : HackObject
     public GameObject trashPrefab;
     public bool trash = false;
 
-    protected new void Start()
+    private void Start()
     {
-        base.Start();
+        hackObject = GetComponent<HackObject>();
         agent = GetComponent<NavMeshAgent>();
         agent.speed = movementSpeed;
         InvokeRepeating(nameof(SpawnTrash),0.5f,0.5f);
@@ -22,7 +23,7 @@ public class HackDrone : HackObject
 
     public void Update()
     {
-        if (isHacked)
+        if (hackObject.isHacked)
         {
             ManualControl();
         }
@@ -58,7 +59,7 @@ public class HackDrone : HackObject
     {
         agent.isStopped = false;
 
-        if (currentTarget != null && !currentTarget.isHacked)
+        if (currentTarget != null && !currentTarget.AttractRobot)
         {
             currentTarget = null;
         }
@@ -82,7 +83,7 @@ public class HackDrone : HackObject
 
         foreach (HackWaste waste in wastes)
         {
-            if (waste.isHacked)
+            if (waste.AttractRobot)
             {
                 float distance = Vector3.Distance(transform.position, waste.transform.position);
                 if (distance < closestDistance)
@@ -99,11 +100,11 @@ public class HackDrone : HackObject
     {
         HackWaste waste = other.GetComponent<HackWaste>();
 
-        if (waste != null && waste.isHacked)
+        if (waste != null && waste.AttractRobot)
         {
-            waste.isHacked = false;
+            waste.AttractRobot = false;
             currentTarget = null;
-            waste.GetComponent<MeshRenderer>().material = waste.defaultMaterial;
+            waste.GetComponent<MeshRenderer>().material = waste.defaultMat;
         }
 
         if(other.gameObject.CompareTag("Trash"))

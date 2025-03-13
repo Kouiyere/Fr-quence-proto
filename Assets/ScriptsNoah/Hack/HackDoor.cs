@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HackDoor : HackObject
+public class HackDoor : MonoBehaviour
 {
+    private HackObject hackObject;
     private float closedYPos;
     private float openYPos;
 
     public float openValue = 10f;
 
-    void Awake()
+    private void Start()
     {
+        hackObject = GetComponent<HackObject>();
         closedYPos = transform.position.y;
         openYPos = closedYPos + openValue;
     }
@@ -18,7 +20,7 @@ public class HackDoor : HackObject
     public void Update()
     {
         float targetYPos;
-        if(isHacked)
+        if(hackObject.isHacked)
         {
             targetYPos = closedYPos;
         }

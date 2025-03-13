@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HackDiversion : HackObject
+public class HackDiversion : MonoBehaviour
 {
-
+    private HackObject hackObject;
     public bool diversion = false;
     public ParticleSystem particlesClassic;
     public ParticleSystem particlesWithWind;
@@ -12,16 +12,15 @@ public class HackDiversion : HackObject
     public Paper prefabPaper;
     public Transform paperSpawn;
 
-    public override void Start()
+    private void Start()
     {
-        base.Start();
-
+        hackObject = GetComponent<HackObject>();
         InvokeRepeating(nameof(SpawnPaper), 1f, 1f);
     }
 
     void Update()
     {
-        if(isHacked)
+        if(hackObject.isHacked)
         {
             diversion = true;
         }
@@ -33,9 +32,9 @@ public class HackDiversion : HackObject
 
     private void SpawnPaper()
     {
-        if(isHacked)
+        if(hackObject.isHacked)
         {
-            if (wind != null && wind.isHacked)
+            if (wind != null && wind.windActivated)
             {
                 prefabPaper.force = 500f;
             }
