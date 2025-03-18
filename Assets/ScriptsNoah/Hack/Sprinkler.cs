@@ -5,17 +5,38 @@ using UnityEngine;
 public class Sprinkler : MonoBehaviour
 {
     public HackFireAlarm fireAlarm;
+    private HackObject fireAlarmHackObject;
     public GameObject waterSprinkler;
+    public bool waterOn;
+    private float timer = 5;
+
+
+    private void Start()
+    {
+        fireAlarmHackObject = fireAlarm.GetComponent<HackObject>();
+    }
 
     private void Update()
     {
-        if(fireAlarm.alarmOn)
+        if(fireAlarm.needWater==true && fireAlarmHackObject.isHacked == false)
         {
-            waterSprinkler.SetActive(true);
+            timer -= Time.deltaTime;
+            if(timer <=0)
+            {
+                sprinklerActivate();
+            }
         }
         else
         {
+            timer = 5;
             waterSprinkler.SetActive(false);
+            waterOn = false;
         }
+    }
+
+    private void sprinklerActivate()
+    {
+        waterSprinkler.SetActive(true);
+        waterOn = true;
     }
 }

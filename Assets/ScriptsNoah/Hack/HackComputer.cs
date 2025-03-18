@@ -2,56 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HackComputer : HackObject
+public class HackComputer : MonoBehaviour
 {
-    public ParticleSystem fireEffect;
-    public HackWind wind;
-    public HackFireAlarm alarm;
-    public int hackIndex = 0;
-    public float timer = 5f;
+    private HackObject hackObject;
+    public GameObject text;
 
-    public Transform workPoint;
-    public bool isOnFire = false;
-
-    public override void Start()
+    private void Start()
     {
-        base.Start();
-        InvokeRepeating(nameof(ParticlesSpawn), 0.25f, 0.25f);
+        hackObject = GetComponent<HackObject>();
     }
 
-    private void ParticlesSpawn()
-    { 
-        if(!fireEffect.isEmitting && isOnFire)
+    private void Update()
+    {
+        if(hackObject.isHacked)
         {
-            if (alarm.isHacked)
-            {
-                if (wind != null && wind.isHacked)
-                {
-                    isOnFire = true;
-                    fireEffect.Emit(5);
-                }
-                else
-                {
-                    isOnFire = true;
-                    fireEffect.Emit(1);
-                }
-            }
+            text.SetActive(true);
         }
         else
         {
-            isOnFire = false;
-            fireEffect.Emit(0);
+            text.SetActive(false);
         }
-    }
-
-    protected new void OnMouseDown()
-    {
-        base.OnMouseDown();
-        Invoke(nameof(ActiveFire), timer);
-    }
-
-    private void ActiveFire()
-    {
-        isOnFire = true;
     }
 }

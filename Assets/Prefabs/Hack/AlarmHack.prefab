@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 2244353711269599696}
   - component: {fileID: 9145263353929119387}
   - component: {fileID: 2855066856633152087}
+  - component: {fileID: 3904019489289141847}
   m_Layer: 0
   m_Name: AlarmHack
   m_TagString: Untagged
@@ -231,12 +232,35 @@ MonoBehaviour:
   activatedMaterial: {fileID: 2100000, guid: 7373d4a6d6396e2458b2a4d403e30d22, type: 2}
   objRenderer: {fileID: 0}
   isHacked: 0
+  autoDesactivation: 1
+  resetTimer: 10
+  timer: 0
   fireAlarm: {fileID: 2422973325445040094}
   computers:
   - {fileID: 0}
   fireAlarmActivated: {fileID: 2100000, guid: 33a8c3ca0ce7f8448b879f12c10b0a96, type: 2}
   fireAlarmDefault: {fileID: 2100000, guid: 16695392f058aad4b8da0d50a4e06d19, type: 2}
   alarmOn: 0
+--- !u!114 &3904019489289141847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3713828193497487200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3d5c0fbb3229241bd23744e393b64b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: cc6635d5c679f0d42a4a826e18e4ad46, type: 2}
+  overMaterial: {fileID: 2100000, guid: 7c2d549a3b575b74b97b862755115396, type: 2}
+  activatedMaterial: {fileID: 2100000, guid: 7373d4a6d6396e2458b2a4d403e30d22, type: 2}
+  objRenderer: {fileID: 0}
+  isHacked: 0
+  autoDesactivation: 1
+  resetTimer: 10
+  timer: 0
 --- !u!1 &5609453504043306099
 GameObject:
   m_ObjectHideFlags: 0

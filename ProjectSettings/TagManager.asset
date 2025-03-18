@@ -8,15 +8,16 @@ TagManager:
   - Trap
   - Enemy
   - Trash
-  - Hackable
+  - FireObject
+  - Drone
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProcess
   - Water
   - UI
-  - Hackable
+  - 
   - 
   - 
   - 

@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class IA_test : MonoBehaviour
 {
+    /*
     public Transform pointA;
     public Transform pointB;
     public Transform alertPoint;
@@ -60,8 +61,8 @@ public class IA_test : MonoBehaviour
 
             if (distanceToTarget <= stopDistance)
             {
-                currentTarget.isHacked = false;
-                currentTarget.objRenderer.material = currentTarget.defaultMaterial;
+                //currentTarget.isHacked = false;
+                //currentTarget.objRenderer.material = currentTarget.defaultMaterial;
                 currentTarget = null;
                 isChasing = false;
                 movingToB = !movingToB;
@@ -82,7 +83,7 @@ public class IA_test : MonoBehaviour
             if (distanceToTarget <= stopDistance)
             {
                 alarm.isHacked = false;
-                alarm.objRenderer.material = currentTarget.defaultMaterial;
+                //alarm.objRenderer.material = currentTarget.defaultMaterial;
                 Patrol();
             }
         }
@@ -140,6 +141,7 @@ public class IA_test : MonoBehaviour
         }
     }
     */
+    /*
     public IEnumerator FreezeForSeconds(float seconds)
     {
         isFrozen = true;
@@ -151,4 +153,5 @@ public class IA_test : MonoBehaviour
         objRenderer.material = defaultMaterial;
         Patrol();
     }
+    */
 }

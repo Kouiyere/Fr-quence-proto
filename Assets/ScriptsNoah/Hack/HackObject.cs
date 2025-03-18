@@ -7,9 +7,13 @@ public class HackObject : MonoBehaviour
     public Material defaultMaterial;
     public Material overMaterial;
     public Material activatedMaterial;
-
     public Renderer objRenderer;
+
     public bool isHacked = false;
+    public bool autoDesactivation = true;
+
+    public float resetTimer = 10f;
+    public float timer = 0;
 
     public virtual void Start()
     {
@@ -21,9 +25,56 @@ public class HackObject : MonoBehaviour
         }
     }
 
-    public virtual void OnMouseDown()
+    public virtual void Update()
     {
-        ActivateOrNotObject();
+    }
+
+    #region Activate
+    public void Activate()
+    {
+        isHacked = true;
+        objRenderer.material = activatedMaterial;
+        if(autoDesactivation)
+        {
+            Invoke(nameof(Timer), 1);
+        }
+    }
+    #endregion
+
+    #region Desactivate
+    public void Desactivate()
+    {
+        timer = 0;
+        isHacked = false;
+        objRenderer.material = defaultMaterial;
+    }
+    #endregion
+
+    #region Timer
+    private void Timer()
+    {
+        timer++;
+        if (timer < resetTimer)
+        {
+            Invoke(nameof(Timer), 1);
+        }
+        else
+        {
+            Invoke(nameof(Desactivate), 1);
+        }
+    }
+    #endregion
+
+    private void OnMouseDown()
+    {
+        if(isHacked)
+        {
+            Desactivate();
+        }
+        else
+        {
+            Activate();
+        }
     }
 
     private void OnMouseOver()
@@ -38,15 +89,6 @@ public class HackObject : MonoBehaviour
         if (!isHacked)
         {
             objRenderer.material = defaultMaterial;
-        }
-    }
-
-    public virtual void ActivateOrNotObject()
-    {
-        if (objRenderer != null)
-        {
-            isHacked = !isHacked;
-            objRenderer.material = isHacked ? activatedMaterial : defaultMaterial;
         }
     }
 }
