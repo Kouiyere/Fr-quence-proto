@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraSwitch : HackObject
+public class CameraSwitch : MonoBehaviour
 {
+    private HackObject hackObject;
     public Camera[] cameras;
     public GameObject[] cameraGO;
     private int currentCameraIndex;
 
-    public override void Start()
+    private void Start()
     {
-        base.Start();
+        hackObject = GetComponent<HackObject>();
 
         cameraGO = new GameObject[transform.childCount];
         int i = 0;

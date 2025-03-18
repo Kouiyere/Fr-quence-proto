@@ -28,6 +28,7 @@ public class Sprinkler : MonoBehaviour
         }
         else
         {
+            timer = 5;
             waterSprinkler.SetActive(false);
             waterOn = false;
         }

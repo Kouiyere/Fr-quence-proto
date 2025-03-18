@@ -5,14 +5,16 @@ using UnityEngine;
 public class HackFireAlarm : MonoBehaviour
 {
     public GameObject fireAlarm;
-    public HackComputer[] computers;
+    public HackFireObject[] fireObjects;
     public Material fireAlarmActivated;
     public Material fireAlarmDefault;
 
     public bool alarmOn = false;
-    private MeshRenderer fireAlarmRenderer;
+    public MeshRenderer fireAlarmRenderer;
 
     private HackObject hackObject;
+
+    private float timer = 0.5f;
 
     public bool needWater;
 
@@ -24,71 +26,40 @@ public class HackFireAlarm : MonoBehaviour
 
     private void Update()
     {
-        foreach(HackComputer computer in computers)
+        foreach(HackFireObject fireObject in fireObjects)
         {
-            if (computer.isOnfire==true)
+            if (fireObject.isOnfire==true)
             {
                 needWater = true;
+                alarmOn = true;
             }
             else
             {
                 needWater = false;
+                alarmOn = false;
             }
         }
-    }
 
-    /*
-    private new void Start()
-    {
-        base.Start();
-
-        if (fireAlarm != null)
+        if(alarmOn)
         {
-            fireAlarmRenderer = fireAlarm.GetComponent<MeshRenderer>();
-        }
-
-        InvokeRepeating(nameof(AlarmVisual), 1f, 1f);
-
-        computers = FindObjectsOfType<HackComputer>();
-    }
-
-    private void Update()
-    {
-        bool isFireDetected = false;
-        foreach (HackComputer computer in computers)
-        {
-            if (computer.isOnFire && !isHacked)
+            timer -= Time.deltaTime;
+            if(timer <= 0)
             {
-                isFireDetected = true;
-                break;
+                if(fireAlarmRenderer.material == fireAlarmActivated)
+                {
+                    fireAlarmRenderer.material = fireAlarmDefault;
+                    timer = 0.5f;
+                }
+                else 
+                {
+                    fireAlarmRenderer.material = fireAlarmActivated;
+                    timer = 0.5f;
+                }
             }
-        }
-
-        alarmOn = isFireDetected;
-    }
-
-    /*
-    protected new void ActivateOrNotObject()
-    {
-        base.ActivateOrNotObject();
-        alarmOn = isHacked;
-    }
-    
-    private void AlarmVisual()
-    {
-        if (fireAlarmRenderer == null) return;
-
-        if (alarmOn)
-        {
-            fireAlarmRenderer.material = (fireAlarmRenderer.material == fireAlarmActivated)
-                ? fireAlarmDefault
-                : fireAlarmActivated;
         }
         else
         {
             fireAlarmRenderer.material = fireAlarmDefault;
         }
     }
-    */
-
 }

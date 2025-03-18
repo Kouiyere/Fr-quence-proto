@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HackComputer : MonoBehaviour
+public class HackDoorDigicode : MonoBehaviour
 {
     private HackObject hackObject;
-    public GameObject text;
+    public GameObject digiCode;
 
     private void Start()
     {
@@ -16,11 +16,11 @@ public class HackComputer : MonoBehaviour
     {
         if(hackObject.isHacked)
         {
-            text.SetActive(true);
+            digiCode.SetActive(true);
         }
         else
         {
-            text.SetActive(false);
+            digiCode.SetActive(false);
         }
     }
 }

@@ -9,6 +9,7 @@ public class HackDrone : MonoBehaviour
     public float movementSpeed = 1f;
     private NavMeshAgent agent;
     private HackWaste currentTarget;
+    public GameObject spawnPoint;
 
     public GameObject trashPrefab;
     public bool trash = false;
@@ -72,6 +73,10 @@ public class HackDrone : MonoBehaviour
         if (currentTarget != null)
         {
             agent.SetDestination(currentTarget.transform.position);
+        }
+        else
+        {
+            agent.SetDestination(spawnPoint.transform.position);
         }
     }
 

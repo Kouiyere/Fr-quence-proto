@@ -45,6 +45,7 @@ public class LaserHack : MonoBehaviour
         if (Physics.Raycast(laserOrigin.position, laserOrigin.forward, out hit, laserRange, hitLayers))
         {
             laserEnd = hit.point;
+            CheckHitObject(hit.collider);
         }
 
         lineRenderer.SetPosition(0, laserOrigin.position);
@@ -67,6 +68,14 @@ public class LaserHack : MonoBehaviour
         currentYRotation = Mathf.Clamp(currentYRotation, -rotationLimit, rotationLimit);
 
         transform.rotation = Quaternion.Euler(0, initialYRotation + currentYRotation, 0);
+    }
+
+    void CheckHitObject(Collider hitCollider)
+    {
+        if (hitCollider.CompareTag("FireObject"))
+        {
+            hitCollider.gameObject.GetComponent<HackFireObject>().isOnfire = true;
+        }
     }
 }
 

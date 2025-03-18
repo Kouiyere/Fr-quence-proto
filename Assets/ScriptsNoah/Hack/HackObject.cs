@@ -30,7 +30,7 @@ public class HackObject : MonoBehaviour
     }
 
     #region Activate
-    private void Activate()
+    public void Activate()
     {
         isHacked = true;
         objRenderer.material = activatedMaterial;
