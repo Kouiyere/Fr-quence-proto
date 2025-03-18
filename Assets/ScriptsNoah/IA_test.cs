@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class IA_test : MonoBehaviour
 {
+    /*
     public Transform pointA;
     public Transform pointB;
     public Transform alertPoint;
@@ -140,6 +141,7 @@ public class IA_test : MonoBehaviour
         }
     }
     */
+    /*
     public IEnumerator FreezeForSeconds(float seconds)
     {
         isFrozen = true;
@@ -151,4 +153,5 @@ public class IA_test : MonoBehaviour
         objRenderer.material = defaultMaterial;
         Patrol();
     }
+    */
 }

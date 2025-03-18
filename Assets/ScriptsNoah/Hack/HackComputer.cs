@@ -2,58 +2,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HackComputer : HackObject
+public class HackComputer : MonoBehaviour
 {
-    public ParticleSystem fireEffect;
-    public HackWind wind;
-    public HackFireAlarm alarm;
-    public int hackIndex = 0;
-    public float timer = 5f;
+    private HackObject hackObject;
+    public Sprinkler sprinkler;
+    public ParticleSystem hackEffect; // Assigner un prefab de particules dans l'inspecteur
+    public bool isOnfire = false;
+    private float timer = 2; 
 
-    public Transform workPoint;
-    public bool isOnFire = false;
-
-    public override void Start()
+    private void Start()
     {
-        base.Start();
-        InvokeRepeating(nameof(ParticlesSpawn), 0.25f, 0.25f);
+        hackObject = GetComponent<HackObject>();
+
+        if (hackEffect != null)
+        {
+            hackEffect.Stop(); // S'assurer que les particules ne jouent pas au début
+        }
     }
 
-    private void ParticlesSpawn()
-    { 
-        if(!fireEffect.isEmitting && isOnFire)
+    private void Update()
+    {
+        if (hackObject != null && hackEffect != null)
         {
-            if (alarm.isHacked)
+            if(sprinkler.waterOn == false)
             {
-                if (wind != null && wind.windActivated)
+                if (hackObject.isHacked && !hackEffect.isPlaying)
                 {
-                    isOnFire = true;
-                    fireEffect.Emit(5);
+                    hackEffect.Play();
+                    isOnfire = true;
                 }
-                else
+                else if (!hackObject.isHacked && hackEffect.isPlaying)
                 {
-                    isOnFire = true;
-                    fireEffect.Emit(1);
+                    hackEffect.Stop();
+                    isOnfire = false;
+                }
+            }
+            else
+            {
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    FireDesactivate();
                 }
             }
         }
-        else
-        {
-            isOnFire = false;
-            fireEffect.Emit(0);
-        }
     }
 
-    /*
-    protected new void OnMouseDown()
+    private void FireDesactivate()
     {
-        base.OnMouseDown();
-        Invoke(nameof(ActiveFire), timer);
-    }
-    */
-
-    private void ActiveFire()
-    {
-        isOnFire = true;
+        hackObject.Desactivate();
+        hackEffect.Stop();
+        isOnfire = false;
     }
 }

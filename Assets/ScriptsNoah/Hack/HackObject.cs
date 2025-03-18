@@ -13,6 +13,7 @@ public class HackObject : MonoBehaviour
     public bool autoDesactivation = true;
 
     public float resetTimer = 10f;
+    public float timer = 0;
 
     public virtual void Start()
     {
@@ -35,16 +36,32 @@ public class HackObject : MonoBehaviour
         objRenderer.material = activatedMaterial;
         if(autoDesactivation)
         {
-            Invoke(nameof(Desactivate), resetTimer);
+            Invoke(nameof(Timer), 1);
         }
     }
     #endregion
 
     #region Desactivate
-    private void Desactivate()
+    public void Desactivate()
     {
+        timer = 0;
         isHacked = false;
         objRenderer.material = defaultMaterial;
+    }
+    #endregion
+
+    #region Timer
+    private void Timer()
+    {
+        timer++;
+        if (timer < resetTimer)
+        {
+            Invoke(nameof(Timer), 1);
+        }
+        else
+        {
+            Invoke(nameof(Desactivate), 1);
+        }
     }
     #endregion
 

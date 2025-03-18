@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HackFireAlarm : HackObject
+public class HackFireAlarm : MonoBehaviour
 {
     public GameObject fireAlarm;
     public HackComputer[] computers;
@@ -12,6 +12,32 @@ public class HackFireAlarm : HackObject
     public bool alarmOn = false;
     private MeshRenderer fireAlarmRenderer;
 
+    private HackObject hackObject;
+
+    public bool needWater;
+
+
+    private void Start()
+    {
+        hackObject = GetComponent<HackObject>();
+    }
+
+    private void Update()
+    {
+        foreach(HackComputer computer in computers)
+        {
+            if (computer.isOnfire==true)
+            {
+                needWater = true;
+            }
+            else
+            {
+                needWater = false;
+            }
+        }
+    }
+
+    /*
     private new void Start()
     {
         base.Start();
@@ -47,8 +73,7 @@ public class HackFireAlarm : HackObject
         base.ActivateOrNotObject();
         alarmOn = isHacked;
     }
-    */
-
+    
     private void AlarmVisual()
     {
         if (fireAlarmRenderer == null) return;
@@ -64,4 +89,6 @@ public class HackFireAlarm : HackObject
             fireAlarmRenderer.material = fireAlarmDefault;
         }
     }
+    */
+
 }
