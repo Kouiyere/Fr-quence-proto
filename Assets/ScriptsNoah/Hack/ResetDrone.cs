@@ -11,4 +11,5 @@ public class ResetDrone : MonoBehaviour
             other.GetComponent<HackObject>().Desactivate();
         }
     }
+
 }
