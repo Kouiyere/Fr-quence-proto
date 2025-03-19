@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,6 +8,9 @@ public class IngenierStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     public HackFireAlarm fireAlarm;
+    private JobList jobList;
+    private Called called;
+    public Transform waitPoint;
 
     public enum State
     {
@@ -27,6 +31,8 @@ public class IngenierStateMachine : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        jobList = GetComponent<JobList>();
+        called = GetComponent<Called>();
     }
 
     // Update is called once per frame
@@ -80,7 +86,10 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void UpdateWaiting()
     {
-
+        if (jobList.jobs.Count > 0)
+        {
+            ChangeState(State.Called);
+        }
     }
 
     private void ExitWaiting()
@@ -97,7 +106,14 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void UpdateCalled()
     {
-
+        if (jobList.jobs.Count > 0)
+        {
+            called.Working();
+        }
+        else
+        {
+            ChangeState(State.JobDone);
+        }
     }
 
     private void ExitCalled()
@@ -148,7 +164,21 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void UpdateJobDone()
     {
-
+        if (jobList.jobs.Count > 0)
+        {
+            ChangeState(State.Called);
+        }
+        else
+        {
+            if (agent.remainingDistance <= 0.1f)
+            {
+                ChangeState(State.Waiting);
+            }
+            else
+            {
+                agent.SetDestination(waitPoint.position);                
+            }
+        }
     }
 
     private void ExitJobDone()

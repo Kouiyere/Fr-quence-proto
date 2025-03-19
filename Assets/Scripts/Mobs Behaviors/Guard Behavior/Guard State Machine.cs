@@ -110,8 +110,7 @@ public class GuardStateMachine : MonoBehaviour
             }
             else
             {
-                jobList.jobs.Add(hackDetection.CanSeeHack());
-                //Call animation
+                ChangeState(State.Alert);
             }
         }
         else
@@ -179,12 +178,13 @@ public class GuardStateMachine : MonoBehaviour
     #region Alert
     private void EnterAlert()
     {
-
+        jobList.jobs.Add(hackDetection.CanSeeHack());
     }
 
     private void UpdateAlert()
     {
-
+        //Call animation
+        ChangeState(State.Patrol);
     }
 
     private void ExitAlert()
