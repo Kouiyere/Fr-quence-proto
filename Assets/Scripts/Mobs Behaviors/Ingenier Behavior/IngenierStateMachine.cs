@@ -101,13 +101,17 @@ public class IngenierStateMachine : MonoBehaviour
     #region Called
     private void EnterCalled()
     {
-
+        called.activeJob = jobList.jobs[0];
     }
 
     private void UpdateCalled()
     {
         if (jobList.jobs.Count > 0)
         {
+            if (called.activeJob == null)
+            {
+                called.activeJob = jobList.jobs[0];
+            }
             called.Working();
         }
         else

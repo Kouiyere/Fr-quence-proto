@@ -7,6 +7,7 @@ public class Called : MonoBehaviour
 {
     NavMeshAgent agent;
     private JobList jobList;
+    public GameObject activeJob;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +18,12 @@ public class Called : MonoBehaviour
 
     public void Working()
     {
-        agent.SetDestination(jobList.jobs[0].transform.position);
+        agent.SetDestination(activeJob.transform.position);
         if (agent.remainingDistance != 0 && agent.remainingDistance < 0.5f)
         {
             jobList.jobs[0].GetComponent<HackObject>().Desactivate();
+            jobList.jobs.Remove(activeJob);
+            activeJob = null;
         }
     }
 }
