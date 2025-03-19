@@ -7,7 +7,7 @@ public class HackDetection : MonoBehaviour
     public float fov = 45f;
     public float distance = 5f;
     private Color color = Color.white;
-    private GameObject hack;
+    private Collider[] hacks;
 
     void Update()
     {
@@ -15,58 +15,52 @@ public class HackDetection : MonoBehaviour
         DebugFov(fov, distance, color);
     }
 
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    HackObject hackScript = other.GetComponent<HackObject>();
-    //    if (hackScript != null && hackScript.isHacked)
-    //    {
-    //        CanSeeHack(other.gameObject);
-    //    }
-    //}
-
-    public bool CanSeeHack()
+    public GameObject CanSeeHack()
     {
         int mask = LayerMask.GetMask("Hackable");
-        RaycastHit hit;
-        if (Physics.SphereCast(transform.position, distance, transform.forward, out hit, mask))
+        hacks = Physics.OverlapSphere(transform.position, distance, mask);
+
+        if (hacks.Length > 0)
         {
-            hack = hit.collider.gameObject;
-            HackObject hackScript = hack.GetComponent<HackObject>();
-            if (hackScript !=null && hackScript.isHacked)
+            foreach (var hack in hacks)
             {
-                Vector3 toHack = new Vector3((hack.transform.position.x - transform.position.x), (hack.transform.position.y - transform.position.y), (hack.transform.position.z - transform.position.z));
-                float angle = Vector3.Angle(toHack, transform.forward);
-                if (angle <= fov)
+                GameObject hackGO = hack.gameObject;
+                HackDiversion diversionScript = hack.GetComponent<HackDiversion>();
+                if (diversionScript != null && diversionScript.diversion)
                 {
-                    if (Physics.Raycast(transform.position, hack.transform.position, out hit, Mathf.Infinity))
+                    Vector3 toHack = new Vector3((hack.transform.position.x - transform.position.x), (hack.transform.position.y - transform.position.y), (hack.transform.position.z - transform.position.z));
+                    float angle = Vector3.Angle(toHack, transform.forward);
+                    if (angle <= fov)
                     {
-                        color = Color.red;
-                        return true;
+                        RaycastHit hit;
+                        if (Physics.Raycast(transform.position, hack.transform.position, out hit, Mathf.Infinity))
+                        {
+                            color = Color.red;
+                            return hit.collider.gameObject;
+                        }
+                        else
+                        {
+                            color = Color.yellow;
+                            return null;
+                        }
                     }
                     else
                     {
                         color = Color.yellow;
-                        return false;
+                        return null;
                     }
                 }
                 else
                 {
-                    color = Color.yellow;
-                    return false;
+                    color = Color.white;
+                    return null;
                 }
-            }
-            else
-            {
-                hack = null;
-                color = Color.white;
-                return false;
             }
         }
         else
         {
-            hack = null;
             color = Color.white;
-            return false;
+            return null;
         }
     }
 
@@ -76,7 +70,8 @@ public class HackDetection : MonoBehaviour
         Vector3 extentRight = Vector3.Reflect(extentLeft, transform.right);
         Debug.DrawRay(transform.position, extentLeft * distance, color);
         Debug.DrawRay(transform.position, extentRight * distance, color);
-        if (CanSeeHack())
+        GameObject hack = CanSeeHack();
+        if (hack != null)
         {
             Vector3 toHack = new Vector3((hack.transform.position.x - transform.position.x), (hack.transform.position.y - transform.position.y), (hack.transform.position.z - transform.position.z));
             Debug.DrawRay(transform.position, toHack, color);
