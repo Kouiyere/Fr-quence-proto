@@ -17,6 +17,7 @@ public class HackDetection : MonoBehaviour
 
     public GameObject CanSeeHack()
     {
+        GameObject objectSeen = null;
         int mask = LayerMask.GetMask("Hackable");
         hacks = Physics.OverlapSphere(transform.position, distance, mask);
 
@@ -25,8 +26,8 @@ public class HackDetection : MonoBehaviour
             foreach (var hack in hacks)
             {
                 GameObject hackGO = hack.gameObject;
-                HackDiversion diversionScript = hack.GetComponent<HackDiversion>();
-                if (diversionScript != null && diversionScript.diversion)
+                HackObject hackScript = hackGO.GetComponent<HackObject>();
+                if (hackScript != null && hackScript.isHacked)
                 {
                     Vector3 toHack = new Vector3((hack.transform.position.x - transform.position.x), (hack.transform.position.y - transform.position.y), (hack.transform.position.z - transform.position.z));
                     float angle = Vector3.Angle(toHack, transform.forward);
@@ -36,32 +37,30 @@ public class HackDetection : MonoBehaviour
                         if (Physics.Raycast(transform.position, hack.transform.position, out hit, Mathf.Infinity))
                         {
                             color = Color.red;
-                            return hit.collider.gameObject;
+                            objectSeen = hit.collider.gameObject;
                         }
                         else
                         {
                             color = Color.yellow;
-                            return null;
                         }
                     }
                     else
                     {
                         color = Color.yellow;
-                        return null;
                     }
                 }
                 else
                 {
                     color = Color.white;
-                    return null;
                 }
             }
         }
         else
         {
             color = Color.white;
-            return null;
         }
+
+        return objectSeen;
     }
 
     private void DebugFov(float angle, float distance, Color color)
