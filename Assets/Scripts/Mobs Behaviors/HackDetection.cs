@@ -37,7 +37,7 @@ public class HackDetection : MonoBehaviour
                         if (Physics.Raycast(transform.position, hack.transform.position, out hit, Mathf.Infinity))
                         {
                             color = Color.red;
-                            objectSeen = hit.collider.gameObject;
+                            objectSeen = hackGO;
                         }
                         else
                         {

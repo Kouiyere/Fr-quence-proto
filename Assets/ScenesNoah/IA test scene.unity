@@ -1173,6 +1173,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
+--- !u!114 &1021541009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8862482215308290984, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
+  m_PrefabInstance: {fileID: 1021541008}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c198d6d43567d42b21a952cc341cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1047854241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1691,6 +1702,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6492208514096928797, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
+      propertyPath: autoDesactivation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7906452089903761673, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2145,6 +2160,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6351648756451774934, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
+      propertyPath: jobList
+      value: 
+      objectReference: {fileID: 1021541009}
+    - target: {fileID: 6351648756451774934, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
       propertyPath: fireAlarm
       value: 
       objectReference: {fileID: 1574359726}
@@ -2375,6 +2394,14 @@ PrefabInstance:
     - target: {fileID: 5466718518379784131, guid: 07edccb201e258b4b9ca4040384884f7, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991937648730981069, guid: 07edccb201e258b4b9ca4040384884f7, type: 3}
+      propertyPath: resetTimer
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991937648730981069, guid: 07edccb201e258b4b9ca4040384884f7, type: 3}
+      propertyPath: autoDesactivation
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8051235686785862633, guid: 07edccb201e258b4b9ca4040384884f7, type: 3}
       propertyPath: m_Layer

@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 1425359214544751205}
   - component: {fileID: 7773453259101572846}
   - component: {fileID: 5185649750640868377}
+  - component: {fileID: 8862482215308290984}
   m_Layer: 0
   m_Name: IA_Ingenier
   m_TagString: Untagged
@@ -171,6 +172,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26ed01c422225b44497d9ad960f1ee41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireAlarm: {fileID: 0}
+  currentState: 0
+  walkingSpeed: 3
+  runningSpeed: 5
+--- !u!114 &8862482215308290984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343694588791529249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c198d6d43567d42b21a952cc341cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6897307413404248525
