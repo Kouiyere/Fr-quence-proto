@@ -10,6 +10,7 @@ TagManager:
   - Trash
   - FireObject
   - Drone
+  - Door
   layers:
   - Default
   - TransparentFX

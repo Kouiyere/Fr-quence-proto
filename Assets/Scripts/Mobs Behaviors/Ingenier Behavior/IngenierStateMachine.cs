@@ -27,7 +27,6 @@ public class IngenierStateMachine : MonoBehaviour
     public float walkingSpeed = 3f;
     public float runningSpeed = 5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -35,7 +34,6 @@ public class IngenierStateMachine : MonoBehaviour
         called = GetComponent<Called>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Update State
@@ -78,6 +76,22 @@ public class IngenierStateMachine : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.CompareTag("Door"))
+        {
+            ChangeState(State.Stuck);
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.gameObject.CompareTag("Door"))
+        {
+            ChangeState(State.Called);
+        }
+    }
+
     #region Waiting
     private void EnterWaiting()
     {
@@ -101,7 +115,7 @@ public class IngenierStateMachine : MonoBehaviour
     #region Called
     private void EnterCalled()
     {
-        called.activeJob = jobList.jobs[0];
+        agent.speed = walkingSpeed;
     }
 
     private void UpdateCalled()
@@ -194,7 +208,7 @@ public class IngenierStateMachine : MonoBehaviour
     #region Stuck
     private void EnterStuck()
     {
-
+        agent.speed = 0;
     }
 
     private void UpdateStuck()

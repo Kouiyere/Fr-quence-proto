@@ -7,6 +7,7 @@ public class Called : MonoBehaviour
 {
     NavMeshAgent agent;
     private JobList jobList;
+    [HideInInspector]
     public GameObject activeJob;
 
     // Start is called before the first frame update
