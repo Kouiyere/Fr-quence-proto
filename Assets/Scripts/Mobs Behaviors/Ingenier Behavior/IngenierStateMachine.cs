@@ -9,8 +9,10 @@ public class IngenierStateMachine : MonoBehaviour
     NavMeshAgent agent;
     public HackFireAlarm fireAlarm;
     private JobList jobList;
-    private Called called;
+    private CalledInge called;
     public Transform waitPoint;
+    private Stuck stuck;
+    private GameObject blockingDoor;
 
     public enum State
     {
@@ -31,7 +33,8 @@ public class IngenierStateMachine : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         jobList = GetComponent<JobList>();
-        called = GetComponent<Called>();
+        called = GetComponent<CalledInge>();
+        stuck = GetComponent<Stuck>();
     }
 
     void Update()
@@ -80,6 +83,7 @@ public class IngenierStateMachine : MonoBehaviour
     {
         if (collision.collider.gameObject.CompareTag("Door"))
         {
+            blockingDoor = collision.collider.gameObject;
             ChangeState(State.Stuck);
         }
     }
@@ -88,6 +92,7 @@ public class IngenierStateMachine : MonoBehaviour
     {
         if (collision.collider.gameObject.CompareTag("Door"))
         {
+            blockingDoor = null;
             ChangeState(State.Called);
         }
     }
@@ -209,6 +214,7 @@ public class IngenierStateMachine : MonoBehaviour
     private void EnterStuck()
     {
         agent.speed = 0;
+        stuck.CallGuard(blockingDoor);
     }
 
     private void UpdateStuck()
@@ -218,7 +224,7 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void ExitStuck()
     {
-
+        stuck.CancelCall();
     }
     #endregion
 }
