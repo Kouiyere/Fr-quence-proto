@@ -6,18 +6,27 @@ public class HackFireObject : MonoBehaviour
 {
     private HackObject hackObject;
     public Sprinkler sprinkler;
-    public ParticleSystem hackEffect; // Assigner un prefab de particules dans l'inspecteur
+    public HackWind wind;
+    public ParticleSystem hackEffect;
+    public ParticleSystem fireSparkles;
+
+    private Vector3 initRotationSparkles;
+    private Vector3 windRotationSparkles;
+
+
     public bool isOnfire = false;
     private float resetTimer = 2;
     private float initializeTimer = 3;
 
     private void Start()
     {
+        initRotationSparkles = new Vector3(-90, 0, 90);
+        windRotationSparkles = initRotationSparkles + new Vector3(-90,0,0);
         hackObject = GetComponent<HackObject>();
 
         if (hackEffect != null)
         {
-            hackEffect.Stop(); // S'assurer que les particules ne jouent pas au début
+            hackEffect.Stop();
         }
     }
 
@@ -25,11 +34,11 @@ public class HackFireObject : MonoBehaviour
     {
         if (isOnfire && sprinkler.waterOn == false)
         {
-
             initializeTimer -= Time.deltaTime;
             if (initializeTimer <= 0 && !hackEffect.isPlaying)
             {
                 hackEffect.Play();
+                fireSparkles.Play();
             }
         }
         else
@@ -40,14 +49,29 @@ public class HackFireObject : MonoBehaviour
                 FireDesactivate();
             }
         }
+        SparklesRotation();
     }
 
     private void FireDesactivate()
     {
         hackObject.Desactivate();
         hackEffect.Stop();
+        fireSparkles.Stop();
         isOnfire = false;
         resetTimer = 2f;
         initializeTimer = 5f;
     }
+
+    private void SparklesRotation()
+    {
+        if(wind.GetComponent<HackObject>().isHacked)
+        {
+            fireSparkles.transform.rotation = Quaternion.Euler(windRotationSparkles.x, windRotationSparkles.y, windRotationSparkles.z);
+        }
+        else
+        {
+            fireSparkles.transform.rotation = Quaternion.Euler(initRotationSparkles.x, initRotationSparkles.y, initRotationSparkles.z);
+        }
+    }
+
 }
