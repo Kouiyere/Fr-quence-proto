@@ -12,6 +12,7 @@ public class GuardStateMachine : MonoBehaviour
     private HackDetection hackDetection;
     public JobList jobList;
     private float timer;
+    private CalledGuard called;
 
     public enum State
     {
@@ -33,6 +34,7 @@ public class GuardStateMachine : MonoBehaviour
         patrol = GetComponent<Patrol>();
         alarm = GetComponent<GuardAlarm>();
         hackDetection = GetComponent<HackDetection>();
+        called = GetComponent<CalledGuard>();
     }
 
     void Update()
@@ -101,6 +103,10 @@ public class GuardStateMachine : MonoBehaviour
         if (fireAlarm.alarmOn)
         {
             ChangeState(State.Alarm);
+        }
+        else if (called.door != null)
+        {
+            ChangeState(State.Called);
         }
         else if (hackDetection.CanSeeHack() != null)
         {
@@ -201,7 +207,11 @@ public class GuardStateMachine : MonoBehaviour
 
     private void UpdateCalled()
     {
-
+        called.OnCall();
+        if (called.door == null)
+        {
+            ChangeState(State.Patrol);
+        }
     }
 
     private void ExitCalled()

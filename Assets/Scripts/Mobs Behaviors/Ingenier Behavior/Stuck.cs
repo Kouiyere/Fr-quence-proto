@@ -25,14 +25,14 @@ public class Stuck : MonoBehaviour
         foreach (var guard in guards)
         {
             float distance = Vector3.Distance(guard.transform.position, transform.position);
-            if (distance < minDistance && guard.GetComponent<GuardStateMachine>().currentState == GuardStateMachine.State.Patrol)
+            if (distance < minDistance)
             {
                 closestGuard = guard;
                 minDistance = distance;
             }
         }
 
-        closestGuard.GetComponent<CalledGuard>().OnCall(door);
+        closestGuard.GetComponent<CalledGuard>().door = door;
     }
 
     public void CancelCall()

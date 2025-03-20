@@ -6,19 +6,21 @@ using UnityEngine.AI;
 public class CalledGuard : MonoBehaviour
 {
     NavMeshAgent agent;
+    public GameObject door;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
     }
+    
 
-    public void OnCall(GameObject door)
+    public void OnCall()
     {
         agent.SetDestination(door.transform.position);
-        Debug.Log(agent.remainingDistance);
-        if (agent.remainingDistance != 0 && agent.remainingDistance < 0.5f)
+        if (!agent.pathPending && agent.remainingDistance < 0.6f)
         {
             door.GetComponent<HackObject>().Desactivate();
+            door = null;
         }
     }
 }
