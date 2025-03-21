@@ -20,7 +20,6 @@ public class CalledGuard : MonoBehaviour
         if (!agent.pathPending && agent.remainingDistance < 0.6f)
         {
             door.GetComponent<HackObject>().Desactivate();
-            door = null;
         }
     }
 }

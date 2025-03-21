@@ -207,10 +207,13 @@ public class GuardStateMachine : MonoBehaviour
 
     private void UpdateCalled()
     {
-        called.OnCall();
         if (called.door == null)
         {
             ChangeState(State.Patrol);
+        }
+        else
+        {
+            called.OnCall();           
         }
     }
 

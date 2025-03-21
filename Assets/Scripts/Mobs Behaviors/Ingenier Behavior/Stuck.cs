@@ -5,6 +5,7 @@ using UnityEngine;
 public class Stuck : MonoBehaviour
 {
     private GameObject[] guards;
+    private GameObject activeGuard;
 
     private void Start()
     {
@@ -32,11 +33,14 @@ public class Stuck : MonoBehaviour
             }
         }
 
-        closestGuard.GetComponent<CalledGuard>().door = door;
+        activeGuard = closestGuard;
+        activeGuard.GetComponent<CalledGuard>().door = door;
     }
 
     public void CancelCall()
     {
-
+        activeGuard.GetComponent<CalledGuard>().door = null;
+        activeGuard.GetComponent<GuardStateMachine>().ChangeState(GuardStateMachine.State.Patrol);
+        activeGuard = null;
     }
 }

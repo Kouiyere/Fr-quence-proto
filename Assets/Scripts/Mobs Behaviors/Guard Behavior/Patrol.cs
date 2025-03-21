@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
 public class Patrol : MonoBehaviour
 {
@@ -23,11 +25,13 @@ public class Patrol : MonoBehaviour
 
         int destinationID = GetClosestWaypointID(transform.position);
         waypointId = destinationID;
-        agent.destination = route.waypointArray[waypointId].position;
+        agent.SetDestination(route.waypointArray[waypointId].position);
     }
 
     public void Patroling()
     {
+        //Need to check if current destination is a waypoint
+
         if (agent.remainingDistance < .01f)
         {
             if (routeType == RouteType.BackAndForth && reverse)
@@ -61,7 +65,7 @@ public class Patrol : MonoBehaviour
                 }
             }
 
-            agent.destination = route.waypointArray[waypointId].position;
+            agent.SetDestination(route.waypointArray[waypointId].position);
         }
     }
 
