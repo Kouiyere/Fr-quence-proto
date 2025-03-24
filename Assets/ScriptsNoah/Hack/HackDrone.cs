@@ -10,9 +10,11 @@ public class HackDrone : MonoBehaviour
     private NavMeshAgent agent;
     private HackWaste currentTarget;
     public GameObject spawnPoint;
+    public GameObject sparklesParticle;
 
     public GameObject trashPrefab;
     public bool trash = false;
+    private bool broken = false;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class HackDrone : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = movementSpeed;
         InvokeRepeating(nameof(SpawnTrash),0.5f,0.5f);
+        BrokenDrone();
     }
 
     public void Update()
@@ -109,10 +112,32 @@ public class HackDrone : MonoBehaviour
         {
             waste.AttractRobot = false;
             currentTarget = null;
-            waste.GetComponent<MeshRenderer>().material = waste.defaultMat;
+            Destroy(waste);
         }
 
         if(other.gameObject.CompareTag("Trash"))
+        {
+            trash = true;
+        }
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        HackWaste waste = other.gameObject.GetComponent<HackWaste>();
+
+        if (waste != null && waste.AttractRobot)
+        {
+            waste.AttractRobot = false;
+            currentTarget = null;
+            Destroy(waste.transform.gameObject);
+
+            if (waste.isOnFire == true)
+            {
+                broken = true;
+                BrokenDrone();
+            }
+        }
+
+        if (other.gameObject.CompareTag("Trash"))
         {
             trash = true;
         }
@@ -123,6 +148,18 @@ public class HackDrone : MonoBehaviour
         if (trash)
         {
             Instantiate(trashPrefab, new Vector3(transform.position.x, transform.position.y-0.25f, transform.position.z), transform.rotation);
+        }
+    }
+
+    private void BrokenDrone()
+    {
+        if(broken == true)
+        {
+            sparklesParticle.SetActive(true);
+        }
+        else
+        {
+            sparklesParticle.SetActive(false);
         }
     }
 }

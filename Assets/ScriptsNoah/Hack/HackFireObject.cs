@@ -9,6 +9,7 @@ public class HackFireObject : MonoBehaviour
     public HackWind wind;
     public ParticleSystem hackEffect;
     public ParticleSystem fireSparkles;
+    public ParticleSystem fire2Sparkles;
 
     private Vector3 initRotationSparkles;
     private Vector3 windRotationSparkles;
@@ -38,7 +39,6 @@ public class HackFireObject : MonoBehaviour
             if (initializeTimer <= 0 && !hackEffect.isPlaying)
             {
                 hackEffect.Play();
-                fireSparkles.Play();
             }
         }
         else
@@ -56,7 +56,6 @@ public class HackFireObject : MonoBehaviour
     {
         hackObject.Desactivate();
         hackEffect.Stop();
-        fireSparkles.Stop();
         isOnfire = false;
         resetTimer = 2f;
         initializeTimer = 5f;
@@ -66,11 +65,17 @@ public class HackFireObject : MonoBehaviour
     {
         if(wind.GetComponent<HackObject>().isHacked)
         {
-            fireSparkles.transform.rotation = Quaternion.Euler(windRotationSparkles.x, windRotationSparkles.y, windRotationSparkles.z);
+            //fireSparkles.transform.rotation = Quaternion.Euler(windRotationSparkles.x, windRotationSparkles.y, windRotationSparkles.z);
+            fireSparkles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            fire2Sparkles.Clear();
+            fire2Sparkles.Play();
         }
         else
         {
-            fireSparkles.transform.rotation = Quaternion.Euler(initRotationSparkles.x, initRotationSparkles.y, initRotationSparkles.z);
+            //fireSparkles.transform.rotation = Quaternion.Euler(initRotationSparkles.x, initRotationSparkles.y, initRotationSparkles.z);
+            fire2Sparkles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            fireSparkles.Clear();
+            fireSparkles.Play();
         }
     }
 

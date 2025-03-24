@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class HackWaste : MonoBehaviour
 {
-    private HackObject hackObject;
+    private ParticleCollision particleCollision;
     public bool AttractRobot;
-    public Material defaultMat;
+    public bool isOnFire;
 
     private void Start()
     {
-        hackObject = GetComponent<HackObject>();
-        hackObject.defaultMaterial = defaultMat;
+        particleCollision = GetComponentInParent<ParticleCollision>();
     }
 
     private void Update()
     {
-        AttractRobot = hackObject.isHacked;
+        if(particleCollision != null)
+        {
+            isOnFire = particleCollision.isOnFire;
+        }
     }
 }

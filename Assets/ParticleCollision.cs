@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ParticleCollision : MonoBehaviour
 {
+    public GameObject prefabFire;
     public GameObject firePaper;
+    public bool isOnFire = false;
 
     private void Start()
     {
@@ -12,6 +14,33 @@ public class ParticleCollision : MonoBehaviour
     }
     private void OnParticleCollision(GameObject particle)
     {
+        Invoke(nameof(FirePaper), 1f);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<ParticleCollision>())
+        {
+            if (isOnFire == true)
+            {
+                Instantiate(prefabFire);
+                prefabFire.transform.position = collision.gameObject.transform.position;
+                Destroy(collision.gameObject);
+                Destroy(gameObject);
+
+            }
+        }
+    }
+
+    private void FirePaper()
+    {
         firePaper.SetActive(true);
+        isOnFire = true;
+        Invoke(nameof(DestroyPaper), 30f);
+    }
+
+    private void DestroyPaper()
+    {
+        Destroy(gameObject);
     }
 }
