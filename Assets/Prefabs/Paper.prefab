@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 170234639503787092}
   - component: {fileID: 8653241860017951281}
   - component: {fileID: -8593223016671166018}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9190d6f5ce4fc6b44b9987e038f4f82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireParticles: {fileID: 8204696247536257030}
   prefabFire: {fileID: 2661900096795164907, guid: 5da1d667cec26804d98d299d0cf40fca, type: 3}
   firePaper: {fileID: 4743374750947797392}
   isOnFire: 0
@@ -190,7 +191,7 @@ GameObject:
   - component: {fileID: 7205609321235845722}
   - component: {fileID: 8204696247536257030}
   - component: {fileID: 6069222260802809570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fire (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,6 +6,7 @@ public class HackWind : MonoBehaviour
 {
     private HackObject hackObject;
     public GameObject palm;
+    public GameObject wind;
     public bool windActivated;
     private void Start()
     {
@@ -17,11 +18,13 @@ public class HackWind : MonoBehaviour
         if(hackObject.isHacked)
         {
             windActivated = true;
+            wind.SetActive(true);
             palm.transform.Rotate(new Vector3(0,10,0));
         }
         else
         {
             windActivated = false;
+            wind.SetActive(false);
         }
     }
 }

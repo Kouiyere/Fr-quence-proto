@@ -64,29 +64,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: GarbageVisual Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8936980131730729767, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bb4ae4d812debf243b8b275a344ee76b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8604576861304716481, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4568877559423960481}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
---- !u!1 &2239572161748449908 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8604576861304716481, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
-  m_PrefabInstance: {fileID: 7529198423183083189}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4568877559423960481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2239572161748449908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59278ed537a3b74481ad23a4bb30477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 5

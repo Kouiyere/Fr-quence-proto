@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6720294404282430892}
   - component: {fileID: 7067113152502297134}
   - component: {fileID: 8653241860017951281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PaperCombined
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2661900096795164907}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.624906, y: 0.011623591, z: 3.1851072}
+  m_LocalPosition: {x: 13.530044, y: 0.012760133, z: 4.735946}
   m_LocalScale: {x: 0.6074592, y: 0.008365811, z: 0.3586119}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 1436651850426302368}
   - component: {fileID: 577962244313945291}
   - component: {fileID: 5373231077550639103}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fire (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

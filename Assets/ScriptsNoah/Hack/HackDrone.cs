@@ -11,9 +11,11 @@ public class HackDrone : MonoBehaviour
     private HackWaste currentTarget;
     public GameObject spawnPoint;
     public GameObject sparklesParticle;
+    public GameObject fireParticle;
 
     public GameObject trashPrefab;
     public bool trash = false;
+    public bool fire = false;
     private bool broken = false;
 
     private void Start()
@@ -23,6 +25,7 @@ public class HackDrone : MonoBehaviour
         agent.speed = movementSpeed;
         InvokeRepeating(nameof(SpawnTrash),0.5f,0.5f);
         BrokenDrone();
+        FireDrone(fire);
     }
 
     public void Update()
@@ -73,10 +76,16 @@ public class HackDrone : MonoBehaviour
             currentTarget = FindClosestActiveWaste();
         }
 
-        if (currentTarget != null)
+        if(broken)
+        {
+            agent.SetDestination(spawnPoint.transform.position);
+        }
+
+        else if (currentTarget != null)
         {
             agent.SetDestination(currentTarget.transform.position);
         }
+
         else
         {
             agent.SetDestination(spawnPoint.transform.position);
@@ -106,40 +115,49 @@ public class HackDrone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        HackWaste waste = other.GetComponent<HackWaste>();
-
-        if (waste != null && waste.AttractRobot)
+        if (broken == false)
         {
-            waste.AttractRobot = false;
-            currentTarget = null;
-            Destroy(waste);
-        }
+            HackWaste waste = other.GetComponent<HackWaste>();
 
-        if(other.gameObject.CompareTag("Trash"))
-        {
-            trash = true;
+            if (waste != null && waste.AttractRobot)
+            {
+                waste.AttractRobot = false;
+                currentTarget = null;
+                Destroy(waste);
+            }
+
+            if (other.gameObject.CompareTag("Trash"))
+            {
+                trash = true;
+                Invoke(nameof(ResetTrash), 10f);
+            }
         }
     }
     private void OnCollisionEnter(Collision other)
     {
-        HackWaste waste = other.gameObject.GetComponent<HackWaste>();
-
-        if (waste != null && waste.AttractRobot)
+        if (broken == false)
         {
-            waste.AttractRobot = false;
-            currentTarget = null;
-            Destroy(waste.transform.gameObject);
+            HackWaste waste = other.gameObject.GetComponent<HackWaste>();
 
-            if (waste.isOnFire == true)
+            if (waste != null && waste.AttractRobot)
             {
-                broken = true;
-                BrokenDrone();
-            }
-        }
+                waste.AttractRobot = false;
+                currentTarget = null;
+                Destroy(waste.transform.gameObject);
 
-        if (other.gameObject.CompareTag("Trash"))
-        {
-            trash = true;
+                if (waste.isOnFire == true)
+                {
+                    fire = true;
+                    FireDrone(fire);
+                    Invoke(nameof(ResestFire), 15f);
+
+                }
+            }
+
+            if (other.gameObject.CompareTag("Trash"))
+            {
+                trash = true;
+            }
         }
     }
 
@@ -149,6 +167,10 @@ public class HackDrone : MonoBehaviour
         {
             Instantiate(trashPrefab, new Vector3(transform.position.x, transform.position.y-0.25f, transform.position.z), transform.rotation);
         }
+    }
+    private void ResetTrash()
+    {
+        trash = false;
     }
 
     private void BrokenDrone()
@@ -161,5 +183,26 @@ public class HackDrone : MonoBehaviour
         {
             sparklesParticle.SetActive(false);
         }
+    }
+
+    private void FireDrone(bool pFire)
+    {
+        if(fire == true)
+        {
+            broken = true;
+            BrokenDrone();
+            fireParticle.SetActive(true);
+
+        }
+        else
+        {
+            fireParticle.SetActive(false);
+        }
+    }
+
+    private void ResestFire()
+    {
+        fire = false;
+        FireDrone(fire);
     }
 }

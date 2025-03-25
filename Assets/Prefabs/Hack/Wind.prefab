@@ -5060,6 +5060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palm: {fileID: 8413322756343534069}
+  wind: {fileID: 634533543191786961}
   windActivated: 0
 --- !u!65 &3391752343992283317
 BoxCollider:

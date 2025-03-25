@@ -13,6 +13,9 @@ public class HackFireObject : MonoBehaviour
 
     private Vector3 initRotationSparkles;
     private Vector3 windRotationSparkles;
+    public int emitCount = 10;
+    public float emitCooldown = 0.5f;
+    private float nextEmitTime;
 
 
     public bool isOnfire = false;
@@ -63,19 +66,20 @@ public class HackFireObject : MonoBehaviour
 
     private void SparklesRotation()
     {
-        if(wind.GetComponent<HackObject>().isHacked)
+        if (Time.time >= nextEmitTime && hackEffect.isPlaying) // Vérifie si le cooldown est écoulé
         {
-            //fireSparkles.transform.rotation = Quaternion.Euler(windRotationSparkles.x, windRotationSparkles.y, windRotationSparkles.z);
-            fireSparkles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            fire2Sparkles.Clear();
-            fire2Sparkles.Play();
-        }
-        else
-        {
-            //fireSparkles.transform.rotation = Quaternion.Euler(initRotationSparkles.x, initRotationSparkles.y, initRotationSparkles.z);
-            fire2Sparkles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-            fireSparkles.Clear();
-            fireSparkles.Play();
+            if (wind.GetComponent<HackObject>().isHacked)
+            {
+                //fireSparkles.transform.rotation = Quaternion.Euler(windRotationSparkles.x, windRotationSparkles.y, windRotationSparkles.z);
+                fire2Sparkles.Emit(emitCount);
+                nextEmitTime = Time.time + emitCooldown;
+            }
+            else
+            {
+                //fireSparkles.transform.rotation = Quaternion.Euler(initRotationSparkles.x, initRotationSparkles.y, initRotationSparkles.z);
+                fireSparkles.Emit(emitCount);
+                nextEmitTime = Time.time + emitCooldown;
+            }
         }
     }
 

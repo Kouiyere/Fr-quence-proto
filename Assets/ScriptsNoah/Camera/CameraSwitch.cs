@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraSwitch : MonoBehaviour
 {
     private HackObject hackObject;
+    public SwitchEffect switchEffect;
     public Camera[] cameras;
     public GameObject[] cameraGO;
     private int currentCameraIndex;
@@ -75,6 +76,7 @@ public class CameraSwitch : MonoBehaviour
     {
         for (int i = 0; i < cameras.Length; i++)
         {
+            switchEffect.TriggerGlitch();
             cameras[i].gameObject.SetActive(i == index);
         }
     }

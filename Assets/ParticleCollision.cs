@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class ParticleCollision : MonoBehaviour
 {
+    public ParticleSystem fireParticles;
     public GameObject prefabFire;
     public GameObject firePaper;
     public bool isOnFire = false;
+
 
     private void Start()
     {
         firePaper.SetActive(false);
     }
+
     private void OnParticleCollision(GameObject particle)
     {
         Invoke(nameof(FirePaper), 1f);
@@ -32,11 +35,27 @@ public class ParticleCollision : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.GetComponent<HackDrone>())
+        {
+            if (other.gameObject.GetComponent<HackDrone>().fire)
+            {
+                FirePaper();
+            }
+        }
+    }
+
     private void FirePaper()
     {
         firePaper.SetActive(true);
         isOnFire = true;
-        Invoke(nameof(DestroyPaper), 30f);
+        Invoke(nameof(FireGrow), 15f);
+    }
+
+    private void FireGrow()
+    {
+        fireParticles.startSize = 6f;
     }
 
     private void DestroyPaper()
