@@ -17,7 +17,7 @@ public class Patrol : MonoBehaviour
     public RouteType routeType;
     private bool reverse = false;
 
-    private int waypointId;
+    public int waypointId;
 
     void Start()
     {
@@ -30,9 +30,13 @@ public class Patrol : MonoBehaviour
 
     public void Patroling()
     {
-        //Need to check if current destination is a waypoint
+        //Check if destination is on the patrol route
+        if (agent.destination != route.waypointArray[waypointId].position)
+        {
+            agent.SetDestination(route.waypointArray[waypointId].position);
+        }
 
-        if (agent.remainingDistance < .01f)
+        if (agent.remainingDistance < .05f)
         {
             if (routeType == RouteType.BackAndForth && reverse)
             {
