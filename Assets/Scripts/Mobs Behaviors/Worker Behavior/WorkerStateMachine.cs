@@ -69,12 +69,12 @@ public class WorkerStateMachine : MonoBehaviour
     #region Working
     private void EnterWorking()
     {
-
+        agent.speed = walkingSpeed;
     }
 
     private void UpdateWorking()
     {
-
+        working.Work();
     }
 
     private void ExitWorking()

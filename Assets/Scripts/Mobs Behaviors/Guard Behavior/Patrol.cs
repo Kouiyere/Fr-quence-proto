@@ -17,59 +17,58 @@ public class Patrol : MonoBehaviour
     public RouteType routeType;
     private bool reverse = false;
 
-    public int waypointId;
+    private int waypointID;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
 
-        int destinationID = GetClosestWaypointID(transform.position);
-        waypointId = destinationID;
-        agent.SetDestination(route.waypointArray[waypointId].position);
+        waypointID = GetClosestWaypointID(transform.position);
+        agent.SetDestination(route.waypointArray[waypointID].position);
     }
 
     public void Patroling()
     {
         //Check if destination is on the patrol route
-        if (agent.destination != route.waypointArray[waypointId].position)
+        if (agent.destination != route.waypointArray[waypointID].position)
         {
-            agent.SetDestination(route.waypointArray[waypointId].position);
+            agent.SetDestination(route.waypointArray[waypointID].position);
         }
 
         if (agent.remainingDistance < .05f)
         {
             if (routeType == RouteType.BackAndForth && reverse)
             {
-                waypointId--;
+                waypointID--;
             }
             else
             {
-                waypointId++;
+                waypointID++;
             }
 
             //Check when out of array
             if (routeType == RouteType.Loop)
             {
-                if (waypointId > route.waypointArray.Length - 1)
+                if (waypointID > route.waypointArray.Length - 1)
                 {
-                    waypointId = 0;
+                    waypointID = 0;
                 }
             }
             else if (routeType == RouteType.BackAndForth)
             {
-                if (!reverse && waypointId > route.waypointArray.Length - 1)
+                if (!reverse && waypointID > route.waypointArray.Length - 1)
                 {
                     reverse = true;
-                    waypointId -= 2;
+                    waypointID -= 2;
                 }
-                else if (reverse && waypointId < 0)
+                else if (reverse && waypointID < 0)
                 {
                     reverse = false;
-                    waypointId = 1;
+                    waypointID = 1;
                 }
             }
 
-            agent.SetDestination(route.waypointArray[waypointId].position);
+            agent.SetDestination(route.waypointArray[waypointID].position);
         }
     }
 
