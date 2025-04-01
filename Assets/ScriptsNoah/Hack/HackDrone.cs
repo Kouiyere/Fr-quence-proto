@@ -135,29 +135,29 @@ public class HackDrone : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
-        if (broken == false)
+        HackWaste waste = other.gameObject.GetComponent<HackWaste>();
+
+        if (waste != null && waste.AttractRobot)
         {
-            HackWaste waste = other.gameObject.GetComponent<HackWaste>();
-
-            if (waste != null && waste.AttractRobot)
+            waste.AttractRobot = false;
+            currentTarget = null;
+            if (broken != false)
             {
-                waste.AttractRobot = false;
-                currentTarget = null;
                 Destroy(waste.transform.gameObject);
-
-                if (waste.isOnFire == true)
-                {
-                    fire = true;
-                    FireDrone(fire);
-                    Invoke(nameof(ResestFire), 15f);
-
-                }
             }
 
-            if (other.gameObject.CompareTag("Trash"))
+            if (waste.isOnFire == true)
             {
-                trash = true;
+                fire = true;
+                FireDrone(fire);
+                Invoke(nameof(ResestFire), 15f);
+
             }
+        }
+
+        if (other.gameObject.CompareTag("Trash"))
+        {
+            trash = true;
         }
     }
 

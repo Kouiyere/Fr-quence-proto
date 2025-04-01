@@ -66,7 +66,7 @@ public class HackFireObject : MonoBehaviour
 
     private void SparklesRotation()
     {
-        if (Time.time >= nextEmitTime && hackEffect.isPlaying) // Vérifie si le cooldown est écoulé
+        if (Time.time >= nextEmitTime && hackEffect.isPlaying)
         {
             if (wind.GetComponent<HackObject>().isHacked)
             {

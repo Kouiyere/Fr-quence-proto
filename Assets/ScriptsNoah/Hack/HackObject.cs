@@ -10,6 +10,7 @@ public class HackObject : MonoBehaviour
     public Renderer objRenderer;
 
     public bool isHacked = false;
+    public bool attractAI = false;
     public bool autoDesactivation = true;
 
     public float resetTimer = 10f;

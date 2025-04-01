@@ -21,7 +21,7 @@ MonoBehaviour:
     value: 10
   aperture:
     overrideState: 1
-    value: 0.1
+    value: 3.6
   focalLength:
     overrideState: 1
     value: 300
@@ -49,13 +49,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 0.558
   size:
     overrideState: 1
     value: 3
   lumContrib:
-    overrideState: 0
-    value: 0.8
+    overrideState: 1
+    value: 0.24
 --- !u!114 &-5085219786895931186
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -108,8 +108,8 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   temperature:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: -29.2
   tint:
     overrideState: 0
     value: 0
@@ -1402,7 +1402,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 40.9
+    value: 29.7
   intensityX:
     overrideState: 0
     value: 1
