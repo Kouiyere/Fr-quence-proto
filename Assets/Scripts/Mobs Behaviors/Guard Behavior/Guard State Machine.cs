@@ -9,7 +9,10 @@ public class GuardStateMachine : MonoBehaviour
     private Patrol patrol;
     private GuardAlarm alarm;
     public HackFireAlarm fireAlarm;
+    private HackDetection hackDetection;
+    public JobList jobList;
     private float timer;
+    private CalledGuard called;
 
     public enum State
     {
@@ -30,6 +33,8 @@ public class GuardStateMachine : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         patrol = GetComponent<Patrol>();
         alarm = GetComponent<GuardAlarm>();
+        hackDetection = GetComponent<HackDetection>();
+        called = GetComponent<CalledGuard>();
     }
 
     void Update()
@@ -99,6 +104,21 @@ public class GuardStateMachine : MonoBehaviour
         {
             ChangeState(State.Alarm);
         }
+        else if (called.door != null)
+        {
+            ChangeState(State.Called);
+        }
+        else if (hackDetection.CanSeeHack() != null)
+        {
+            if (jobList.jobs.Contains(hackDetection.CanSeeHack()))
+            {
+                patrol.Patroling();
+            }
+            else
+            {
+                ChangeState(State.Alert);
+            }
+        }
         else
         {
             patrol.Patroling();
@@ -110,7 +130,6 @@ public class GuardStateMachine : MonoBehaviour
 
     }
     #endregion
-
 
     #region Frozen
     private void EnterFrozen()
@@ -165,12 +184,13 @@ public class GuardStateMachine : MonoBehaviour
     #region Alert
     private void EnterAlert()
     {
-
+        jobList.jobs.Add(hackDetection.CanSeeHack());
     }
 
     private void UpdateAlert()
     {
-
+        //Call animation
+        ChangeState(State.Patrol);
     }
 
     private void ExitAlert()
@@ -187,7 +207,14 @@ public class GuardStateMachine : MonoBehaviour
 
     private void UpdateCalled()
     {
-
+        if (called.door == null)
+        {
+            ChangeState(State.Patrol);
+        }
+        else
+        {
+            called.OnCall();           
+        }
     }
 
     private void ExitCalled()

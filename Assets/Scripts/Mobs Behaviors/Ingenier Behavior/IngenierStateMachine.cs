@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,6 +8,11 @@ public class IngenierStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     public HackFireAlarm fireAlarm;
+    private JobList jobList;
+    private CalledInge called;
+    public Transform waitPoint;
+    private Stuck stuck;
+    private GameObject blockingDoor;
 
     public enum State
     {
@@ -23,13 +29,14 @@ public class IngenierStateMachine : MonoBehaviour
     public float walkingSpeed = 3f;
     public float runningSpeed = 5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        jobList = GetComponent<JobList>();
+        called = GetComponent<CalledInge>();
+        stuck = GetComponent<Stuck>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Update State
@@ -72,6 +79,24 @@ public class IngenierStateMachine : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.CompareTag("Door"))
+        {
+            blockingDoor = collision.collider.gameObject;
+            ChangeState(State.Stuck);
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.gameObject.CompareTag("Door"))
+        {
+            blockingDoor = null;
+            ChangeState(State.Called);
+        }
+    }
+
     #region Waiting
     private void EnterWaiting()
     {
@@ -80,7 +105,10 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void UpdateWaiting()
     {
-
+        if (jobList.jobs.Count > 0)
+        {
+            ChangeState(State.Called);
+        }
     }
 
     private void ExitWaiting()
@@ -92,12 +120,23 @@ public class IngenierStateMachine : MonoBehaviour
     #region Called
     private void EnterCalled()
     {
-
+        agent.speed = walkingSpeed;
     }
 
     private void UpdateCalled()
     {
-
+        if (jobList.jobs.Count > 0)
+        {
+            if (called.activeJob == null)
+            {
+                called.activeJob = jobList.jobs[0];
+            }
+            called.Working();
+        }
+        else
+        {
+            ChangeState(State.JobDone);
+        }
     }
 
     private void ExitCalled()
@@ -148,7 +187,21 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void UpdateJobDone()
     {
-
+        if (jobList.jobs.Count > 0)
+        {
+            ChangeState(State.Called);
+        }
+        else
+        {
+            if (agent.remainingDistance <= 0.1f)
+            {
+                ChangeState(State.Waiting);
+            }
+            else
+            {
+                agent.SetDestination(waitPoint.position);                
+            }
+        }
     }
 
     private void ExitJobDone()
@@ -160,7 +213,8 @@ public class IngenierStateMachine : MonoBehaviour
     #region Stuck
     private void EnterStuck()
     {
-
+        agent.speed = 0;
+        stuck.CallGuard(blockingDoor);
     }
 
     private void UpdateStuck()
@@ -170,7 +224,7 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void ExitStuck()
     {
-
+        stuck.CancelCall();
     }
     #endregion
 }

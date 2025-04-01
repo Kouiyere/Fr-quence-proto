@@ -7,6 +7,7 @@ public class WorkerStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     public HackFireAlarm fireAlarm;
+    private Working working;
 
     public enum State
     {
@@ -25,6 +26,7 @@ public class WorkerStateMachine : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        working = GetComponent<Working>();
     }
 
     // Update is called once per frame
@@ -67,12 +69,12 @@ public class WorkerStateMachine : MonoBehaviour
     #region Working
     private void EnterWorking()
     {
-
+        agent.speed = walkingSpeed;
     }
 
     private void UpdateWorking()
     {
-
+        working.Work();
     }
 
     private void ExitWorking()
