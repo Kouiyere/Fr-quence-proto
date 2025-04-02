@@ -187,7 +187,7 @@ public class HackDrone : MonoBehaviour
 
     private void FireDrone(bool pFire)
     {
-        if(fire == true)
+        if(pFire == true)
         {
             broken = true;
             BrokenDrone();

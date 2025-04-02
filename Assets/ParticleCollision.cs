@@ -46,6 +46,7 @@ public class ParticleCollision : MonoBehaviour
         }
     }
 
+
     private void FirePaper()
     {
         firePaper.SetActive(true);
