@@ -19,9 +19,9 @@ public class IngenierStateMachine : MonoBehaviour
         Waiting,
         Called,
         Alarm,
-        FireOver,
         JobDone,
-        Stuck
+        Stuck,
+        FireControl
     }
 
     public State currentState;
@@ -45,9 +45,9 @@ public class IngenierStateMachine : MonoBehaviour
             case State.Waiting: UpdateWaiting(); break;
             case State.Called: UpdateCalled(); break;
             case State.Alarm: UpdateAlarm(); break;
-            case State.FireOver: UpdateFireOver(); break;
             case State.JobDone: UpdateJobDone(); break;
             case State.Stuck: UpdateStuck(); break;
+            case State.FireControl: UpdateFireControl(); break;
         }
     }
 
@@ -59,9 +59,9 @@ public class IngenierStateMachine : MonoBehaviour
             case State.Waiting: ExitWaiting(); break;
             case State.Called: ExitCalled(); break;
             case State.Alarm: ExitAlarm(); break;
-            case State.FireOver: ExitFireOver(); break;
             case State.JobDone: ExitJobDone(); break;
             case State.Stuck: ExitStuck(); break;
+            case State.FireControl: ExitFireControl(); break;
         }
 
         //Change current state to new state
@@ -73,9 +73,9 @@ public class IngenierStateMachine : MonoBehaviour
             case State.Waiting: EnterWaiting(); break;
             case State.Called: EnterCalled(); break;
             case State.Alarm: EnterAlarm(); break;
-            case State.FireOver: EnterFireOver(); break;
             case State.JobDone: EnterJobDone(); break;
             case State.Stuck: EnterStuck(); break;
+            case State.FireControl: EnterFireControl(); break;
         }
     }
 
@@ -162,27 +162,10 @@ public class IngenierStateMachine : MonoBehaviour
     }
     #endregion
 
-    #region FireOver
-    private void EnterFireOver()
-    {
-
-    }
-
-    private void UpdateFireOver()
-    {
-
-    }
-
-    private void ExitFireOver()
-    {
-
-    }
-    #endregion
-
     #region JobDone
     private void EnterJobDone()
     {
-
+        agent.SetDestination(waitPoint.position);                
     }
 
     private void UpdateJobDone()
@@ -191,16 +174,9 @@ public class IngenierStateMachine : MonoBehaviour
         {
             ChangeState(State.Called);
         }
-        else
+        else if (agent.remainingDistance <= 0.1f)
         {
-            if (agent.remainingDistance <= 0.1f)
-            {
-                ChangeState(State.Waiting);
-            }
-            else
-            {
-                agent.SetDestination(waitPoint.position);                
-            }
+            ChangeState(State.Waiting);
         }
     }
 
@@ -225,6 +201,24 @@ public class IngenierStateMachine : MonoBehaviour
     private void ExitStuck()
     {
         stuck.CancelCall();
+    }
+    #endregion
+
+    #region FireControl
+
+    private void EnterFireControl()
+    {
+
+    }
+
+    private void UpdateFireControl()
+    {
+
+    }
+
+    private void ExitFireControl()
+    {
+
     }
     #endregion
 }
