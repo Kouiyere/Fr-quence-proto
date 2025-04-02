@@ -141,16 +141,20 @@ public class HackDrone : MonoBehaviour
         {
             waste.AttractRobot = false;
             currentTarget = null;
-            if (broken != false)
+            if(fire == false)
             {
                 Destroy(waste.transform.gameObject);
+            }
+            else
+            {
+                waste.isOnFire = true;
             }
 
             if (waste.isOnFire == true)
             {
                 fire = true;
                 FireDrone(fire);
-                Invoke(nameof(ResestFire), 15f);
+                //Invoke(nameof(ResestFire), 15f);
 
             }
         }
