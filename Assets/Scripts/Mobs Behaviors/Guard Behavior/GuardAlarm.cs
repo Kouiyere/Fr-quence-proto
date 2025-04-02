@@ -14,8 +14,8 @@ public class GuardAlarm : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    public void TurnOfAlarm(Transform alarmPos)
+    public void FindFire()
     {
-        agent.destination = alarmPos.position;
+        //look for fire
     }
 }

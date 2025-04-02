@@ -7,7 +7,7 @@ public class GuardStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     private Patrol patrol;
-    private GuardAlarm alarm;
+    private GuardAlarm guardAlarm;
     public HackFireAlarm fireAlarm;
     private HackDetection hackDetection;
     public JobList jobList;
@@ -32,7 +32,7 @@ public class GuardStateMachine : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         patrol = GetComponent<Patrol>();
-        alarm = GetComponent<GuardAlarm>();
+        guardAlarm = GetComponent<GuardAlarm>();
         hackDetection = GetComponent<HackDetection>();
         called = GetComponent<CalledGuard>();
     }
@@ -163,13 +163,13 @@ public class GuardStateMachine : MonoBehaviour
     {
         if (fireAlarm != null)
         {
-            if (fireAlarm.alarmOn)
+            if (!fireAlarm.alarmOn)
             {
-                alarm.TurnOfAlarm(fireAlarm.gameObject.transform);
+                ChangeState(State.Patrol);
             }
             else
             {
-                ChangeState(State.Patrol);
+                guardAlarm.FindFire();
             }
         }
     }
