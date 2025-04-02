@@ -169,7 +169,7 @@ public class GuardStateMachine : MonoBehaviour
             }
             else
             {
-                guardAlarm.FindFire();
+                guardAlarm.SearchFire();
             }
         }
     }

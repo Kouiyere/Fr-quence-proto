@@ -14,8 +14,12 @@ public class GuardAlarm : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
-    public void FindFire()
+    public void SearchFire()
     {
-        //look for fire
+        if (agent.remainingDistance < 0.05f)
+        {
+            Vector3 dest = transform.position + Random.insideUnitSphere * 10;
+            agent.SetDestination(dest);           
+        }
     }
 }
