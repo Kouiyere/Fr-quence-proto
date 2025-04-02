@@ -665,7 +665,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 56.62
+    angle: 56.91
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 0
@@ -747,11 +747,11 @@ ParticleSystem:
     m_TextureColorAffectsParticles: 1
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
-    randomDirectionAmount: 0
+    randomDirectionAmount: 1
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.08
+      value: 0.02
       mode: 0
       spread: 0
       speed:
@@ -4876,6 +4876,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50066e6891ff17042be7f6f57841d6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireAlarm: {fileID: 0}
+  waterSprinkler: {fileID: 3133252687494284880}
+  waterOn: 0
 --- !u!1 &6110692320812557798
 GameObject:
   m_ObjectHideFlags: 0

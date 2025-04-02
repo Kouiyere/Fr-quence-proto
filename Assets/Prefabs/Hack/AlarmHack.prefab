@@ -136,7 +136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3713828193497487200}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.387824, y: -2.573289, z: 3.581931}
   m_LocalScale: {x: 0.41664, y: 0.41664, z: 0.41664}
   m_ConstrainProportionsScale: 0
@@ -228,7 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireAlarm: {fileID: 2422973325445040094}
-  fireObjects: []
+  fireObjects:
+  - {fileID: 0}
   fireAlarmActivated: {fileID: 2100000, guid: 33a8c3ca0ce7f8448b879f12c10b0a96, type: 2}
   fireAlarmDefault: {fileID: 2100000, guid: 16695392f058aad4b8da0d50a4e06d19, type: 2}
   alarmOn: 0
@@ -251,7 +252,8 @@ MonoBehaviour:
   activatedMaterial: {fileID: 2100000, guid: 7373d4a6d6396e2458b2a4d403e30d22, type: 2}
   objRenderer: {fileID: 0}
   isHacked: 0
-  autoDesactivation: 1
+  attractAI: 0
+  autoDesactivation: 0
   resetTimer: 10
   timer: 0
 --- !u!1 &5609453504043306099
