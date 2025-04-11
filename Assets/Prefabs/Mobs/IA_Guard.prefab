@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c9f739d157623084593ea613722a7391, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -102,7 +102,6 @@ GameObject:
   - component: {fileID: 2509383740486809626}
   - component: {fileID: 3513325246014928909}
   - component: {fileID: 4279924422034274561}
-  - component: {fileID: 8858806720563288152}
   m_Layer: 0
   m_Name: IA_Guard
   m_TagString: Enemy
@@ -155,7 +154,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 16695392f058aad4b8da0d50a4e06d19, type: 2}
+  - {fileID: 2100000, guid: d60ecbed6b84d7449bf1795af57a2000, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -291,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   route: {fileID: 0}
-  routeType: 0
+  routeType: 1
 --- !u!114 &3513325246014928909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,21 +318,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 0}
---- !u!114 &8858806720563288152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6023998693942270157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d0369426c7c534a804261189976d04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fire: {fileID: 6252664286001770182}
-  AttractRobot: 0
-  isOnFire: 0
 --- !u!1 &6252664286001770182
 GameObject:
   m_ObjectHideFlags: 0
