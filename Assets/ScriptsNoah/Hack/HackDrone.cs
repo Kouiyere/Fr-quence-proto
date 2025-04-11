@@ -135,9 +135,10 @@ public class HackDrone : MonoBehaviour
     }
     private void OnCollisionEnter(Collision other)
     {
+        FireScriptNew fireScript = other.gameObject.GetComponent<FireScriptNew>();
         HackWaste waste = other.gameObject.GetComponent<HackWaste>();
 
-        if (waste != null && waste.AttractRobot)
+        if (waste != null && fireScript != null && waste.AttractRobot)
         {
             waste.AttractRobot = false;
             currentTarget = null;
@@ -147,10 +148,10 @@ public class HackDrone : MonoBehaviour
             }
             else
             {
-                waste.isOnFire = true;
+                fireScript.isOnFire = true;
             }
 
-            if (waste.isOnFire == true)
+            if (fireScript.isOnFire == true)
             {
                 fire = true;
                 FireDrone(fire);

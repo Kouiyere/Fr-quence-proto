@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireNPC : MonoBehaviour
 {
+    /*
     public GameObject fire;
     public bool isOnFire;
 
@@ -25,4 +26,5 @@ public class FireNPC : MonoBehaviour
             }
         }
     }
+    */
 }
