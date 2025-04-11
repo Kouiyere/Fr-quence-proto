@@ -46,10 +46,17 @@ public class FireScriptNew : MonoBehaviour
         OnCollisionEnter(collision);
     }
 
-    private void SetOnFire()
+    public void SetOnFire()
     {
         isOnFire = true;
         if (fire != null)
             fire.SetActive(true);
+    }
+
+    public void ResetFire()
+    {
+        isOnFire = false;
+        if (fire != null)
+            fire.SetActive(false);
     }
 }

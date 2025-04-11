@@ -16,6 +16,9 @@ public class HackObject : MonoBehaviour
     public float resetTimer = 10f;
     public float timer = 0;
 
+    public string playSoundName;
+
+
     public virtual void Start()
     {
         objRenderer = GetComponent<Renderer>();
@@ -26,15 +29,12 @@ public class HackObject : MonoBehaviour
         }
     }
 
-    public virtual void Update()
-    {
-    }
-
     #region Activate
     public void Activate()
     {
         isHacked = true;
         objRenderer.material = activatedMaterial;
+
         if(autoDesactivation)
         {
             Invoke(nameof(Timer), 1);

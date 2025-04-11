@@ -1,6 +1,7 @@
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class AudioManager : MonoBehaviour
     }
 
     public SoundEvent[] soundEvents;
+
+    private Dictionary<string, EventInstance> loopingSounds = new Dictionary<string, EventInstance>();
 
     private void Awake()
     {
@@ -39,11 +42,20 @@ public class AudioManager : MonoBehaviour
             }
         }
 
-        Debug.LogWarning("Sound " + soundName + " not found in FMODSoundManager");
+        Debug.LogWarning("Sound " + soundName + " not found in AudioManager");
     }
 
-    public void PlaySound(EventReference eventRef, Vector3 position = default)
+    public void StopLoop(string soundName)
     {
-        RuntimeManager.PlayOneShot(eventRef, position);
+        if (loopingSounds.TryGetValue(soundName, out EventInstance instance))
+        {
+            instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            instance.release();
+            loopingSounds.Remove(soundName);
+        }
+        else
+        {
+            Debug.LogWarning("Trying to stop loop that is not playing: " + soundName);
+        }
     }
 }
