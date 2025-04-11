@@ -5,11 +5,13 @@ using UnityEngine;
 public class FireNPC : MonoBehaviour
 {
     public GameObject fire;
+    public bool isOnFire;
 
 
     private void Start()
     {
         fire.SetActive(false);
+        isOnFire = false;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -19,6 +21,7 @@ public class FireNPC : MonoBehaviour
             if (collision.gameObject.GetComponent<HackWaste>().isOnFire == true)
             {
                 fire.SetActive(true);
+                isOnFire = true;
             }
         }
     }
