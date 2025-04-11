@@ -9,9 +9,12 @@ public class CameraMovement : MonoBehaviour
     private float currentYRotation = 0f;
     private float initialYRotation;
 
+    public bool playeSound = false;
+
     void Start()
     {
         initialYRotation = transform.eulerAngles.y;
+        //AudioManager.Instance.PlaySound("CameraMovement", transform.position);
     }
 
     void Update()
@@ -26,9 +29,8 @@ public class CameraMovement : MonoBehaviour
         {
             currentYRotation -= rotationAmount;
         }
-
         currentYRotation = Mathf.Clamp(currentYRotation, -rotationLimit, rotationLimit);
 
-        transform.rotation = Quaternion.Euler(10, initialYRotation + currentYRotation, 0);
+        transform.rotation = Quaternion.Euler(25, initialYRotation + currentYRotation, 0);
     }
 }

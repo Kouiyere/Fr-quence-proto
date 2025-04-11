@@ -32,6 +32,8 @@ public class HackFireAlarm : MonoBehaviour
             {
                 needWater = true;
                 alarmOn = true;
+                //AudioManager.Instance.PlaySound("CameraMovement", transform.position);
+                //if(AudioManager.
             }
             else
             {

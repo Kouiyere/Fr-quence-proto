@@ -76,6 +76,8 @@ public class HackObject : MonoBehaviour
         {
             Activate();
         }
+
+        AudioManager.Instance.PlaySound("HackObject", transform.position);
     }
 
     private void OnMouseOver()

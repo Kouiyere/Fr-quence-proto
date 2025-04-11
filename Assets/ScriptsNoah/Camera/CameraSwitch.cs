@@ -65,6 +65,7 @@ public class CameraSwitch : MonoBehaviour
 
     void SwitchToCamera(int index)
     {
+        AudioManager.Instance.PlaySound("CameraSwitch", transform.position);
         if (index != currentCameraIndex)
         {
             currentCameraIndex = index;

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 170234639503787092}
   - component: {fileID: 8653241860017951281}
   - component: {fileID: -8593223016671166018}
+  - component: {fileID: 3315341657897507823}
   m_Layer: 6
   m_Name: Paper
   m_TagString: Untagged
@@ -136,7 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttractRobot: 1
-  isOnFire: 0
 --- !u!54 &8653241860017951281
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2661900096795164907}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9190d6f5ce4fc6b44b9987e038f4f82d, type: 3}
   m_Name: 
@@ -179,6 +179,20 @@ MonoBehaviour:
   fireParticles: {fileID: 8204696247536257030}
   prefabFire: {fileID: 2661900096795164907, guid: 5da1d667cec26804d98d299d0cf40fca, type: 3}
   firePaper: {fileID: 4743374750947797392}
+  isOnFire: 0
+--- !u!114 &3315341657897507823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661900096795164907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0369426c7c534a804261189976d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 4743374750947797392}
   isOnFire: 0
 --- !u!1 &4743374750947797392
 GameObject:
