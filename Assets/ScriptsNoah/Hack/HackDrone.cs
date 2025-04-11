@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class HackDrone : MonoBehaviour
 {
     private HackObject hackObject;
+    private FireScriptNew fireScriptNew;
     public float movementSpeed = 1f;
     private NavMeshAgent agent;
     private HackWaste currentTarget;
@@ -20,6 +21,7 @@ public class HackDrone : MonoBehaviour
 
     private void Start()
     {
+        fireScriptNew = GetComponent<FireScriptNew>();
         hackObject = GetComponent<HackObject>();
         agent = GetComponent<NavMeshAgent>();
         agent.speed = movementSpeed;
@@ -142,7 +144,7 @@ public class HackDrone : MonoBehaviour
         {
             waste.AttractRobot = false;
             currentTarget = null;
-            if(fire == false)
+            if(fireScriptNew.isOnFire == false)
             {
                 Destroy(waste.transform.gameObject);
             }

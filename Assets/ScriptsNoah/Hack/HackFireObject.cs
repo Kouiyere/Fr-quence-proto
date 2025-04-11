@@ -5,9 +5,9 @@ using UnityEngine;
 public class HackFireObject : MonoBehaviour
 {
     private HackObject hackObject;
+    public FireScriptNew fireScriptNew;
     public Sprinkler sprinkler;
     public HackWind wind;
-    public ParticleSystem hackEffect;
     public ParticleSystem fireSparkles;
     public ParticleSystem fire2Sparkles;
 
@@ -16,32 +16,33 @@ public class HackFireObject : MonoBehaviour
     public int emitCount = 10;
     public float emitCooldown = 0.5f;
     private float nextEmitTime;
+    public bool fire = false;
 
-
-    public bool isOnfire = false;
     private float resetTimer = 2;
     private float initializeTimer = 3;
 
     private void Start()
     {
+        //fireScriptNew = GetComponent<FireScriptNew>();
         initRotationSparkles = new Vector3(-90, 0, 90);
         windRotationSparkles = initRotationSparkles + new Vector3(-90,0,0);
         hackObject = GetComponent<HackObject>();
 
-        if (hackEffect != null)
+        if (fireScriptNew != null)
         {
-            hackEffect.Stop();
+            fireScriptNew.ResetFire();
         }
     }
 
     private void Update()
     {
-        if (isOnfire && sprinkler.waterOn == false)
+        if (fireScriptNew.isOnFire && sprinkler.waterOn == false)
         {
             initializeTimer -= Time.deltaTime;
-            if (initializeTimer <= 0 && !hackEffect.isPlaying)
+            if (initializeTimer <= 0 && fireScriptNew.isOnFire)
             {
-                hackEffect.Play();
+                fire = true;
+                fireScriptNew.SetOnFire();
             }
         }
         else
@@ -49,6 +50,7 @@ public class HackFireObject : MonoBehaviour
             resetTimer -= Time.deltaTime;
             if (resetTimer <= 0)
             {
+                fire = false;
                 FireDesactivate();
             }
         }
@@ -58,15 +60,14 @@ public class HackFireObject : MonoBehaviour
     private void FireDesactivate()
     {
         hackObject.Desactivate();
-        hackEffect.Stop();
-        isOnfire = false;
+        fireScriptNew.ResetFire();
         resetTimer = 2f;
         initializeTimer = 5f;
     }
 
     private void SparklesRotation()
     {
-        if (Time.time >= nextEmitTime && hackEffect.isPlaying)
+        if (Time.time >= nextEmitTime && fireScriptNew.isOnFire)
         {
             if (wind.GetComponent<HackObject>().isHacked)
             {

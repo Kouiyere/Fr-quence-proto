@@ -11,6 +11,5 @@ public class Paper : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.AddForce(Vector3.right * force + new Vector3(Random.Range(-300, 100), 0, Random.Range(-200, 200)));
-        AudioManager.Instance.PlaySound("CameraMovement", transform.position);
     }
 }

@@ -28,7 +28,7 @@ public class HackFireAlarm : MonoBehaviour
     {
         foreach(HackFireObject fireObject in fireObjects)
         {
-            if (fireObject.isOnfire==true)
+            if (fireObject.fire == true)
             {
                 needWater = true;
                 alarmOn = true;
