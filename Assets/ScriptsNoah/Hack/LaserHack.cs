@@ -74,7 +74,7 @@ public class LaserHack : MonoBehaviour
     {
         if (hitCollider.CompareTag("FireObject"))
         {
-            hitCollider.gameObject.GetComponent<HackFireObject>().fire = true;
+            hitCollider.gameObject.GetComponent<HackFireObject>().fireScriptNew.SetOnFire();
         }
     }
 }
