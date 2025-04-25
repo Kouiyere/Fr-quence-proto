@@ -5,7 +5,7 @@ using UnityEngine;
 public class HackFireObject : MonoBehaviour
 {
     private HackObject hackObject;
-    public FireScriptNew fireScriptNew;
+    private FireScriptNew fireScriptNew;
     public Sprinkler sprinkler;
     public HackWind wind;
     public ParticleSystem fireSparkles;
@@ -27,6 +27,7 @@ public class HackFireObject : MonoBehaviour
         initRotationSparkles = new Vector3(-90, 0, 90);
         windRotationSparkles = initRotationSparkles + new Vector3(-90,0,0);
         hackObject = GetComponent<HackObject>();
+        fireScriptNew = GetComponent<FireScriptNew>();
 
         if (fireScriptNew != null)
         {

@@ -2153,6 +2153,10 @@ PrefabInstance:
       propertyPath: sprinkler
       value: 
       objectReference: {fileID: 1617646464}
+    - target: {fileID: 753519752281100262, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
+      propertyPath: fireScriptNew
+      value: 
+      objectReference: {fileID: 1733567601}
     - target: {fileID: 1473140868326448739, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2230,6 +2234,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
+--- !u!114 &1733567601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1668481865452394780, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
+  m_PrefabInstance: {fileID: 1733567600}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0369426c7c534a804261189976d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1761486980
 GameObject:
   m_ObjectHideFlags: 0

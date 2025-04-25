@@ -62,6 +62,14 @@ public class HackDetection : MonoBehaviour
         return objectSeen;
     }
 
+    public GameObject SeeFire()
+    {
+        GameObject fire = null;
+
+
+        return fire;
+    }
+
     private void DebugFov(float angle, float distance, Color color)
     {
         Vector3 extentLeft = Quaternion.AngleAxis(angle, Vector3.up) * transform.forward;
