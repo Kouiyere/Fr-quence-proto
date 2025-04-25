@@ -4979,6 +4979,7 @@ GameObject:
   - component: {fileID: 3328606805928442628}
   - component: {fileID: 6492208514096928797}
   - component: {fileID: 753519752281100262}
+  - component: {fileID: 1668481865452394780}
   m_Layer: 0
   m_Name: Computer
   m_TagString: FireObject
@@ -5110,6 +5111,7 @@ MonoBehaviour:
   autoDesactivation: 0
   resetTimer: 10
   timer: 0
+  playSoundName: 
 --- !u!114 &753519752281100262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5122,14 +5124,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dfbdaab184af304fa8c1ab454728af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireScriptNew: {fileID: 0}
   sprinkler: {fileID: 0}
   wind: {fileID: 0}
-  hackEffect: {fileID: 3015333337805630031}
   fireSparkles: {fileID: 8314695723248115536}
   fire2Sparkles: {fileID: 3734917338897325281}
   emitCount: 4
   emitCooldown: 0.5
-  isOnfire: 0
+  fire: 0
+--- !u!114 &1668481865452394780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952498447317309514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0369426c7c534a804261189976d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 8225602682025572373}
+  isOnFire: 0
 --- !u!1 &6430633109827630486
 GameObject:
   m_ObjectHideFlags: 0

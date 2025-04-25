@@ -9,6 +9,7 @@ public class Paper : MonoBehaviour
 
     public void Start()
     {
+        AudioManager.Instance.PlaySound("PrintPaper", transform.position);
         rb = GetComponent<Rigidbody>();
         rb.AddForce(Vector3.right * force + new Vector3(Random.Range(-300, 100), 0, Random.Range(-200, 200)));
     }

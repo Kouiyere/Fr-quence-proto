@@ -11,6 +11,7 @@ TagManager:
   - FireObject
   - Drone
   - Door
+  - Water
   layers:
   - Default
   - TransparentFX

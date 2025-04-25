@@ -34,8 +34,12 @@ public class HackObject : MonoBehaviour
     {
         isHacked = true;
         objRenderer.material = activatedMaterial;
+        if (playSoundName != null)
+        {
+            AudioManager.Instance.PlayLoopingSound(playSoundName);
+        }
 
-        if(autoDesactivation)
+        if (autoDesactivation)
         {
             Invoke(nameof(Timer), 1);
         }
@@ -48,6 +52,11 @@ public class HackObject : MonoBehaviour
         timer = 0;
         isHacked = false;
         objRenderer.material = defaultMaterial;
+
+        if (playSoundName != null)
+        {
+            AudioManager.Instance.StopLoopingSound(playSoundName);
+        }
     }
     #endregion
 

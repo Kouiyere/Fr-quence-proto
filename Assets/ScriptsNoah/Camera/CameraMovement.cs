@@ -24,10 +24,22 @@ public class CameraMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             currentYRotation += rotationAmount;
+            if (!AudioManager.Instance.IsLoopingSoundPlaying("CameraMovement"))
+            {
+                AudioManager.Instance.PlayLoopingSound("CameraMovement", transform.position);
+            }
         }
-        if (Input.GetKey(KeyCode.Q))
+        else if (Input.GetKey(KeyCode.Q))
         {
             currentYRotation -= rotationAmount;
+            if (!AudioManager.Instance.IsLoopingSoundPlaying("CameraMovement"))
+            {
+                AudioManager.Instance.PlayLoopingSound("CameraMovement", transform.position);
+            }
+        }
+        else
+        {
+            AudioManager.Instance.StopLoopingSound("CameraMovement");
         }
         currentYRotation = Mathf.Clamp(currentYRotation, -rotationLimit, rotationLimit);
 
