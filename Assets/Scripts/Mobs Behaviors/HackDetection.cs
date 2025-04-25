@@ -8,10 +8,12 @@ public class HackDetection : MonoBehaviour
     public float distance = 5f;
     private Color color = Color.white;
     private Collider[] hacks;
+    public FireScriptNew[] fireScripts;
 
     void Update()
     {
         DebugFov(fov, distance, color);
+        SeeFire();
     }
 
     public GameObject CanSeeHack()
@@ -65,7 +67,7 @@ public class HackDetection : MonoBehaviour
     public GameObject SeeFire()
     {
         GameObject fire = null;
-
+        fireScripts = FindObjectsByType<FireScriptNew>(FindObjectsSortMode.None);
 
         return fire;
     }
