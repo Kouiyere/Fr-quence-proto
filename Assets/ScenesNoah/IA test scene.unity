@@ -2344,7 +2344,7 @@ Transform:
   m_GameObject: {fileID: 1761486980}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: -4.7637}
+  m_LocalPosition: {x: -3, y: 0, z: -6.28}
   m_LocalScale: {x: 6, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2730,12 +2730,97 @@ Transform:
   m_GameObject: {fileID: 2033140183}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -6, y: 0, z: -1.7637}
-  m_LocalScale: {x: 6, y: 4, z: 1}
+  m_LocalPosition: {x: -6, y: 0, z: -2.5475}
+  m_LocalScale: {x: 7.5677996, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 998972195}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &2077440458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2077440460}
+  - component: {fileID: 2077440459}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2077440459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077440458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a6300c3abb3bd4289bd289e63c6b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvents:
+  - name: HackObject
+    eventRef:
+      Guid:
+        Data1: 1264323566
+        Data2: 1289138913
+        Data3: -1476049738
+        Data4: -1930908949
+      Path: event:/Hack/HackObject
+  - name: CameraSwitch
+    eventRef:
+      Guid:
+        Data1: 2015526747
+        Data2: 1169301610
+        Data3: 1531543457
+        Data4: 1800126423
+      Path: event:/Hack/CameraSwitch
+  - name: CameraMovement
+    eventRef:
+      Guid:
+        Data1: 1306377301
+        Data2: 1279756620
+        Data3: 1989820583
+        Data4: -816751959
+      Path: event:/Hack/CameraRotation
+  - name: Alarm
+    eventRef:
+      Guid:
+        Data1: 1306377301
+        Data2: 1279756620
+        Data3: 1989820583
+        Data4: -816751959
+      Path: event:/Hack/CameraRotation
+  - name: PrintPaper
+    eventRef:
+      Guid:
+        Data1: -781868760
+        Data2: 1198747792
+        Data3: 758482316
+        Data4: 1270361478
+      Path: event:/PrintPaper
+--- !u!4 &2077440460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077440458}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.044054, y: -4.474115, z: 12.46838}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2115772654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2908,10 +2993,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6252664286001770182, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6351648756451774934, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
       propertyPath: jobList
       value: 
@@ -3024,27 +3105,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030313100919580830, guid: 8176bafb0814368458f119253ad3c932, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1587992
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 1030313100919580830, guid: 8176bafb0814368458f119253ad3c932, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1030313100919580830, guid: 8176bafb0814368458f119253ad3c932, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1030313100919580830, guid: 8176bafb0814368458f119253ad3c932, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1030313100919580830, guid: 8176bafb0814368458f119253ad3c932, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 1030313100919580830, guid: 8176bafb0814368458f119253ad3c932, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1030313100919580830, guid: 8176bafb0814368458f119253ad3c932, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3052,7 +3133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030313100919580830, guid: 8176bafb0814368458f119253ad3c932, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 1030313100919580830, guid: 8176bafb0814368458f119253ad3c932, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3156,3 +3237,4 @@ SceneRoots:
   - {fileID: 1019669401}
   - {fileID: 1617646463}
   - {fileID: 6562183019524740499}
+  - {fileID: 2077440460}

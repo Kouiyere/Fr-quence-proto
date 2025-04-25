@@ -9,7 +9,7 @@ public class GuardStateMachine : MonoBehaviour
     private Patrol patrol;
     private GuardAlarm guardAlarm;
     public HackFireAlarm fireAlarm;
-    private HackDetection hackDetection;
+    private IADetection hackDetection;
     public JobList jobList;
     private float timer;
     private CalledGuard called;
@@ -34,7 +34,7 @@ public class GuardStateMachine : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         patrol = GetComponent<Patrol>();
         guardAlarm = GetComponent<GuardAlarm>();
-        hackDetection = GetComponent<HackDetection>();
+        hackDetection = GetComponent<IADetection>();
         called = GetComponent<CalledGuard>();
     }
 
