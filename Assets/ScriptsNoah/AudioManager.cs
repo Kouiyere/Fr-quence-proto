@@ -20,7 +20,6 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -31,6 +30,7 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    // 🔊 Joue un son one-shot (pas contrôlable)
     public void PlaySound(string soundName, Vector3 position = default)
     {
         foreach (var s in soundEvents)
@@ -45,7 +45,32 @@ public class AudioManager : MonoBehaviour
         Debug.LogWarning("Sound " + soundName + " not found in AudioManager");
     }
 
-    public void StopLoop(string soundName)
+    public void PlayLoopingSound(string soundName, Vector3 position = default)
+    {
+        if (loopingSounds.ContainsKey(soundName))
+        {
+            Debug.LogWarning($"Sound '{soundName}' is already playing.");
+            return;
+        }
+
+        foreach (var s in soundEvents)
+        {
+            if (s.name == soundName)
+            {
+                EventInstance instance = RuntimeManager.CreateInstance(s.eventRef);
+                instance.set3DAttributes(RuntimeUtils.To3DAttributes(position));
+                instance.start();
+
+                loopingSounds.Add(soundName, instance);
+                return;
+            }
+        }
+
+        Debug.LogWarning("Sound " + soundName + " not found in AudioManager");
+    }
+
+    // ⏹️ Coupe le son joué via PlayLoopingSound
+    public void StopLoopingSound(string soundName)
     {
         if (loopingSounds.TryGetValue(soundName, out EventInstance instance))
         {
@@ -55,7 +80,12 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Trying to stop loop that is not playing: " + soundName);
+            Debug.LogWarning($"Looping sound '{soundName}' not found or already stopped.");
         }
+    }
+
+    public bool IsLoopingSoundPlaying(string soundName)
+    {
+        return loopingSounds.ContainsKey(soundName);
     }
 }

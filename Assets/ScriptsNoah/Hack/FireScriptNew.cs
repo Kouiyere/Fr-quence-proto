@@ -24,9 +24,17 @@ public class FireScriptNew : MonoBehaviour
     // Quand touché par des particules (ex: flammes)
     private void OnParticleCollision(GameObject other)
     {
-        if (!isOnFire)
+        if (other.CompareTag("Water"))
         {
-            SetOnFire();
+            Debug.Log($"{gameObject.name} touché par particules d'eau -> feu éteint");
+            ResetFire();
+        }
+        else
+        {
+            if (!isOnFire)
+            {
+                SetOnFire();
+            }
         }
     }
 
