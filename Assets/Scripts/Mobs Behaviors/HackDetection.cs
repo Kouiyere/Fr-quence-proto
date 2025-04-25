@@ -11,7 +11,6 @@ public class HackDetection : MonoBehaviour
 
     void Update()
     {
-        CanSeeHack();
         DebugFov(fov, distance, color);
     }
 
