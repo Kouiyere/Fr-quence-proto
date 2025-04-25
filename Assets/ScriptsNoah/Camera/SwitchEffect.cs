@@ -23,7 +23,6 @@ public class SwitchEffect : MonoBehaviour
 
     private IEnumerator GlitchRoutine()
     {
-        print("hello");
         isGlitching = true;
         postProcessVolume.weight = 1f; 
         yield return new WaitForSeconds(effectDuration);

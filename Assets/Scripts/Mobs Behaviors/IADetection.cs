@@ -13,7 +13,6 @@ public class IADetection : MonoBehaviour
     void Update()
     {
         DebugFov(fov, distance, color);
-        SeeFire();
     }
 
     public GameObject CanSeeHack()
