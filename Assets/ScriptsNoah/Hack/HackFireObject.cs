@@ -5,7 +5,8 @@ using UnityEngine;
 public class HackFireObject : MonoBehaviour
 {
     private HackObject hackObject;
-    private FireScriptNew fireScriptNew;
+    [HideInInspector]
+    public FireScriptNew fireScriptNew;
     public Sprinkler sprinkler;
     public HackWind wind;
     public ParticleSystem fireSparkles;
