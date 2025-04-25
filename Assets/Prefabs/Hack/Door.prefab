@@ -29,6 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 668368253385542934}
   - {fileID: 7173412885393618057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,7 +48,7 @@ GameObject:
   - component: {fileID: 4909983384334289973}
   - component: {fileID: 1274508223110850635}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: DoorActivation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +67,7 @@ Transform:
   m_LocalScale: {x: 0.58752, y: 0.58752, z: 1.0951355}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7173412885393618057}
+  m_Father: {fileID: 1030313100919580830}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5474256675978829580
 MeshFilter:
@@ -238,40 +239,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4d43286ded4a27040ace87a777a3a173, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 668368253385542934}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -5568371526223589888, guid: 4d43286ded4a27040ace87a777a3a173, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3977016111319376034}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d43286ded4a27040ace87a777a3a173, type: 3}
 --- !u!1 &2554642153982849141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5148817236446094103, guid: 4d43286ded4a27040ace87a777a3a173, type: 3}
   m_PrefabInstance: {fileID: 7207919386662130530}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6250582760146001250 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5568371526223589888, guid: 4d43286ded4a27040ace87a777a3a173, type: 3}
-  m_PrefabInstance: {fileID: 7207919386662130530}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3977016111319376034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6250582760146001250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78c6e52fa292a3543b0e4356a60dff85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openValue: 10
-  door1: {fileID: 8824582055333236248}
-  door2: {fileID: 2554642153982849141}
 --- !u!4 &7173412885393618057 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4d43286ded4a27040ace87a777a3a173, type: 3}

@@ -17,10 +17,10 @@ public class HackDoor : MonoBehaviour
     private void Start()
     {
         hackObject = GetComponent<HackObject>();
-        closedXPos = door1.transform.position.x;
+        closedXPos = door1.transform.localPosition.x;
         openXPos = closedXPos - openValue;
 
-        closedXPos2 = door2.transform.position.x;
+        closedXPos2 = door2.transform.localPosition.x;
         openXPos2 = closedXPos2 + openValue;
     }
 
@@ -39,7 +39,7 @@ public class HackDoor : MonoBehaviour
             targetXPos2 = openXPos2;
         }
 
-        door1.transform.position = Vector3.MoveTowards(door1.transform.position,new Vector3(targetXPos1, door1.transform.position.y, door1.transform.position.z), Time.deltaTime*5);
-        door2.transform.position = Vector3.MoveTowards(door2.transform.position, new Vector3(targetXPos2, door2.transform.position.y, door2.transform.position.z), Time.deltaTime * 5);
+        door1.transform.localPosition = Vector3.MoveTowards(door1.transform.localPosition,new Vector3(targetXPos1, door1.transform.localPosition.y, door1.transform.localPosition.z), Time.deltaTime*5);
+        door2.transform.localPosition = Vector3.MoveTowards(door2.transform.localPosition, new Vector3(targetXPos2, door2.transform.localPosition.y, door2.transform.localPosition.z), Time.deltaTime * 5);
     }
 }
