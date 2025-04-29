@@ -8,6 +8,7 @@ public class IADetection : MonoBehaviour
     public float distance = 5f;
     private Color color = Color.white;
     private Collider[] hacks;
+    [HideInInspector]
     public FireScriptNew[] fireScripts;
 
     void Update()

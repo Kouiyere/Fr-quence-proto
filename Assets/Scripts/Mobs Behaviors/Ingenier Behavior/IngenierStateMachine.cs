@@ -10,12 +10,14 @@ public class IngenierStateMachine : MonoBehaviour
     public HackFireAlarm fireAlarm;
     private AlarmSearch alarmSearch;
     private IADetection iaDetection;
-    private FireScriptNew fire;
+    [HideInInspector]
+    public FireScriptNew fire;
     private JobList jobList;
     private CalledInge called;
     public Transform waitPoint;
     private Stuck stuck;
     private GameObject blockingDoor;
+    private FireControl fireControl;
 
     public enum State
     {
@@ -40,6 +42,7 @@ public class IngenierStateMachine : MonoBehaviour
         stuck = GetComponent<Stuck>();
         alarmSearch = GetComponent<AlarmSearch>();
         iaDetection = GetComponent<IADetection>();
+        fireControl = GetComponent<FireControl>();
     }
 
     void Update()
@@ -238,6 +241,7 @@ public class IngenierStateMachine : MonoBehaviour
     private void EnterFireControl()
     {
         fire = iaDetection.SeeFire().GetComponent<FireScriptNew>();
+        fireControl.fire = fire;
     }
 
     private void UpdateFireControl()
@@ -245,6 +249,10 @@ public class IngenierStateMachine : MonoBehaviour
         if (fire.isOnFire == false)
         {
             ChangeState(State.Alarm);
+        }
+        else
+        {
+            fireControl.ExtinguishFire();
         }
     }
 

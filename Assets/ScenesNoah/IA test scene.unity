@@ -3114,6 +3114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IA_Ingenier
       objectReference: {fileID: 0}
+    - target: {fileID: 4726592811290658682, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
+      propertyPath: distance
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5185649750640868377, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
       propertyPath: fireAlarm
       value: 
@@ -3135,6 +3139,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2074403800162426550, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
+      propertyPath: distance
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2509383740486809626, guid: 559dc30b238c0164fb318586f6fcd373, type: 3}
       propertyPath: route
       value: 

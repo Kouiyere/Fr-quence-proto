@@ -11,9 +11,11 @@ public class GuardStateMachine : MonoBehaviour
     public HackFireAlarm fireAlarm;
     private IADetection iaDetection;
     public JobList jobList;
-    private FireScriptNew fire;
+    [HideInInspector]
+    public FireScriptNew fire;
     private float timer;
     private CalledGuard called;
+    private FireControl fireControl;
 
     public enum State
     {
@@ -37,6 +39,7 @@ public class GuardStateMachine : MonoBehaviour
         alarmSearch = GetComponent<AlarmSearch>();
         iaDetection = GetComponent<IADetection>();
         called = GetComponent<CalledGuard>();
+        fireControl = GetComponent<FireControl>();
     }
 
     void Update()
@@ -241,6 +244,7 @@ public class GuardStateMachine : MonoBehaviour
     private void EnterFireControl()
     {
         fire = iaDetection.SeeFire().GetComponent<FireScriptNew>();
+        fireControl.fire = fire;
     }
 
     private void UpdateFireControl()
@@ -248,6 +252,10 @@ public class GuardStateMachine : MonoBehaviour
         if (fire.isOnFire == false)
         {
             ChangeState(State.Alarm);
+        }
+        else
+        {
+            fireControl.ExtinguishFire();
         }
     }
 
