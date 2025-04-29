@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 2509383740486809626}
   - component: {fileID: 4279924422034274561}
   - component: {fileID: 2074403800162426550}
+  - component: {fileID: 7517738459896523630}
   m_Layer: 0
   m_Name: IA_Guard
   m_TagString: Enemy
@@ -319,6 +320,18 @@ MonoBehaviour:
   fov: 45
   distance: 5
   fireScripts: []
+--- !u!114 &7517738459896523630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6023998693942270157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b49d4cde45bdb48ae04f02ae1acb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6252664286001770182
 GameObject:
   m_ObjectHideFlags: 0
