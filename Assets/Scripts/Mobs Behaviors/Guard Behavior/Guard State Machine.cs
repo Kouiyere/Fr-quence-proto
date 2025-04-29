@@ -7,10 +7,11 @@ public class GuardStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     private Patrol patrol;
-    private GuardAlarm guardAlarm;
+    private AlarmSearch guardAlarm;
     public HackFireAlarm fireAlarm;
-    private IADetection hackDetection;
+    private IADetection iaDetection;
     public JobList jobList;
+    private FireScriptNew fire;
     private float timer;
     private CalledGuard called;
 
@@ -33,8 +34,8 @@ public class GuardStateMachine : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         patrol = GetComponent<Patrol>();
-        guardAlarm = GetComponent<GuardAlarm>();
-        hackDetection = GetComponent<IADetection>();
+        guardAlarm = GetComponent<AlarmSearch>();
+        iaDetection = GetComponent<IADetection>();
         called = GetComponent<CalledGuard>();
     }
 
@@ -115,9 +116,9 @@ public class GuardStateMachine : MonoBehaviour
         {
             ChangeState(State.Called);
         }
-        else if (hackDetection.CanSeeHack() != null)
+        else if (iaDetection.CanSeeHack() != null)
         {
-            if (jobList.jobs.Contains(hackDetection.CanSeeHack()))
+            if (jobList.jobs.Contains(iaDetection.CanSeeHack()))
             {
                 patrol.Patroling();
             }
@@ -179,6 +180,11 @@ public class GuardStateMachine : MonoBehaviour
                 guardAlarm.SearchFire();
             }
         }
+
+        if (iaDetection.SeeFire())
+        {
+            ChangeState(State.FireControl);
+        }
     }
 
     private void ExitAlarm()
@@ -191,7 +197,7 @@ public class GuardStateMachine : MonoBehaviour
     #region Alert
     private void EnterAlert()
     {
-        jobList.jobs.Add(hackDetection.CanSeeHack());
+        jobList.jobs.Add(iaDetection.CanSeeHack());
     }
 
     private void UpdateAlert()
@@ -234,12 +240,15 @@ public class GuardStateMachine : MonoBehaviour
 
     private void EnterFireControl()
     {
-
+        fire = iaDetection.SeeFire().GetComponent<FireScriptNew>();
     }
 
     private void UpdateFireControl()
     {
-
+        if (fire.isOnFire == false)
+        {
+            ChangeState(State.Alarm);
+        }
     }
 
     private void ExitFireControl()
