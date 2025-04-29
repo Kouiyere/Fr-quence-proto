@@ -8,6 +8,9 @@ public class IngenierStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     public HackFireAlarm fireAlarm;
+    private AlarmSearch alarmSearch;
+    private IADetection iaDetection;
+    private FireScriptNew fire;
     private JobList jobList;
     private CalledInge called;
     public Transform waitPoint;
@@ -35,6 +38,8 @@ public class IngenierStateMachine : MonoBehaviour
         jobList = GetComponent<JobList>();
         called = GetComponent<CalledInge>();
         stuck = GetComponent<Stuck>();
+        alarmSearch = GetComponent<AlarmSearch>();
+        iaDetection = GetComponent<IADetection>();
     }
 
     void Update()
@@ -105,7 +110,11 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void UpdateWaiting()
     {
-        if (jobList.jobs.Count > 0)
+        if (fireAlarm.alarmOn)
+        {
+            ChangeState(State.Alarm);
+        }
+        else if (jobList.jobs.Count > 0)
         {
             ChangeState(State.Called);
         }
@@ -125,7 +134,11 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void UpdateCalled()
     {
-        if (jobList.jobs.Count > 0)
+        if (fireAlarm.alarmOn)
+        {
+            ChangeState(State.Alarm);
+        }
+        else if (jobList.jobs.Count > 0)
         {
             if (called.activeJob == null)
             {
@@ -148,12 +161,27 @@ public class IngenierStateMachine : MonoBehaviour
     #region Alarm
     private void EnterAlarm()
     {
-
+        agent.speed = runningSpeed;
     }
 
     private void UpdateAlarm()
     {
+        if (fireAlarm != null)
+        {
+            if (!fireAlarm.alarmOn)
+            {
+                ChangeState(State.JobDone);
+            }
+            else
+            {
+                alarmSearch.SearchFire();
+            }
+        }
 
+        if (iaDetection.SeeFire())
+        {
+            ChangeState(State.FireControl);
+        }
     }
 
     private void ExitAlarm()
@@ -165,6 +193,7 @@ public class IngenierStateMachine : MonoBehaviour
     #region JobDone
     private void EnterJobDone()
     {
+        agent.speed = walkingSpeed;
         agent.SetDestination(waitPoint.position);                
     }
 
@@ -208,12 +237,15 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void EnterFireControl()
     {
-
+        fire = iaDetection.SeeFire().GetComponent<FireScriptNew>();
     }
 
     private void UpdateFireControl()
     {
-
+        if (fire.isOnFire == false)
+        {
+            ChangeState(State.Alarm);
+        }
     }
 
     private void ExitFireControl()

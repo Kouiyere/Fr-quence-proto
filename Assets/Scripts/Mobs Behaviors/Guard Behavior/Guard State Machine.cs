@@ -7,7 +7,7 @@ public class GuardStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     private Patrol patrol;
-    private AlarmSearch guardAlarm;
+    private AlarmSearch alarmSearch;
     public HackFireAlarm fireAlarm;
     private IADetection iaDetection;
     public JobList jobList;
@@ -34,7 +34,7 @@ public class GuardStateMachine : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         patrol = GetComponent<Patrol>();
-        guardAlarm = GetComponent<AlarmSearch>();
+        alarmSearch = GetComponent<AlarmSearch>();
         iaDetection = GetComponent<IADetection>();
         called = GetComponent<CalledGuard>();
     }
@@ -177,7 +177,7 @@ public class GuardStateMachine : MonoBehaviour
             }
             else
             {
-                guardAlarm.SearchFire();
+                alarmSearch.SearchFire();
             }
         }
 
