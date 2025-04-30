@@ -7,7 +7,7 @@ using TMPro;
 public class DigiCode : MonoBehaviour
 {
     public TextMeshProUGUI textCode;
-    public HackDoorLaser laserHack;
+    public List<HackDoorLaser> laserHacks = new List<HackDoorLaser>();
     private string currentCode;
     public string secretCode;
     public int codeNbMax = 5;
@@ -31,7 +31,10 @@ public class DigiCode : MonoBehaviour
             if (pCode == secretCode)
             {
                 print("code correct");
-                laserHack.isHacked = true;
+                foreach (HackDoorLaser laser in laserHacks)
+                {
+                    laser.isHacked = true;
+                }
             }
             else
             {
