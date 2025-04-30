@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HackDetection : MonoBehaviour
+public class IADetection : MonoBehaviour
 {
     public float fov = 45f;
     public float distance = 5f;
     private Color color = Color.white;
     private Collider[] hacks;
+    [HideInInspector]
+    public FireScriptNew[] fireScripts;
 
     void Update()
     {
-        CanSeeHack();
         DebugFov(fov, distance, color);
     }
 
@@ -61,6 +62,24 @@ public class HackDetection : MonoBehaviour
         }
 
         return objectSeen;
+    }
+
+    public GameObject SeeFire()
+    {
+        GameObject fire = null;
+        fireScripts = FindObjectsByType<FireScriptNew>(FindObjectsSortMode.None);
+        foreach (var fireScript in fireScripts)
+        {
+            if (fireScript.isOnFire && Vector3.Distance(transform.position, fireScript.transform.position) <= distance)
+            {
+                if (Physics.Raycast(transform.position, fireScript.transform.position, Mathf.Infinity))
+                {
+                    fire = fireScript.gameObject;
+                    return fire;
+                }
+            }
+        }
+        return fire;
     }
 
     private void DebugFov(float angle, float distance, Color color)

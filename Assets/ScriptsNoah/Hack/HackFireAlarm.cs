@@ -22,6 +22,7 @@ public class HackFireAlarm : MonoBehaviour
     private void Start()
     {
         hackObject = GetComponent<HackObject>();
+        fireObjects = FindObjectsByType<HackFireObject>(FindObjectsSortMode.None);
     }
 
     private void Update()

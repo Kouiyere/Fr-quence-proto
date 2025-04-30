@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c9f739d157623084593ea613722a7391, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,9 +100,9 @@ GameObject:
   - component: {fileID: 6351648756451774934}
   - component: {fileID: 5545309492242362803}
   - component: {fileID: 2509383740486809626}
-  - component: {fileID: 3513325246014928909}
   - component: {fileID: 4279924422034274561}
-  - component: {fileID: 8858806720563288152}
+  - component: {fileID: 2074403800162426550}
+  - component: {fileID: 7517738459896523630}
   m_Layer: 0
   m_Name: IA_Guard
   m_TagString: Enemy
@@ -155,7 +155,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 16695392f058aad4b8da0d50a4e06d19, type: 2}
+  - {fileID: 2100000, guid: d60ecbed6b84d7449bf1795af57a2000, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -292,20 +292,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   route: {fileID: 0}
   routeType: 0
---- !u!114 &3513325246014928909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6023998693942270157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccea0fdbead7e9f4b9957e5ddaf2c420, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fov: 45
-  distance: 5
 --- !u!114 &4279924422034274561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 0}
---- !u!114 &8858806720563288152
+--- !u!114 &2074403800162426550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -328,12 +314,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 6023998693942270157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d0369426c7c534a804261189976d04, type: 3}
+  m_Script: {fileID: 11500000, guid: eaf84df92dc895448a726b31ab1f1bea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: {fileID: 6252664286001770182}
-  AttractRobot: 0
-  isOnFire: 0
+  fov: 45
+  distance: 5
+  fireScripts: []
+--- !u!114 &7517738459896523630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6023998693942270157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b49d4cde45bdb48ae04f02ae1acb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6252664286001770182
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5243248433461685303
 Transform:
   m_ObjectHideFlags: 0

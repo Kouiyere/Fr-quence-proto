@@ -8,6 +8,8 @@ public class WorkerStateMachine : MonoBehaviour
     NavMeshAgent agent;
     public HackFireAlarm fireAlarm;
     private Working working;
+    private WorkerAlarm workerAlarm;
+    public Transform exitPoint;
 
     public enum State
     {
@@ -27,6 +29,7 @@ public class WorkerStateMachine : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         working = GetComponent<Working>();
+        workerAlarm = GetComponent<WorkerAlarm>();
     }
 
     // Update is called once per frame
@@ -74,7 +77,14 @@ public class WorkerStateMachine : MonoBehaviour
 
     private void UpdateWorking()
     {
-        working.Work();
+        if (fireAlarm.alarmOn)
+        {
+            ChangeState(State.Alarm);
+        }
+        else
+        {
+            working.Work();
+        }
     }
 
     private void ExitWorking()
@@ -86,12 +96,16 @@ public class WorkerStateMachine : MonoBehaviour
     #region Alarm
     private void EnterAlarm()
     {
-
+        agent.speed = runningSpeed;
+        workerAlarm.Flee(exitPoint);
     }
 
     private void UpdateAlarm()
     {
-
+        if (!fireAlarm.alarmOn)
+        {
+            ChangeState(State.Working);
+        }
     }
 
     private void ExitAlarm()

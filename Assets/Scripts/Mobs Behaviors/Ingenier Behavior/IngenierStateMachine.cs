@@ -8,20 +8,25 @@ public class IngenierStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     public HackFireAlarm fireAlarm;
+    private AlarmSearch alarmSearch;
+    private IADetection iaDetection;
+    [HideInInspector]
+    public FireScriptNew fire;
     private JobList jobList;
     private CalledInge called;
     public Transform waitPoint;
     private Stuck stuck;
     private GameObject blockingDoor;
+    private FireControl fireControl;
 
     public enum State
     {
         Waiting,
         Called,
         Alarm,
-        FireOver,
         JobDone,
-        Stuck
+        Stuck,
+        FireControl
     }
 
     public State currentState;
@@ -35,6 +40,9 @@ public class IngenierStateMachine : MonoBehaviour
         jobList = GetComponent<JobList>();
         called = GetComponent<CalledInge>();
         stuck = GetComponent<Stuck>();
+        alarmSearch = GetComponent<AlarmSearch>();
+        iaDetection = GetComponent<IADetection>();
+        fireControl = GetComponent<FireControl>();
     }
 
     void Update()
@@ -45,9 +53,9 @@ public class IngenierStateMachine : MonoBehaviour
             case State.Waiting: UpdateWaiting(); break;
             case State.Called: UpdateCalled(); break;
             case State.Alarm: UpdateAlarm(); break;
-            case State.FireOver: UpdateFireOver(); break;
             case State.JobDone: UpdateJobDone(); break;
             case State.Stuck: UpdateStuck(); break;
+            case State.FireControl: UpdateFireControl(); break;
         }
     }
 
@@ -59,9 +67,9 @@ public class IngenierStateMachine : MonoBehaviour
             case State.Waiting: ExitWaiting(); break;
             case State.Called: ExitCalled(); break;
             case State.Alarm: ExitAlarm(); break;
-            case State.FireOver: ExitFireOver(); break;
             case State.JobDone: ExitJobDone(); break;
             case State.Stuck: ExitStuck(); break;
+            case State.FireControl: ExitFireControl(); break;
         }
 
         //Change current state to new state
@@ -73,9 +81,9 @@ public class IngenierStateMachine : MonoBehaviour
             case State.Waiting: EnterWaiting(); break;
             case State.Called: EnterCalled(); break;
             case State.Alarm: EnterAlarm(); break;
-            case State.FireOver: EnterFireOver(); break;
             case State.JobDone: EnterJobDone(); break;
             case State.Stuck: EnterStuck(); break;
+            case State.FireControl: EnterFireControl(); break;
         }
     }
 
@@ -105,7 +113,11 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void UpdateWaiting()
     {
-        if (jobList.jobs.Count > 0)
+        if (fireAlarm.alarmOn)
+        {
+            ChangeState(State.Alarm);
+        }
+        else if (jobList.jobs.Count > 0)
         {
             ChangeState(State.Called);
         }
@@ -125,7 +137,11 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void UpdateCalled()
     {
-        if (jobList.jobs.Count > 0)
+        if (fireAlarm.alarmOn)
+        {
+            ChangeState(State.Alarm);
+        }
+        else if (jobList.jobs.Count > 0)
         {
             if (called.activeJob == null)
             {
@@ -148,12 +164,27 @@ public class IngenierStateMachine : MonoBehaviour
     #region Alarm
     private void EnterAlarm()
     {
-
+        agent.speed = runningSpeed;
     }
 
     private void UpdateAlarm()
     {
+        if (fireAlarm != null)
+        {
+            if (!fireAlarm.alarmOn)
+            {
+                ChangeState(State.JobDone);
+            }
+            else
+            {
+                alarmSearch.SearchFire();
+            }
+        }
 
+        if (iaDetection.SeeFire())
+        {
+            ChangeState(State.FireControl);
+        }
     }
 
     private void ExitAlarm()
@@ -162,27 +193,11 @@ public class IngenierStateMachine : MonoBehaviour
     }
     #endregion
 
-    #region FireOver
-    private void EnterFireOver()
-    {
-
-    }
-
-    private void UpdateFireOver()
-    {
-
-    }
-
-    private void ExitFireOver()
-    {
-
-    }
-    #endregion
-
     #region JobDone
     private void EnterJobDone()
     {
-
+        agent.speed = walkingSpeed;
+        agent.SetDestination(waitPoint.position);                
     }
 
     private void UpdateJobDone()
@@ -191,16 +206,9 @@ public class IngenierStateMachine : MonoBehaviour
         {
             ChangeState(State.Called);
         }
-        else
+        else if (agent.remainingDistance <= 0.1f)
         {
-            if (agent.remainingDistance <= 0.1f)
-            {
-                ChangeState(State.Waiting);
-            }
-            else
-            {
-                agent.SetDestination(waitPoint.position);                
-            }
+            ChangeState(State.Waiting);
         }
     }
 
@@ -225,6 +233,32 @@ public class IngenierStateMachine : MonoBehaviour
     private void ExitStuck()
     {
         stuck.CancelCall();
+    }
+    #endregion
+
+    #region FireControl
+
+    private void EnterFireControl()
+    {
+        fire = iaDetection.SeeFire().GetComponent<FireScriptNew>();
+        fireControl.fire = fire;
+    }
+
+    private void UpdateFireControl()
+    {
+        if (fire.isOnFire == false)
+        {
+            ChangeState(State.Alarm);
+        }
+        else
+        {
+            fireControl.ExtinguishFire();
+        }
+    }
+
+    private void ExitFireControl()
+    {
+
     }
     #endregion
 }

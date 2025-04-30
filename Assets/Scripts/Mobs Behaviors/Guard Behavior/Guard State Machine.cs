@@ -7,12 +7,15 @@ public class GuardStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     private Patrol patrol;
-    private GuardAlarm alarm;
+    private AlarmSearch alarmSearch;
     public HackFireAlarm fireAlarm;
-    private HackDetection hackDetection;
+    private IADetection iaDetection;
     public JobList jobList;
+    [HideInInspector]
+    public FireScriptNew fire;
     private float timer;
     private CalledGuard called;
+    private FireControl fireControl;
 
     public enum State
     {
@@ -20,7 +23,8 @@ public class GuardStateMachine : MonoBehaviour
         Frozen,
         Alert,
         Alarm,
-        Called
+        Called,
+        FireControl
     }
 
     public State currentState = State.Patrol;
@@ -32,9 +36,10 @@ public class GuardStateMachine : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         patrol = GetComponent<Patrol>();
-        alarm = GetComponent<GuardAlarm>();
-        hackDetection = GetComponent<HackDetection>();
+        alarmSearch = GetComponent<AlarmSearch>();
+        iaDetection = GetComponent<IADetection>();
         called = GetComponent<CalledGuard>();
+        fireControl = GetComponent<FireControl>();
     }
 
     void Update()
@@ -52,6 +57,8 @@ public class GuardStateMachine : MonoBehaviour
                 UpdateAlert(); break;
             case State.Called:
                 UpdateCalled(); break;
+            case State.FireControl:
+                UpdateFireControl(); break;
         }
     }
 
@@ -70,6 +77,8 @@ public class GuardStateMachine : MonoBehaviour
                 ExitAlert(); break;
             case State.Called:
                 ExitCalled(); break;
+            case State.FireControl:
+                ExitFireControl(); break;
         }
 
         //Change current state to new state
@@ -88,6 +97,8 @@ public class GuardStateMachine : MonoBehaviour
                 EnterAlert(); break;
             case State.Called:
                 EnterCalled(); break;
+            case State.FireControl:
+                EnterFireControl(); break;
         }
     }
 
@@ -108,9 +119,9 @@ public class GuardStateMachine : MonoBehaviour
         {
             ChangeState(State.Called);
         }
-        else if (hackDetection.CanSeeHack() != null)
+        else if (iaDetection.CanSeeHack() != null)
         {
-            if (jobList.jobs.Contains(hackDetection.CanSeeHack()))
+            if (jobList.jobs.Contains(iaDetection.CanSeeHack()))
             {
                 patrol.Patroling();
             }
@@ -163,14 +174,19 @@ public class GuardStateMachine : MonoBehaviour
     {
         if (fireAlarm != null)
         {
-            if (fireAlarm.alarmOn)
-            {
-                alarm.TurnOfAlarm(fireAlarm.gameObject.transform);
-            }
-            else
+            if (!fireAlarm.alarmOn)
             {
                 ChangeState(State.Patrol);
             }
+            else
+            {
+                alarmSearch.SearchFire();
+            }
+        }
+
+        if (iaDetection.SeeFire())
+        {
+            ChangeState(State.FireControl);
         }
     }
 
@@ -184,7 +200,7 @@ public class GuardStateMachine : MonoBehaviour
     #region Alert
     private void EnterAlert()
     {
-        jobList.jobs.Add(hackDetection.CanSeeHack());
+        jobList.jobs.Add(iaDetection.CanSeeHack());
     }
 
     private void UpdateAlert()
@@ -218,6 +234,32 @@ public class GuardStateMachine : MonoBehaviour
     }
 
     private void ExitCalled()
+    {
+
+    }
+    #endregion
+
+    #region FireControl
+
+    private void EnterFireControl()
+    {
+        fire = iaDetection.SeeFire().GetComponent<FireScriptNew>();
+        fireControl.fire = fire;
+    }
+
+    private void UpdateFireControl()
+    {
+        if (fire.isOnFire == false)
+        {
+            ChangeState(State.Alarm);
+        }
+        else
+        {
+            fireControl.ExtinguishFire();
+        }
+    }
+
+    private void ExitFireControl()
     {
 
     }

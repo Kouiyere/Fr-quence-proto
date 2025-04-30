@@ -14,7 +14,6 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         initialYRotation = transform.eulerAngles.y;
-        //AudioManager.Instance.PlaySound("CameraMovement", transform.position);
     }
 
     void Update()
