@@ -19,18 +19,9 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         float rotationAmount = speed * Time.deltaTime;
-
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetAxis("Horizontal") != 0)
         {
-            currentYRotation += rotationAmount;
-            if (!AudioManager.Instance.IsLoopingSoundPlaying("CameraMovement"))
-            {
-                AudioManager.Instance.PlayLoopingSound("CameraMovement", transform.position);
-            }
-        }
-        else if (Input.GetKey(KeyCode.Q))
-        {
-            currentYRotation -= rotationAmount;
+            currentYRotation += rotationAmount * Mathf.Sign(Input.GetAxis("Horizontal"));
             if (!AudioManager.Instance.IsLoopingSoundPlaying("CameraMovement"))
             {
                 AudioManager.Instance.PlayLoopingSound("CameraMovement", transform.position);
