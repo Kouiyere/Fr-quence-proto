@@ -11,6 +11,14 @@ public class Paper : MonoBehaviour
     {
         AudioManager.Instance.PlaySound("PrintPaper", transform.position);
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.right * force + new Vector3(Random.Range(-300, 100), 0, Random.Range(-200, 200)));
+
+        // Force vers l'avant en fonction de la rotation locale
+        Vector3 forwardDirection = transform.forward * force;
+
+        // Ajoute une dispersion aléatoire autour de cette direction
+        Vector3 randomOffset = transform.right * Random.Range(-300f, 100f) +
+                               transform.up * Random.Range(-200f, 200f);
+
+        rb.AddForce(forwardDirection + randomOffset);
     }
 }

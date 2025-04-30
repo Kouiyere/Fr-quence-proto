@@ -19,7 +19,7 @@ public class HackWind : MonoBehaviour
         {
             windActivated = true;
             wind.SetActive(true);
-            palm.transform.Rotate(new Vector3(0,10,0));
+            palm.transform.Rotate(new Vector3(0,0,15));
         }
         else
         {

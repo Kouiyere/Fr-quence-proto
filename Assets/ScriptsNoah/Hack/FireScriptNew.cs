@@ -20,8 +20,6 @@ public class FireScriptNew : MonoBehaviour
             fire.SetActive(true);
         }
     }
-
-    // Quand touché par des particules (ex: flammes)
     private void OnParticleCollision(GameObject other)
     {
         if (other.CompareTag("Water"))
