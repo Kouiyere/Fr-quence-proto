@@ -29,6 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+<<<<<<< Updated upstream:Assets/Prefabs/Hack/DoorFix.prefab
   - {fileID: 2004757015304669864}
   - {fileID: 5696248982702062457}
   m_Father: {fileID: 0}
@@ -159,12 +160,114 @@ BoxCollider:
   m_Size: {x: 0.006, y: 0.009, z: 0.006}
   m_Center: {x: 0, y: 0, z: 0.015694547}
 --- !u!114 &1771454673471304569
+=======
+  - {fileID: 7173412885393618057}
+  - {fileID: 1658201267453473714}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1191664141506958425
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1030313100919580830}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.854
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8840851502540062464}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7857134750715737280}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6884750082524424368}
+  m_SourcePrefab: {fileID: 100100000, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+--- !u!4 &1658201267453473714 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+  m_PrefabInstance: {fileID: 1191664141506958425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2038105231763106056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 299e4a899b3337342af0eff1415315cf, type: 3}
+  m_PrefabInstance: {fileID: 1191664141506958425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8840851502540062464
+>>>>>>> Stashed changes:Assets/Prefabs/Hack/Door.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Hack/DoorFix.prefab
   m_GameObject: {fileID: 6399385492267490856}
+=======
+  m_GameObject: {fileID: 2038105231763106056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c6e52fa292a3543b0e4356a60dff85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openValue: 2
+  door1: {fileID: 8824582055333236248}
+  door2: {fileID: 2554642153982849141}
+--- !u!114 &7857134750715737280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038105231763106056}
+>>>>>>> Stashed changes:Assets/Prefabs/Hack/Door.prefab
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b3d5c0fbb3229241bd23744e393b64b, type: 3}
@@ -180,12 +283,18 @@ MonoBehaviour:
   resetTimer: 15
   timer: 0
   playSoundName: 
+<<<<<<< Updated upstream:Assets/Prefabs/Hack/DoorFix.prefab
 --- !u!114 &6417317374350699252
 MonoBehaviour:
+=======
+--- !u!65 &6884750082524424368
+BoxCollider:
+>>>>>>> Stashed changes:Assets/Prefabs/Hack/Door.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Hack/DoorFix.prefab
   m_GameObject: {fileID: 6399385492267490856}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -211,6 +320,24 @@ MonoBehaviour:
   bakeKeys: []
   bakeValues: []
 --- !u!1001 &2042640400715902275
+=======
+  m_GameObject: {fileID: 2038105231763106056}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.005, y: 0.012, z: 0.005}
+  m_Center: {x: 0, y: 0, z: 0.016}
+--- !u!1001 &7207919386662130530
+>>>>>>> Stashed changes:Assets/Prefabs/Hack/Door.prefab
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
