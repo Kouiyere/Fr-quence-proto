@@ -239,6 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0242a9f65705de49971703800d9b7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  renTexMini: {fileID: 0}
+  renTexMain: {fileID: 0}
 --- !u!1 &7745869887023394259
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class CamRendering : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Camera cam;
+    public RenderTexture renTexMini;
+    public RenderTexture renTexMain;
+    public RenderBuffer renBufferMini;
+
     void Start()
     {
-        
+        cam = GetComponent<Camera>();
+        if (renTexMini == null || renTexMain == null)
+        {
+            Debug.Log("Render texture has not been assigned on " + transform.parent.gameObject.name);
+        }   
     }
 
-    // Update is called once per frame
     void Update()
     {
         
