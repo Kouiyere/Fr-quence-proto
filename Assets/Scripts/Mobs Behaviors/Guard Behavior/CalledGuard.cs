@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class CalledGuard : MonoBehaviour
 {
     NavMeshAgent agent;
+    [HideInInspector]
     public GameObject door;
 
     void Start()

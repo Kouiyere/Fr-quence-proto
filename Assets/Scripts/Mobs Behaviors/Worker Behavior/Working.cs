@@ -16,7 +16,14 @@ public class Working : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        waypointID = GetClosestWaypointID(transform.position);
+        if (route != null)
+        {
+            waypointID = GetClosestWaypointID(transform.position);
+        }
+        else
+        {
+            Debug.Log("Route has not been assigned on " + gameObject.name);
+        }
         agent.SetDestination(route.waypointArray[waypointID].position);
         walkingSpeed = GetComponent<WorkerStateMachine>().walkingSpeed;
     }

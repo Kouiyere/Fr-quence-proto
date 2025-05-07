@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class FireControl : MonoBehaviour
 {
     NavMeshAgent agent;
+    [HideInInspector]
     public FireScriptNew fire;
 
     void Start()
