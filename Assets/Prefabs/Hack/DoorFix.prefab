@@ -48,8 +48,6 @@ GameObject:
   - component: {fileID: 1522433864451743848}
   - component: {fileID: 8824437309023379663}
   - component: {fileID: 1771454673471304569}
-  - component: {fileID: 6417317374350699252}
-  - component: {fileID: 8726358813768611250}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -283,6 +281,7 @@ MonoBehaviour:
   resetTimer: 15
   timer: 0
   playSoundName: 
+<<<<<<< HEAD
 <<<<<<< Updated upstream:Assets/Prefabs/Hack/DoorFix.prefab
 --- !u!114 &6417317374350699252
 MonoBehaviour:
@@ -319,6 +318,8 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &2042640400715902275
 =======
   m_GameObject: {fileID: 2038105231763106056}

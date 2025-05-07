@@ -418,15 +418,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ssccShader: {fileID: 4800000, guid: 89ec5ce1bd95ed946a65b649164a9c1d, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
   effectIntensity: 0.452
+=======
+  effectIntensity: 0.663
+>>>>>>> parent of d691d04 (Fix Outline)
   distanceFade: 0
   curvaturePixelRadius: 2
-  curvatureBrights: 2.64
-  curvatureDarks: 3.05
+  curvatureBrights: 2
+  curvatureDarks: 3
   cavitySamples: 2
   saturateCavity: 1
+<<<<<<< HEAD
   cavityRadius: 0.055
   cavityBrights: 1.62
   cavityDarks: 2.36
@@ -447,15 +452,23 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+  cavityRadius: 0.25
+  cavityBrights: 3
+  cavityDarks: 2
+>>>>>>> parent of d691d04 (Fix Outline)
   cavityResolution: 0
   normalsSource: 2
   debugMode: 0
   output: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &37177619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -513,10 +526,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &51956354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -611,20 +627,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_AddedGameObjects: []
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
       addedObject: {fileID: 433581179}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
@@ -771,6 +793,7 @@ PrefabInstance:
       propertyPath: m_RenderingPath
       value: 3
       objectReference: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     - target: {fileID: 1690553785826738990, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
@@ -781,6 +804,8 @@ PrefabInstance:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     - target: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -855,20 +880,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_AddedGameObjects: []
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
       addedObject: {fileID: 540640337}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
@@ -1714,11 +1745,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &206167337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1776,10 +1810,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &210644728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d2284edb8f89ba43ab777cb1e0da9c6, type: 3}
@@ -1846,6 +1883,7 @@ MonoBehaviour:
   resetTimer: 10
   timer: 0
   playSoundName: 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!114 &210644735
@@ -1885,6 +1923,8 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &213119233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
@@ -2284,11 +2324,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 139710922529336081, guid: 0b6b22d71493fa741804cf47407f727a, type: 3}
   m_PrefabInstance: {fileID: 1432049278}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &262107421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2346,10 +2389,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &265714016 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bf79cb5249b52fe44990056d74498286, type: 3}
@@ -2669,6 +2715,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a3351dc9dd8b1d246844c9f0e5409c71, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1583332573}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a3351dc9dd8b1d246844c9f0e5409c71, type: 3}
@@ -2702,6 +2749,8 @@ PrefabInstance:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
   m_SourcePrefab: {fileID: 100100000, guid: a3351dc9dd8b1d246844c9f0e5409c71, type: 3}
 --- !u!1 &327329582
 GameObject:
@@ -3151,6 +3200,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 1818552288}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1 &420384737 stripped
@@ -3180,6 +3230,8 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &423433090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3260,6 +3312,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     - target: {fileID: 5422150820129206589, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
@@ -3270,6 +3323,8 @@ PrefabInstance:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     - target: {fileID: 7745869887023394259, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       propertyPath: m_Name
       value: CameraBody 1 (9)
@@ -3282,6 +3337,7 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     - target: {fileID: 9018506900493369716, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
@@ -3296,14 +3352,21 @@ PrefabInstance:
 >>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+=======
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1403507553}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
@@ -3380,20 +3443,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1acd4a5214810844c8682884bb8387eb, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &433581179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
   m_PrefabInstance: {fileID: 1744392761}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &439579574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8159043528753092624, guid: 27b5bbaadce97bb41ac71fb7358523db, type: 3}
@@ -3754,11 +3823,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451168553}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &453877718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3816,10 +3888,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &458726350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3976,6 +4051,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1898315736}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1 &478410199 stripped
@@ -4005,6 +4081,8 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &482627264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6883816303298498580, guid: 1acd4a5214810844c8682884bb8387eb, type: 3}
@@ -4516,6 +4594,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1766240023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
@@ -4582,15 +4661,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8176bafb0814368458f119253ad3c932, type: 3}
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &540640337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
   m_PrefabInstance: {fileID: 1464291730}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &550795438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8326b1ff041336543a6961fbd1d459ed, type: 3}
@@ -5027,20 +5111,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594152639}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &596573526 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
   m_PrefabInstance: {fileID: 206167337}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &604857860
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,6 +5316,7 @@ Transform:
   - {fileID: 2135630216}
   m_Father: {fileID: 1650963142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1 &625457396 stripped
@@ -5255,6 +5346,8 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &643493731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
@@ -5354,20 +5447,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_AddedGameObjects: []
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2067043771}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
@@ -5601,20 +5700,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_AddedGameObjects: []
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2064833771}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
@@ -6297,20 +6402,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_AddedGameObjects: []
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1696385387}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
@@ -6421,6 +6532,7 @@ PrefabInstance:
       propertyPath: m_RenderingPath
       value: 3
       objectReference: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     - target: {fileID: 288763436903464049, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
@@ -6431,6 +6543,8 @@ PrefabInstance:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     - target: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -6505,20 +6619,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_AddedGameObjects: []
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1336606244}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
@@ -6919,6 +7039,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8326b1ff041336543a6961fbd1d459ed, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1 &858769825 stripped
@@ -6948,6 +7069,8 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &862659537 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bf79cb5249b52fe44990056d74498286, type: 3}
@@ -9598,6 +9721,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d2284edb8f89ba43ab777cb1e0da9c6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 210644730}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d2284edb8f89ba43ab777cb1e0da9c6, type: 3}
@@ -9610,6 +9734,8 @@ PrefabInstance:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
   m_SourcePrefab: {fileID: 100100000, guid: 7d2284edb8f89ba43ab777cb1e0da9c6, type: 3}
 --- !u!1001 &1146043810
 PrefabInstance:
@@ -11131,20 +11257,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8159043528753092624, guid: 27b5bbaadce97bb41ac71fb7358523db, type: 3}
   m_PrefabInstance: {fileID: 528278576}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &1336606244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
   m_PrefabInstance: {fileID: 262107421}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &1339258249
 GameObject:
   m_ObjectHideFlags: 0
@@ -11480,6 +11612,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345624997}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1 &1361861778 stripped
@@ -11511,6 +11644,11 @@ MonoBehaviour:
 --- !u!1001 &1354382206
 PrefabInstance:
   m_ObjectHideFlags: 0
+=======
+--- !u!1001 &1354382206
+PrefabInstance:
+  m_ObjectHideFlags: 0
+>>>>>>> parent of d691d04 (Fix Outline)
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
@@ -11565,6 +11703,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+<<<<<<< HEAD
 --- !u!1001 &1376247889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11630,6 +11769,8 @@ PrefabInstance:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &1380785656
 GameObject:
   m_ObjectHideFlags: 0
@@ -12033,20 +12174,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8326b1ff041336543a6961fbd1d459ed, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &1403507553 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
   m_PrefabInstance: {fileID: 1589164610}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &1406712513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12969,11 +13116,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463730282}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &1464291730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13031,10 +13181,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!114 &1466081536 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1668481865452394780, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
@@ -13482,6 +13635,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 2619315444485056155}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1 &1526505360 stripped
@@ -13511,6 +13665,8 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &1529628583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13839,20 +13995,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544860055}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &1550522862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
   m_PrefabInstance: {fileID: 37177619}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &1565617119
 GameObject:
   m_ObjectHideFlags: 0
@@ -14099,6 +14261,7 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!114 &1583332577
@@ -14120,6 +14283,8 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &1585271650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14292,8 +14457,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1898315736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+=======
+--- !u!1001 &1589164610
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2142464182}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+      propertyPath: m_Name
+      value: SecurityCamera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &1591126011
 =======
 --- !u!1001 &1589164610
@@ -14558,20 +14783,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf79cb5249b52fe44990056d74498286, type: 3}
   m_PrefabInstance: {fileID: 606752997}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &1637646042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
   m_PrefabInstance: {fileID: 1722884542}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &1639923536
 GameObject:
   m_ObjectHideFlags: 0
@@ -15133,16 +15364,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8326b1ff041336543a6961fbd1d459ed, type: 3}
   m_PrefabInstance: {fileID: 315140892}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &1696385387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
   m_PrefabInstance: {fileID: 1354382206}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1696725827
 GameObject:
   m_ObjectHideFlags: 0
@@ -15231,6 +15466,8 @@ Transform:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &1702301974
 GameObject:
   m_ObjectHideFlags: 0
@@ -15371,11 +15608,14 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709564422}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &1722884542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15433,10 +15673,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &1725964339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1331985808512756957, guid: 07edccb201e258b4b9ca4040384884f7, type: 3}
@@ -15510,11 +15753,14 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1659819368}
   m_SourcePrefab: {fileID: 100100000, guid: bf79cb5249b52fe44990056d74498286, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &1744392761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15572,10 +15818,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &1746719573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15670,20 +15919,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_AddedGameObjects: []
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1550522862}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
@@ -15700,6 +15955,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8326b1ff041336543a6961fbd1d459ed, type: 3}
   m_PrefabInstance: {fileID: 743439042}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1 &1762100974 stripped
@@ -15729,6 +15985,8 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &1763208797
 GameObject:
   m_ObjectHideFlags: 0
@@ -15937,20 +16195,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_AddedGameObjects: []
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1637646042}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
@@ -16290,6 +16554,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf79cb5249b52fe44990056d74498286, type: 3}
   m_PrefabInstance: {fileID: 371758495}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!1 &1897861153 stripped
@@ -16319,6 +16584,8 @@ MonoBehaviour:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &1898315735
 GameObject:
   m_ObjectHideFlags: 0
@@ -17435,11 +17702,14 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1971815408}
   m_SourcePrefab: {fileID: 100100000, guid: bf79cb5249b52fe44990056d74498286, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &2064833771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
@@ -17450,10 +17720,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
   m_PrefabInstance: {fileID: 453877718}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1 &2073768506
 GameObject:
   m_ObjectHideFlags: 0
@@ -17890,6 +18163,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098883995}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
@@ -17900,6 +18174,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030313100919580830, guid: 8176bafb0814368458f119253ad3c932, type: 3}
   m_PrefabInstance: {fileID: 1376247889}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!1001 &2112426256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17957,10 +18233,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
 --- !u!4 &2114955807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8326b1ff041336543a6961fbd1d459ed, type: 3}
@@ -18258,20 +18537,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     m_AddedGameObjects: []
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2139239885854030660, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
       addedObject: {fileID: 596573526}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of d691d04 (Fix Outline)
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
       insertIndex: -1
