@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 144867754680410580}
   - component: {fileID: 7598902252108663149}
   - component: {fileID: -1602550344067975666}
-  - component: {fileID: 3010041657699044364}
   - component: {fileID: 49152573933849998}
   - component: {fileID: 8807993959350833690}
   - component: {fileID: 3440626900188071019}
+  - component: {fileID: 6643642238608128362}
   m_Layer: 0
   m_Name: Camera 1
   m_TagString: MainCamera
@@ -118,28 +118,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
---- !u!114 &3010041657699044364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6823795369579879950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3d5c0fbb3229241bd23744e393b64b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultMaterial: {fileID: 2100000, guid: cc6635d5c679f0d42a4a826e18e4ad46, type: 2}
-  overMaterial: {fileID: 2100000, guid: 7c2d549a3b575b74b97b862755115396, type: 2}
-  activatedMaterial: {fileID: 2100000, guid: 7373d4a6d6396e2458b2a4d403e30d22, type: 2}
-  objRenderer: {fileID: 0}
-  isHacked: 0
-  attractAI: 0
-  autoDesactivation: 1
-  resetTimer: 10
-  timer: 0
-  playSoundName: 
 --- !u!114 &49152573933849998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +227,18 @@ MonoBehaviour:
   normalsSource: 2
   debugMode: 0
   output: 0
+--- !u!114 &6643642238608128362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6823795369579879950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0242a9f65705de49971703800d9b7d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7745869887023394259
 GameObject:
   m_ObjectHideFlags: 0
