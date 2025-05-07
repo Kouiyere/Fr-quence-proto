@@ -88,19 +88,4 @@ public class HackObject : MonoBehaviour
 
         AudioManager.Instance.PlaySound("HackObject", transform.position);
     }
-
-    private void OnMouseOver()
-    {
-        if (!isHacked)
-        {
-            objRenderer.material = overMaterial;
-        }
-    }
-    private void OnMouseExit()
-    {
-        if (!isHacked)
-        {
-            objRenderer.material = defaultMaterial;
-        }
-    }
 }
