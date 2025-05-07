@@ -78,7 +78,7 @@ public class CameraSwitch : MonoBehaviour
         for (int i = 0; i < cameras.Length; i++)
         {
             switchEffect.TriggerGlitch();
-            cameras[i].gameObject.SetActive(i == index);
+            //cameras[i].gameObject.SetActive(i == index);
         }
     }
 }
