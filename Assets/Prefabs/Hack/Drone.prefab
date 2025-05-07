@@ -4841,6 +4841,7 @@ GameObject:
   - component: {fileID: 1743742544737047242}
   - component: {fileID: 1569504071812809716}
   - component: {fileID: 2945860706242083501}
+  - component: {fileID: 837173932091783327}
   m_Layer: 0
   m_Name: Cube.028
   m_TagString: Untagged
@@ -4914,6 +4915,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &837173932091783327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143787360829961596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2578138145525406165
 GameObject:
   m_ObjectHideFlags: 0
@@ -9820,6 +9839,7 @@ GameObject:
   - component: {fileID: 4034134310829099997}
   - component: {fileID: 4880519165304564336}
   - component: {fileID: 876503944561426845}
+  - component: {fileID: 2221890773126734393}
   m_Layer: 0
   m_Name: Sphere.005
   m_TagString: Untagged
@@ -9893,6 +9913,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2221890773126734393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5776117413494364233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &5884527501193614588
 GameObject:
   m_ObjectHideFlags: 0
@@ -9904,6 +9942,7 @@ GameObject:
   - component: {fileID: 5374357252805896466}
   - component: {fileID: 2962312332518772617}
   - component: {fileID: 3052598447117624747}
+  - component: {fileID: 4583468046749794725}
   m_Layer: 0
   m_Name: Plane.008
   m_TagString: Untagged
@@ -9976,6 +10015,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4583468046749794725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5884527501193614588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6031009622170575478
 GameObject:
   m_ObjectHideFlags: 0
@@ -9990,6 +10047,7 @@ GameObject:
   - component: {fileID: 8543513860178101213}
   - component: {fileID: 9221328040618274197}
   - component: {fileID: 3503754019833893892}
+  - component: {fileID: 7475032439229417963}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -10133,6 +10191,18 @@ CapsuleCollider:
   m_Height: 0.7
   m_Direction: 1
   m_Center: {x: 0, y: 0.29, z: 0}
+--- !u!114 &7475032439229417963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031009622170575478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5ececd5b336884c87b232dde87a62c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7266801432016997378
 GameObject:
   m_ObjectHideFlags: 0
@@ -10144,6 +10214,7 @@ GameObject:
   - component: {fileID: 8527984721367085120}
   - component: {fileID: 4674528546098202887}
   - component: {fileID: 7485869713113491239}
+  - component: {fileID: 1595561429026998321}
   m_Layer: 0
   m_Name: Cylinder.030
   m_TagString: Untagged
@@ -10217,6 +10288,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1595561429026998321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7266801432016997378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &8018044933009882957
 GameObject:
   m_ObjectHideFlags: 0
@@ -10228,6 +10317,7 @@ GameObject:
   - component: {fileID: 7001109945277390838}
   - component: {fileID: 1488736417297671318}
   - component: {fileID: 5737775635669889369}
+  - component: {fileID: 3997672127457713468}
   m_Layer: 0
   m_Name: Cylinder.031
   m_TagString: Untagged
@@ -10301,6 +10391,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3997672127457713468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8018044933009882957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &8580527340254563465
 GameObject:
   m_ObjectHideFlags: 0
@@ -10312,6 +10420,7 @@ GameObject:
   - component: {fileID: 4287397815467702169}
   - component: {fileID: 4046117516904091492}
   - component: {fileID: 8891941218174422902}
+  - component: {fileID: 4242930549945716315}
   m_Layer: 0
   m_Name: Cylinder.028
   m_TagString: Untagged
@@ -10386,3 +10495,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4242930549945716315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580527340254563465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

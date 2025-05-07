@@ -47,6 +47,8 @@ GameObject:
   - component: {fileID: 1522433864451743848}
   - component: {fileID: 8824437309023379663}
   - component: {fileID: 1771454673471304569}
+  - component: {fileID: 6417317374350699252}
+  - component: {fileID: 8726358813768611250}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -178,6 +180,36 @@ MonoBehaviour:
   resetTimer: 15
   timer: 0
   playSoundName: 
+--- !u!114 &6417317374350699252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6399385492267490856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5ececd5b336884c87b232dde87a62c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8726358813768611250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6399385492267490856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &2042640400715902275
 PrefabInstance:
   m_ObjectHideFlags: 0
