@@ -12,6 +12,7 @@ TagManager:
   - Drone
   - Door
   - Water
+  - ElectricParticle
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - UI
   - Hackable
   - Decor
-  - 
+  - Particles
   - 
   - 
   - 

@@ -5,6 +5,8 @@ using UnityEngine;
 public class ElectricityTrigger : MonoBehaviour
 {
     public HackElecticity electricalPannel;
+    public GameObject electricityParticles;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
