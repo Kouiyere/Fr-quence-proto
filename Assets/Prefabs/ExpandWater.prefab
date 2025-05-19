@@ -48,6 +48,8 @@ MonoBehaviour:
   isGrowing: 0
   maxScale: {x: 1, y: 1, z: 1}
   growthSpeed: 0.05
+  hack: {fileID: 0}
+  electricityParent: {fileID: 7110141460737222466}
 --- !u!1001 &1568891957245647747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,6 +98,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7223183341861525460, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8604576861304716481, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
       propertyPath: m_Name
       value: GarbageVisual
@@ -108,5 +114,10 @@ PrefabInstance:
 --- !u!4 &1639248913801869594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 250542276751843993, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
+  m_PrefabInstance: {fileID: 1568891957245647747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7110141460737222466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8604576861304716481, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
   m_PrefabInstance: {fileID: 1568891957245647747}
   m_PrefabAsset: {fileID: 0}
