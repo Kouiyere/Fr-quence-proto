@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ScenesNoah/MainMenu.unity
+    guid: 2cc8e2d521e9b704083df84021c95ed9
+  - enabled: 1
+    path: Assets/ScenesNoah/Noah 1.unity
+    guid: 51402d629cea9754cae11a8698ef5879
   m_configObjects: {}
