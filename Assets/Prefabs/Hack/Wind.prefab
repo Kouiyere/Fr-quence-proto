@@ -5786,6 +5786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5ececd5b336884c87b232dde87a62c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outlines: []
   hackObject: {fileID: 54368089623367092}
   hackedColor: {r: 0, g: 0, b: 0, a: 0}
   initialColor: {r: 0, g: 0, b: 0, a: 0}
