@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OutlineMesh : MonoBehaviour
 {
-    private List<Outline> outlines = new List<Outline>();
+    private Outline[] outlines;
     public HackObject hackObject;
 
     public Color hackedColor;
@@ -12,8 +12,8 @@ public class OutlineMesh : MonoBehaviour
 
     void Start()
     {
-        outlines.Clear();
-        ApplyOutlines(transform);
+        // Récupère tous les composants Outline dans les enfants
+        outlines = GetComponentsInChildren<Outline>();
         SetOutline(false);
     }
 
@@ -27,41 +27,6 @@ public class OutlineMesh : MonoBehaviour
         SetOutline(false);
     }
 
-    private void ApplyOutlines(Transform obj)
-    {
-        MeshRenderer meshRenderer = obj.GetComponent<MeshRenderer>();
-        MeshFilter meshFilter = obj.GetComponent<MeshFilter>();
-
-        if (meshRenderer != null && meshFilter != null)
-        {
-            int materialCount = meshRenderer.sharedMaterials.Length;
-
-            for (int i = 0; i < materialCount; i++)
-            {
-                GameObject subMeshObj = new GameObject("SubMeshOutline_" + i);
-                subMeshObj.transform.SetParent(obj);
-                subMeshObj.transform.localPosition = Vector3.zero;
-                subMeshObj.transform.localRotation = Quaternion.identity;
-                subMeshObj.transform.localScale = Vector3.one;
-
-                MeshFilter subMeshFilter = subMeshObj.AddComponent<MeshFilter>();
-                MeshRenderer subMeshRenderer = subMeshObj.AddComponent<MeshRenderer>();
-                Outline outline = subMeshObj.AddComponent<Outline>();
-
-                subMeshFilter.mesh = meshFilter.mesh;
-                subMeshRenderer.sharedMaterial = meshRenderer.sharedMaterials[i];
-                outline.enabled = false;
-
-                outlines.Add(outline);
-            }
-        }
-
-        foreach (Transform child in obj)
-        {
-            ApplyOutlines(child);
-        }
-    }
-
     private void SetOutline(bool value)
     {
         foreach (var outline in outlines)
@@ -69,4 +34,5 @@ public class OutlineMesh : MonoBehaviour
             outline.enabled = value;
         }
     }
+
 }
