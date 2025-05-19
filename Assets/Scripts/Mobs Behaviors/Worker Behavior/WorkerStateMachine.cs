@@ -7,7 +7,7 @@ public class WorkerStateMachine : MonoBehaviour
 {
     NavMeshAgent agent;
     public HackFireAlarm fireAlarm;
-    private Working working;
+    private Patrol patrol;
     private WorkerAlarm workerAlarm;
     public Transform exitPoint;
 
@@ -28,7 +28,7 @@ public class WorkerStateMachine : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        working = GetComponent<Working>();
+        patrol = GetComponent<Patrol>();
         workerAlarm = GetComponent<WorkerAlarm>();
     }
 
@@ -83,7 +83,7 @@ public class WorkerStateMachine : MonoBehaviour
         }
         else
         {
-            working.Work();
+            patrol.Patroling();
         }
     }
 

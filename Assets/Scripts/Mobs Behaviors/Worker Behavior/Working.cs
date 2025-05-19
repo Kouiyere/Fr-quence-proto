@@ -36,7 +36,7 @@ public class Working : MonoBehaviour
             agent.SetDestination(route.waypointArray[waypointID].position);
         }
 
-        if (agent.remainingDistance < 0.5f)
+        if (agent.remainingDistance < 0.05f)
         {
             waypointID++;
             if (waypointID >= route.waypointArray.Length)
