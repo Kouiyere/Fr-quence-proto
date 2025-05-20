@@ -23,17 +23,19 @@ public class HackObject : MonoBehaviour
     {
         objRenderer = GetComponent<Renderer>();
 
+        /*
         if (objRenderer != null && defaultMaterial != null)
         {
             objRenderer.material = defaultMaterial;
         }
+        */
     }
 
     #region Activate
     public void Activate()
     {
         isHacked = true;
-        objRenderer.material = activatedMaterial;
+        //objRenderer.material = activatedMaterial;
         if (playSoundName != null)
         {
             AudioManager.Instance.PlayLoopingSound(playSoundName);
@@ -51,7 +53,7 @@ public class HackObject : MonoBehaviour
     {
         timer = 0;
         isHacked = false;
-        objRenderer.material = defaultMaterial;
+        //objRenderer.material = defaultMaterial;
 
         if (playSoundName != null)
         {
