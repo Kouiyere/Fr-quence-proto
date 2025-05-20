@@ -6,72 +6,121 @@ using UnityEngine.AI;
 public class Working : MonoBehaviour
 {
     NavMeshAgent agent;
-    public PatrolRoute route;
-    private int waypointID;
+    public Transform workStation;
+    public Transform[] restStops;
 
-    public float workTime = 5f;
+    public float workTime;
+    public float restTime;
     private float timer;
-    private float walkingSpeed;
+    public enum State
+    {
+        Work,
+        Rest,
+        Travelling
+    }
+    public State currentState;
+    public bool resting = false;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        if (route != null)
-        {
-            waypointID = GetClosestWaypointID(transform.position);
-        }
-        else
-        {
-            Debug.Log("Route has not been assigned on " + gameObject.name);
-        }
-        agent.SetDestination(route.waypointArray[waypointID].position);
-        walkingSpeed = GetComponent<WorkerStateMachine>().walkingSpeed;
     }
 
     public void Work()
     {
-        //Check if destination is on the patrol route
-        if (agent.destination != route.waypointArray[waypointID].position)
+        switch (currentState)
         {
-            agent.SetDestination(route.waypointArray[waypointID].position);
-        }
-
-        if (agent.remainingDistance < 0.05f)
-        {
-            waypointID++;
-            if (waypointID >= route.waypointArray.Length)
-            {
-                waypointID = 0;
-            }
-            agent.SetDestination(route.waypointArray[waypointID].position);
-
-            timer = workTime;
-        }
-
-        if (timer > 0)
-        {
-            timer -= Time.deltaTime;
-            agent.speed = 0;
-        }
-        else if (timer <= 0)
-        {
-            agent.speed = walkingSpeed;
+            case State.Work: UpdateWork(); break;
+            case State.Rest: UpdateRest(); break;
+            case State.Travelling: UpdateTravelling(); break;
         }
     }
 
-    private int GetClosestWaypointID(Vector3 position)
+    public void ChangeState(State newState)
     {
-        float closestDistance = Mathf.Infinity;
-        int closestWaypointID = 0;
-        for (int i = 0; i < route.waypointArray.Length; i++)
+        switch (currentState)
         {
-            float dist = Vector3.Distance(position, route.waypointArray[i].position);
-            if (dist < closestDistance)
+            case State.Work: ExitWork(); break;
+            case State.Rest: ExitRest(); break;
+            case State.Travelling: ExitTravelling(); break;
+        }
+        currentState = newState;
+        switch (currentState)
+        {
+            case State.Work: EnterWork(); break;
+            case State.Rest: EnterRest(); break;
+            case State.Travelling: EnterTravelling(); break;
+        }
+    }
+
+    #region Work
+    private void EnterWork()
+    {
+        timer = workTime;
+    }
+    private void UpdateWork()
+    {
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            ChangeState(State.Travelling);
+        }
+    }
+    private void ExitWork()
+    {
+        resting = true;
+    }
+    #endregion
+
+    #region Rest
+    private void EnterRest()
+    {
+        timer = restTime;
+    }
+    private void UpdateRest()
+    {
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            ChangeState(State.Travelling);
+        }
+    }
+    private void ExitRest()
+    {
+        resting = false;
+    }
+    #endregion
+
+    #region Travelling
+    private void EnterTravelling()
+    {
+        if (!resting)
+        {
+            agent.SetDestination(workStation.position);
+        }
+        else
+        {
+            int randomID = Random.Range(0, restStops.Length);
+            agent.SetDestination(restStops[randomID].position);
+        }
+    }
+    private void UpdateTravelling()
+    {
+        if (agent.remainingDistance <= 0.05f)
+        {
+            if (resting)
             {
-                closestDistance = dist;
-                closestWaypointID = i;
+                ChangeState(State.Rest);
+            }
+            else
+            {
+                ChangeState(State.Work);
             }
         }
-        return closestWaypointID;
     }
+    private void ExitTravelling()
+    {
+
+    }
+    #endregion
 }
