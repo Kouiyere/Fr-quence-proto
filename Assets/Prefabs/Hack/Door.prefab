@@ -151,7 +151,7 @@ MonoBehaviour:
   autoDesactivation: 1
   resetTimer: 10
   timer: 0
-  playSoundName: 
+  playSoundName: OpenDoor
 --- !u!65 &6884750082524424368
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6d17992b-59dd-4180-b776-85d262bd41bb}">
+		<property name="assetPath">
+			<value>ElectricitySparks/ElectricitySparks3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a9c2f9a7-14e2-4852-858f-3b6861a15b68}</destination>
+		</relationship>
+	</object>
+</objects>
