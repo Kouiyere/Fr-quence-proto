@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 2139239885854030660}
   - component: {fileID: 116343340470288861}
   - component: {fileID: 2557234307245525937}
+  - component: {fileID: 3923375277481033912}
   m_Layer: 0
   m_Name: CameraBody 1
   m_TagString: MainCamera
@@ -208,6 +209,37 @@ MonoBehaviour:
   hackObject: {fileID: 3010041657699044364}
   hackedColor: {r: 0.15371211, g: 0.72955966, b: 0.22078648, a: 1}
   initialColor: {r: 0.14771953, g: 0.48427665, b: 0.18664114, a: 0.8}
+--- !u!114 &3923375277481033912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7745869887023394259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1522389211
+      Data2: 1105927537
+      Data3: -1167125367
+      Data4: 2061956255
+    Path: event:/OverideButton
+  Event: 
+  EventPlayTrigger: 13
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &5451813331124149518
 PrefabInstance:
   m_ObjectHideFlags: 0
