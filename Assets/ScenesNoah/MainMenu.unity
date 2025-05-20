@@ -1481,6 +1481,7 @@ GameObject:
   - component: {fileID: 678769864}
   - component: {fileID: 678769863}
   - component: {fileID: 678769862}
+  - component: {fileID: 678769865}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -1589,6 +1590,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678769860}
   m_CullTransparentMesh: 1
+--- !u!114 &678769865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678769860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1522389211
+      Data2: 1105927537
+      Data3: -1167125367
+      Data4: 2061956255
+    Path: event:/OverideButton
+  Event: 
+  EventPlayTrigger: 17
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &695799147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,6 +2408,8 @@ GameObject:
   - component: {fileID: 1083110129}
   - component: {fileID: 1083110128}
   - component: {fileID: 1083110127}
+  - component: {fileID: 1083110130}
+  - component: {fileID: 1083110131}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -2484,6 +2518,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083110125}
   m_CullTransparentMesh: 1
+--- !u!114 &1083110130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083110125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1522389211
+      Data2: 1105927537
+      Data3: -1167125367
+      Data4: 2061956255
+    Path: event:/OverideButton
+  Event: 
+  EventPlayTrigger: 17
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1083110131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083110125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1033203027
+      Data2: 1312317929
+      Data3: -1519561569
+      Data4: -142509293
+    Path: event:/ButtonPressed
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1102263216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3417,6 +3513,7 @@ GameObject:
   - component: {fileID: 1398790963}
   - component: {fileID: 1398790962}
   - component: {fileID: 1398790961}
+  - component: {fileID: 1398790964}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -3525,6 +3622,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398790959}
   m_CullTransparentMesh: 1
+--- !u!114 &1398790964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398790959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1522389211
+      Data2: 1105927537
+      Data3: -1167125367
+      Data4: 2061956255
+    Path: event:/OverideButton
+  Event: 
+  EventPlayTrigger: 17
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1495071649
 GameObject:
   m_ObjectHideFlags: 0
