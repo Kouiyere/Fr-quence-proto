@@ -5,7 +5,10 @@ using UnityEngine;
 public class FireScriptNew : MonoBehaviour
 {
     public GameObject fire;
+    public GameObject explosionPrefab;
+    public Transform explosionPosition;
     public bool isOnFire = false;
+    public bool isExplosive = false;
 
     private void Start()
     {
@@ -20,6 +23,7 @@ public class FireScriptNew : MonoBehaviour
             fire.SetActive(true);
         }
     }
+
     private void OnParticleCollision(GameObject other)
     {
         if (other.CompareTag("Water"))
@@ -36,7 +40,6 @@ public class FireScriptNew : MonoBehaviour
         }
     }
 
-    // Si on entre en collision avec un objet déjà en feu
     private void OnCollisionEnter(Collision collision)
     {
         FireScriptNew otherFire = collision.gameObject.GetComponent<FireScriptNew>();
@@ -48,13 +51,18 @@ public class FireScriptNew : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        // Continue de propager le feu même après la première collision
         OnCollisionEnter(collision);
     }
 
     public void SetOnFire()
     {
+        if (isExplosive && explosionPrefab != null && isOnFire == false)
+        {
+            Instantiate(explosionPrefab, explosionPosition.position, Quaternion.identity);
+        }
+
         isOnFire = true;
+
         if (fire != null)
             fire.SetActive(true);
     }
