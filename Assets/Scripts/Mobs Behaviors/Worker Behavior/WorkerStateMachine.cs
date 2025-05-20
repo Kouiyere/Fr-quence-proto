@@ -10,13 +10,15 @@ public class WorkerStateMachine : MonoBehaviour
     private Patrol patrol;
     private WorkerAlarm workerAlarm;
     public Transform exitPoint;
+    public GameObject distraction;
 
     public enum State
     {
         Working,
         Alarm,
         Alert,
-        Cleaning
+        Cleaning,
+        Distracted
     }
 
     public State currentState;
@@ -42,10 +44,11 @@ public class WorkerStateMachine : MonoBehaviour
             case State.Alarm: UpdateAlarm(); break;
             case State.Alert: UpdateAlert(); break;
             case State.Cleaning: UpdateCleaning(); break;
+            case State.Distracted: UpdateDistracted(); break;
         }
     }
 
-    private void ChangeState(State newState)
+    public void ChangeState(State newState)
     {
         //Exit current State
         switch(currentState)
@@ -54,6 +57,7 @@ public class WorkerStateMachine : MonoBehaviour
             case State.Alarm: ExitAlarm(); break;
             case State.Alert: ExitAlert(); break;
             case State.Cleaning: ExitCleaning(); break;
+            case State.Distracted : ExitDistracted(); break;
         }
 
         //Change current state to new state
@@ -66,6 +70,7 @@ public class WorkerStateMachine : MonoBehaviour
             case State.Alarm: EnterAlarm(); break;
             case State.Alert: EnterAlert(); break;
             case State.Cleaning: EnterCleaning(); break;
+            case State.Distracted : EnterDistracted(); break;
         }
     }
 
@@ -145,6 +150,24 @@ public class WorkerStateMachine : MonoBehaviour
     private void ExitCleaning()
     {
 
+    }
+    #endregion
+
+    #region Distracted
+    private void EnterDistracted()
+    {
+        agent.SetDestination(distraction.transform.position);
+    }
+    private void UpdateDistracted()
+    {
+        if (!distraction.GetComponent<HackObject>().isHacked)
+        {
+            ChangeState(State.Working);
+        }
+    }
+    private void ExitDistracted()
+    {
+        distraction = null;
     }
     #endregion
 }
