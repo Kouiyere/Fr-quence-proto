@@ -7,7 +7,7 @@ public class Working : MonoBehaviour
 {
     NavMeshAgent agent;
     public Transform workStation;
-    public Transform[] restStops;
+    public RestStops restStopsScript;
 
     public float workTime;
     public float restTime;
@@ -100,8 +100,8 @@ public class Working : MonoBehaviour
         }
         else
         {
-            int randomID = Random.Range(0, restStops.Length);
-            agent.SetDestination(restStops[randomID].position);
+            int randomID = Random.Range(0, restStopsScript.restStops.Length);
+            agent.SetDestination(restStopsScript.restStops[randomID].position);
         }
     }
     private void UpdateTravelling()
