@@ -25606,7 +25606,7 @@ MonoBehaviour:
   laserRange: 50
   hitLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 507
   speed: 150
   rotationLimit: 45
 --- !u!114 &1583332575
