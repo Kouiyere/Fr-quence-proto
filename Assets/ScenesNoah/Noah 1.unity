@@ -9365,6 +9365,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8326b1ff041336543a6961fbd1d459ed, type: 3}
+--- !u!1 &448276951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 448276952}
+  m_Layer: 0
+  m_Name: Inge Wait Point
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &448276952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448276951}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.058, y: 0.761, z: -15.358}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &451168553
 GameObject:
   m_ObjectHideFlags: 0
@@ -11650,7 +11681,7 @@ PrefabInstance:
     - target: {fileID: 5185649750640868377, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
       propertyPath: waitPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 448276952}
     - target: {fileID: 5706641020544172072, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -30710,6 +30741,7 @@ SceneRoots:
   - {fileID: 1934473912}
   - {fileID: 1543420664}
   - {fileID: 827460146}
-  - {fileID: 2080435383}
   - {fileID: 236387496}
+  - {fileID: 2080435383}
   - {fileID: 481150956}
+  - {fileID: 448276952}
