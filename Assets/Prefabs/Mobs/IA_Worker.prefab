@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 4651683102287664353}
   - component: {fileID: 4588645271403830577}
   - component: {fileID: 2720411889841869813}
+  - component: {fileID: 3931465353175522650}
+  - component: {fileID: 4196452726052400355}
   m_Layer: 0
   m_Name: IA_Worker
   m_TagString: Enemy
@@ -31,8 +33,8 @@ Transform:
   m_GameObject: {fileID: 1954620804030979046}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5651886, y: 1.0000019, z: 10.23394}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.5651886, y: 1.194, z: 10.23394}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7905350721508529915}
@@ -153,6 +155,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d987c9cc297729945a790ed4bc268f80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3931465353175522650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954620804030979046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058fc110e0b878849aa86519085bfb37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementThreshold: 0.1
+  animator: {fileID: 9061613844234799742}
+  health: {fileID: 0}
+  walkParameter: isWalking
+  deathTrigger: Die
+--- !u!114 &4196452726052400355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954620804030979046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6cfda2b68e06c54980a1c1484c1b1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
+  deathEffect: {fileID: 0}
+  destroyOnDeath: 1
+  stateMachine: {fileID: 4651683102287664353}
 --- !u!1001 &7656062078961692944
 PrefabInstance:
   m_ObjectHideFlags: 0

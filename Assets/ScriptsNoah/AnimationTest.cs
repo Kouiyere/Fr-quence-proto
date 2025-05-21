@@ -9,8 +9,12 @@ public class AnimationTest : MonoBehaviour
 
     private NavMeshAgent agent;
     public Animator animator;
+    public HealthAI health;
 
     public string walkParameter = "isWalking";
+    public string deathTrigger = "Die";
+
+    private bool isDead = false;
 
     void Start()
     {
@@ -19,16 +23,28 @@ public class AnimationTest : MonoBehaviour
 
     void Update()
     {
-        if(agent.speed != 0)
+        if (isDead) return;
+
+        if (health.currentHealth > 0)
         {
-            animator.SetBool(walkParameter, true);
+            bool isMoving = agent.velocity.magnitude > movementThreshold;
+            animator.SetBool(walkParameter, isMoving);
         }
         else
         {
-            animator.SetBool(walkParameter, false);
+            HandleDeath();
         }
 
-        Debug.Log(agent.speed);
-        
+    }
+
+    void HandleDeath()
+    {
+        isDead = true;
+
+        animator.SetBool(walkParameter, false);
+        animator.SetTrigger(deathTrigger);      
+
+        agent.isStopped = true;                 
+        agent.enabled = false;                  
     }
 }
