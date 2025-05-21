@@ -10,7 +10,7 @@ public class VictoryManager : MonoBehaviour
 
     private void Start()
     {
-        
+        victoryScreen.SetActive(false);
     }
 
     void Update()
