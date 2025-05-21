@@ -17,7 +17,6 @@ public class WorkerStateMachine : MonoBehaviour
     {
         Working,
         Alarm,
-        Alert,
         Cleaning,
         Distracted
     }
@@ -43,7 +42,6 @@ public class WorkerStateMachine : MonoBehaviour
         {
             case State.Working: UpdateWorking(); break;
             case State.Alarm: UpdateAlarm(); break;
-            case State.Alert: UpdateAlert(); break;
             case State.Cleaning: UpdateCleaning(); break;
             case State.Distracted: UpdateDistracted(); break;
         }
@@ -56,7 +54,6 @@ public class WorkerStateMachine : MonoBehaviour
         {
             case State.Working : ExitWorking(); break;
             case State.Alarm: ExitAlarm(); break;
-            case State.Alert: ExitAlert(); break;
             case State.Cleaning: ExitCleaning(); break;
             case State.Distracted : ExitDistracted(); break;
         }
@@ -69,7 +66,6 @@ public class WorkerStateMachine : MonoBehaviour
         {
             case State.Working : EnterWorking(); break;
             case State.Alarm: EnterAlarm(); break;
-            case State.Alert: EnterAlert(); break;
             case State.Cleaning: EnterCleaning(); break;
             case State.Distracted : EnterDistracted(); break;
         }
@@ -122,23 +118,6 @@ public class WorkerStateMachine : MonoBehaviour
     }
     #endregion
 
-    #region Alert
-    private void EnterAlert()
-    {
-
-    }
-
-    private void UpdateAlert()
-    {
-
-    }
-
-    private void ExitAlert()
-    {
-
-    }
-    #endregion
-
     #region Cleaning
     private void EnterCleaning()
     {
@@ -163,6 +142,11 @@ public class WorkerStateMachine : MonoBehaviour
     }
     private void UpdateDistracted()
     {
+        if (fireAlarm.alarmOn)
+        {
+            ChangeState(State.Working);
+        }
+
         if (!distraction.GetComponent<HackObject>().isHacked)
         {
             ChangeState(State.Working);
