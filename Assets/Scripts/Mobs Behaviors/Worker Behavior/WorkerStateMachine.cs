@@ -10,6 +10,7 @@ public class WorkerStateMachine : MonoBehaviour
     private Working working;
     private WorkerAlarm workerAlarm;
     public Transform exitPoint;
+    [HideInInspector]
     public GameObject distraction;
 
     public enum State
