@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sprinkler : MonoBehaviour
 {
-    public HackFireAlarm fireAlarm;
+    private HackFireAlarm fireAlarm;
     private HackObject fireAlarmHackObject;
     public GameObject waterSprinkler;
     public bool waterOn;
@@ -13,6 +13,7 @@ public class Sprinkler : MonoBehaviour
 
     private void Start()
     {
+        fireAlarm = FindObjectOfType<HackFireAlarm>();
         fireAlarmHackObject = fireAlarm.GetComponent<HackObject>();
     }
 
