@@ -10716,7 +10716,7 @@ PrefabInstance:
     - target: {fileID: 1945529432681947095, guid: 27b5bbaadce97bb41ac71fb7358523db, type: 3}
       propertyPath: fireAlarm
       value: 
-      objectReference: {fileID: 168057831}
+      objectReference: {fileID: 0}
     - target: {fileID: 3133252687494284880, guid: 27b5bbaadce97bb41ac71fb7358523db, type: 3}
       propertyPath: m_TagString
       value: Water
@@ -25901,10 +25901,6 @@ PrefabInstance:
     - target: {fileID: 1945529432681947095, guid: 27b5bbaadce97bb41ac71fb7358523db, type: 3}
       propertyPath: fireAlarm
       value: 
-      objectReference: {fileID: 168057831}
-    - target: {fileID: 3133252687494284880, guid: 27b5bbaadce97bb41ac71fb7358523db, type: 3}
-      propertyPath: m_TagString
-      value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 5226014322996581683, guid: 27b5bbaadce97bb41ac71fb7358523db, type: 3}
       propertyPath: m_Name
