@@ -4928,10 +4928,6 @@ PrefabInstance:
       propertyPath: maxScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5228921175548512366, guid: f1ea65ce1ebc9e84b90d8e0e0665f22f, type: 3}
-      propertyPath: electricityEffect
-      value: 
-      objectReference: {fileID: 1595266479688676741}
     - target: {fileID: 8444143786940235017, guid: f1ea65ce1ebc9e84b90d8e0e0665f22f, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -4960,11 +4956,6 @@ PrefabInstance:
 --- !u!1 &734447815046426141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7110141460737222466, guid: f1ea65ce1ebc9e84b90d8e0e0665f22f, type: 3}
-  m_PrefabInstance: {fileID: 7538185308159052127}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1595266479688676741 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9132884360260615386, guid: f1ea65ce1ebc9e84b90d8e0e0665f22f, type: 3}
   m_PrefabInstance: {fileID: 7538185308159052127}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6202134115664436198 stripped
@@ -5134,8 +5125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
+  outlineColor: {r: 0.08715109, g: 0.5471698, b: 0, a: 1}
+  outlineWidth: 4
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
