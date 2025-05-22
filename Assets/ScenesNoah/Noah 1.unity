@@ -8417,6 +8417,7 @@ Transform:
   - {fileID: 481150956}
   - {fileID: 448276952}
   - {fileID: 1263167370}
+  - {fileID: 1426743634}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &308692692
@@ -19562,7 +19563,7 @@ GameObject:
   - component: {fileID: 1426743634}
   - component: {fileID: 1426743633}
   m_Layer: 0
-  m_Name: Worker Route 1
+  m_Name: Patrol Route 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19589,8 +19590,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426743632}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1083717, y: 0, z: 10.9537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.931628, y: -0.34, z: 26.2637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19599,7 +19600,7 @@ Transform:
   - {fileID: 982308485}
   - {fileID: 1916613814}
   - {fileID: 1132365224}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 305744048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1432049278
 PrefabInstance:
@@ -31467,7 +31468,6 @@ SceneRoots:
   - {fileID: 84576848}
   - {fileID: 371514717}
   - {fileID: 664342487}
-  - {fileID: 1426743634}
   - {fileID: 696831025}
   - {fileID: 1395772845}
   - {fileID: 27107024}
