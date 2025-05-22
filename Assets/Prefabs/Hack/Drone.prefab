@@ -4841,13 +4841,6 @@ GameObject:
   - component: {fileID: 1743742544737047242}
   - component: {fileID: 1569504071812809716}
   - component: {fileID: 2945860706242083501}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  - component: {fileID: 837173932091783327}
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Cube.028
   m_TagString: Untagged
@@ -4921,30 +4914,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
---- !u!114 &837173932091783327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143787360829961596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 --- !u!1 &2578138145525406165
 GameObject:
   m_ObjectHideFlags: 0
@@ -9805,40 +9774,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3340234545897193276}
   - {fileID: 6411335729904941260}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5485888285008712743
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3340234545897193276}
-  m_Layer: 0
-  m_Name: SpawnDrone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3340234545897193276
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5485888285008712743}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7025282562758694538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5776117413494364233
 GameObject:
@@ -9851,13 +9788,6 @@ GameObject:
   - component: {fileID: 4034134310829099997}
   - component: {fileID: 4880519165304564336}
   - component: {fileID: 876503944561426845}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  - component: {fileID: 2221890773126734393}
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Sphere.005
   m_TagString: Untagged
@@ -9931,30 +9861,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
---- !u!114 &2221890773126734393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5776117413494364233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 --- !u!1 &5884527501193614588
 GameObject:
   m_ObjectHideFlags: 0
@@ -9966,13 +9872,6 @@ GameObject:
   - component: {fileID: 5374357252805896466}
   - component: {fileID: 2962312332518772617}
   - component: {fileID: 3052598447117624747}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  - component: {fileID: 4583468046749794725}
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Plane.008
   m_TagString: Untagged
@@ -10045,30 +9944,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
---- !u!114 &4583468046749794725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5884527501193614588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 --- !u!1 &6031009622170575478
 GameObject:
   m_ObjectHideFlags: 0
@@ -10078,18 +9953,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6411335729904941260}
-  - component: {fileID: 1374784680969797180}
+  - component: {fileID: 8285712493764923541}
   - component: {fileID: 389592851420293208}
   - component: {fileID: 8543513860178101213}
   - component: {fileID: 9221328040618274197}
   - component: {fileID: 3503754019833893892}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  - component: {fileID: 7475032439229417963}
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -10120,7 +9988,7 @@ Transform:
   - {fileID: 2757437040436153987}
   m_Father: {fileID: 7025282562758694538}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!195 &1374784680969797180
+--- !u!195 &8285712493764923541
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10128,7 +9996,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6031009622170575478}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1372625422
   m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
@@ -10138,8 +10006,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.57
-  m_BaseOffset: 0.09
+  m_Height: 0.6
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!54 &389592851420293208
@@ -10182,7 +10050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1.5
-  spawnPoint: {fileID: 5485888285008712743}
+  spawnPoint: {fileID: 0}
   sparklesParticle: {fileID: 2578138145525406165}
   fireParticle: {fileID: 571316082642908795}
   trashPrefab: {fileID: 2239572161748449908, guid: 17475701633c9974bb551e50ebebfc78, type: 3}
@@ -10233,24 +10101,6 @@ CapsuleCollider:
   m_Height: 0.7
   m_Direction: 1
   m_Center: {x: 0, y: 0.29, z: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
---- !u!114 &7475032439229417963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6031009622170575478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca5ececd5b336884c87b232dde87a62c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 --- !u!1 &7266801432016997378
 GameObject:
   m_ObjectHideFlags: 0
@@ -10262,13 +10112,6 @@ GameObject:
   - component: {fileID: 8527984721367085120}
   - component: {fileID: 4674528546098202887}
   - component: {fileID: 7485869713113491239}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  - component: {fileID: 1595561429026998321}
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Cylinder.030
   m_TagString: Untagged
@@ -10342,30 +10185,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
---- !u!114 &1595561429026998321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7266801432016997378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 --- !u!1 &8018044933009882957
 GameObject:
   m_ObjectHideFlags: 0
@@ -10377,13 +10196,6 @@ GameObject:
   - component: {fileID: 7001109945277390838}
   - component: {fileID: 1488736417297671318}
   - component: {fileID: 5737775635669889369}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  - component: {fileID: 3997672127457713468}
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Cylinder.031
   m_TagString: Untagged
@@ -10457,30 +10269,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
---- !u!114 &3997672127457713468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8018044933009882957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 --- !u!1 &8580527340254563465
 GameObject:
   m_ObjectHideFlags: 0
@@ -10492,13 +10280,6 @@ GameObject:
   - component: {fileID: 4287397815467702169}
   - component: {fileID: 4046117516904091492}
   - component: {fileID: 8891941218174422902}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  - component: {fileID: 4242930549945716315}
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Cylinder.028
   m_TagString: Untagged
@@ -10573,27 +10354,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
---- !u!114 &4242930549945716315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8580527340254563465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes

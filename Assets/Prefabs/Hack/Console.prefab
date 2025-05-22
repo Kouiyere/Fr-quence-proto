@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3217186238933911144}
   - component: {fileID: 7335971690156009204}
   - component: {fileID: 8995822097109710772}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.045
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3873777678067286962}
   - component: {fileID: 7460310630523900916}
   - component: {fileID: 8069164625296617349}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Console
   m_TagString: FireObject
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773364544254390699}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000026822087}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 17.5, y: 0, z: -12.12849}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 3039723853036411360}
   - component: {fileID: 8889959271241073944}
   - component: {fileID: 44191281060027348}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.048
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 1100435738232432859}
   - component: {fileID: 2957182666021873463}
   - component: {fileID: 861566733963836572}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.044
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 3333729779269935931}
   - component: {fileID: 1693692912475739531}
   - component: {fileID: 2794697591410563490}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 8814117053359838751}
   - component: {fileID: 5006935125072434584}
   - component: {fileID: 7357400524574232274}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 8162979846370976761}
   - component: {fileID: 6419398275604515307}
   - component: {fileID: 5531453919559591456}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 2914585538207374166}
   - component: {fileID: 8773104672203780097}
   - component: {fileID: 7674114020496101377}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 6503293173440190155}
   - component: {fileID: 5477097009676383423}
   - component: {fileID: 7316511697827969573}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +799,7 @@ GameObject:
   - component: {fileID: 1958031486058123520}
   - component: {fileID: 5205083881466573186}
   - component: {fileID: 5562411163270232627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.041
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 664209095882009637}
   - component: {fileID: 3938581327025229603}
   - component: {fileID: 1334896230971548918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.039
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +967,7 @@ GameObject:
   - component: {fileID: 5856687822794397614}
   - component: {fileID: 3484936073835590268}
   - component: {fileID: 5868540744664210263}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.042
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 2228770324605790098}
   - component: {fileID: 7993610074281417002}
   - component: {fileID: 820797395760766866}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.040
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 6463009896344055556}
   - component: {fileID: 241250603875209773}
   - component: {fileID: 3376016653919382732}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.038
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1219,7 +1219,7 @@ GameObject:
   - component: {fileID: 3212938660009697849}
   - component: {fileID: 6903104219857728645}
   - component: {fileID: 7686289045404513253}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.049
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 1506039731114072985}
   - component: {fileID: 5039343639969369134}
   - component: {fileID: 1332641111304002967}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1387,7 +1387,7 @@ GameObject:
   - component: {fileID: 8330330473700302399}
   - component: {fileID: 264718472352315677}
   - component: {fileID: 1177708333035061255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1471,7 +1471,7 @@ GameObject:
   - component: {fileID: 498224785751200956}
   - component: {fileID: 619078119410110497}
   - component: {fileID: 5846767197839641079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.046
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1553,7 +1553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1424264905621108365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ExplosionPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1586,7 +1586,7 @@ GameObject:
   - component: {fileID: 4333822912360363594}
   - component: {fileID: 5974331543652230158}
   - component: {fileID: 8316283942548067621}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.043
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1670,7 +1670,7 @@ GameObject:
   - component: {fileID: 5249079237590386494}
   - component: {fileID: 4953181685505636455}
   - component: {fileID: 708794089359288131}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1794,6 +1794,18 @@ PrefabInstance:
     - target: {fileID: 1629569369108314097, guid: fb71e50650117544c92d365649accb67, type: 3}
       propertyPath: m_Name
       value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629569369108314097, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234125518680437445, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: firePrefab
+      value: 
+      objectReference: {fileID: 1629569369108314097, guid: a7c0669dd9ea6e14f8d1b15915fca756, type: 3}
+    - target: {fileID: 7234125518680437445, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: maxFlamesInArea
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7234125518680437445, guid: fb71e50650117544c92d365649accb67, type: 3}
       propertyPath: propagationRadius

@@ -17,7 +17,7 @@ public class FireControl : MonoBehaviour
     public void ExtinguishFire()
     {
         agent.SetDestination(fire.transform.position);
-        if (agent.remainingDistance <= 1f)
+        if (agent.remainingDistance <= 3f)
         {
             //Trigger fire extinguisher animation
             fire.ResetFire();

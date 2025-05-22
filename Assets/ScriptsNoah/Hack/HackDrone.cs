@@ -10,7 +10,7 @@ public class HackDrone : MonoBehaviour
     public float movementSpeed = 1f;
     private NavMeshAgent agent;
     private HackWaste currentTarget;
-    public GameObject spawnPoint;
+    public Transform spawnPoint;
     public GameObject sparklesParticle;
     public GameObject fireParticle;
 
@@ -80,7 +80,7 @@ public class HackDrone : MonoBehaviour
 
         if(broken)
         {
-            agent.SetDestination(spawnPoint.transform.position);
+            agent.SetDestination(spawnPoint.position);
         }
 
         else if (currentTarget != null)
@@ -90,7 +90,7 @@ public class HackDrone : MonoBehaviour
 
         else
         {
-            agent.SetDestination(spawnPoint.transform.position);
+            agent.SetDestination(spawnPoint.position);
         }
     }
 
