@@ -14063,7 +14063,7 @@ GameObject:
   - component: {fileID: 941942714}
   - component: {fileID: 941942713}
   - component: {fileID: 941942715}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14150,11 +14150,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &945050215 stripped
@@ -18022,8 +18022,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textCode: {fileID: 451168555}
   laserHacks:
-  - {fileID: 0}
   - {fileID: 397476064}
+  - {fileID: 1605513368}
   secretCode: 59465
   codeNbMax: 5
 --- !u!4 &1339258251
@@ -29484,7 +29484,7 @@ GameObject:
   - component: {fileID: 2070963183}
   - component: {fileID: 2070963182}
   - component: {fileID: 2070963185}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29571,11 +29571,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2073768506
