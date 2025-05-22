@@ -25767,7 +25767,7 @@ MonoBehaviour:
   isHacked: 0
   attractAI: 0
   autoDesactivation: 1
-  resetTimer: 10
+  resetTimer: 0.25
   timer: 0
   playSoundName: 
 --- !u!120 &1583332576
