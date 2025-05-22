@@ -10,21 +10,25 @@ public class OutlineMesh : MonoBehaviour
     public Color hackedColor;
     public Color initialColor;
 
+    private bool canReset;
+
     void Start()
     {
-        // Récupère tous les composants Outline dans les enfants
         outlines = GetComponentsInChildren<Outline>();
         SetOutline(false);
+        InvokeRepeating(nameof(ResetOutline), 2f, 2f);
     }
 
     void OnMouseEnter()
     {
         SetOutline(true);
+        canReset = false;
     }
 
     void OnMouseExit()
     {
-        SetOutline(false);
+        canReset = true;
+        ResetOutline();
     }
 
     private void SetOutline(bool value)
@@ -32,6 +36,14 @@ public class OutlineMesh : MonoBehaviour
         foreach (var outline in outlines)
         {
             outline.enabled = value;
+        }
+    }
+
+    private void ResetOutline()
+    {
+        if(hackObject.isHacked != true && canReset == true)
+        {
+            SetOutline(false);
         }
     }
 
