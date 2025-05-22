@@ -4,11 +4,25 @@ using UnityEngine;
 
 public class FireAutoDestruction : MonoBehaviour
 {
-    public float requiredDistance = 10f;
-    public string targetScriptName = "FireNewHack";
+    public float requiredDistance = 3f;
+    public string targetScriptName = "FirePropagation";
+
+    public float minDelay = 0.5f;
+    public float maxDelay = 1f;
+
+    private float destructionDelay;
+    private bool timerStarted = false;
+
+    void Start()
+    {
+        destructionDelay = Random.Range(minDelay, maxDelay);
+    }
 
     void Update()
     {
+        if (timerStarted)
+            return;
+
         MonoBehaviour[] targets = FindObjectsOfType<MonoBehaviour>();
         bool isCloseEnough = false;
 
@@ -27,7 +41,13 @@ public class FireAutoDestruction : MonoBehaviour
 
         if (!isCloseEnough)
         {
-            Destroy(gameObject);
+            timerStarted = true;
+            Invoke(nameof(DestroySelf), destructionDelay);
         }
+    }
+
+    void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 }
