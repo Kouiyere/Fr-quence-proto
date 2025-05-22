@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireAlarm: {fileID: 0}
+  fire: {fileID: 0}
   waitPoint: {fileID: 0}
   currentState: 0
   walkingSpeed: 3
@@ -343,3 +344,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b49d4cde45bdb48ae04f02ae1acb6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire: {fileID: 0}

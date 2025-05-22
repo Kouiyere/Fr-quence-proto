@@ -138,11 +138,11 @@ public class WorkerStateMachine : MonoBehaviour
     #region Distracted
     private void EnterDistracted()
     {
-        agent.SetDestination(distraction.transform.position);
+        agent.SetDestination(distraction.GetComponent<HackDistraction>().distractionPoint.position);
     }
     private void UpdateDistracted()
     {
-        if (fireAlarm.alarmOn)
+        if (fireAlarm != null && fireAlarm.alarmOn)
         {
             ChangeState(State.Working);
         }

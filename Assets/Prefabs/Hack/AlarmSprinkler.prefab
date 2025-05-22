@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7658799212798383736}
   m_Layer: 0
   m_Name: Particle System
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4842,7 +4842,7 @@ GameObject:
   - component: {fileID: 1945529432681947095}
   m_Layer: 0
   m_Name: AlarmSprinkler
-  m_TagString: Untagged
+  m_TagString: Sprinkler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

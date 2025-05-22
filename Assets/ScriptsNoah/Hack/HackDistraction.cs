@@ -6,7 +6,8 @@ using UnityEngine;
 public class HackDistraction : MonoBehaviour
 {
     private HackObject hackObject;
-    private Transform distractionPoint;
+    [HideInInspector]
+    public Transform distractionPoint;
 
     // Start is called before the first frame update
     void Start()

@@ -2701,6 +2701,72 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5562436fcd417f842917f65598fadf11, type: 3}
+--- !u!1 &232183587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232183588}
+  - component: {fileID: 232183590}
+  - component: {fileID: 232183589}
+  m_Layer: 2
+  m_Name: Area Effect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &232183588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232183587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776601607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &232183589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232183587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea25178aea6a9d246abe531650db7992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &232183590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232183587}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 124.37, y: 35.36, z: 141.96}
+  m_Center: {x: 39.6, y: 7.8, z: -43.08}
 --- !u!1001 &236387496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10474,14 +10540,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 709518489}
     m_Modifications:
-    - target: {fileID: 1945529432681947095, guid: 27b5bbaadce97bb41ac71fb7358523db, type: 3}
-      propertyPath: fireAlarm
-      value: 
-      objectReference: {fileID: 168057831}
-    - target: {fileID: 3133252687494284880, guid: 27b5bbaadce97bb41ac71fb7358523db, type: 3}
-      propertyPath: m_TagString
-      value: Water
-      objectReference: {fileID: 0}
     - target: {fileID: 5226014322996581683, guid: 27b5bbaadce97bb41ac71fb7358523db, type: 3}
       propertyPath: m_Name
       value: AlarmSprinkler
@@ -12008,10 +12066,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3358574721448220995, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5da685d6bcc91514588bfea6802536a6, type: 2}
     - target: {fileID: 4343694588791529249, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
       propertyPath: m_Name
       value: IA_Ingenier
@@ -12024,24 +12078,17 @@ PrefabInstance:
       propertyPath: waitPoint
       value: 
       objectReference: {fileID: 448276952}
-    - target: {fileID: 5706641020544172072, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: da46267c2d1bc8b419da04bc183383dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4343694588791529249, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1223039022}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
 --- !u!114 &696831026 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8862482215308290984, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
   m_PrefabInstance: {fileID: 696831025}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223039009}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88c198d6d43567d42b21a952cc341cc3, type: 3}
@@ -16864,26 +16911,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff018168cd05c024eb0feb4c5e3b6bf9, type: 3}
---- !u!1 &1223039009 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4343694588791529249, guid: 5fb15961875e82044bb9d199cb4648ab, type: 3}
-  m_PrefabInstance: {fileID: 696831025}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1223039022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1223039009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf84df92dc895448a726b31ab1f1bea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fov: 45
-  distance: 5
-  fireScripts: []
 --- !u!1 &1230771364
 GameObject:
   m_ObjectHideFlags: 0
@@ -20177,6 +20204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf106fa33ab6414492d4f0cf7f74c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distractionPoint: {fileID: 0}
 --- !u!1 &1478101581
 GameObject:
   m_ObjectHideFlags: 0
@@ -28769,7 +28797,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4209696988089565347, guid: f036ef98e98ebaa41aed61d3f467a309, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 232183588}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f036ef98e98ebaa41aed61d3f467a309, type: 3}
 --- !u!1 &1971815407 stripped
