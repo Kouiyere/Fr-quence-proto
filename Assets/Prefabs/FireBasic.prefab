@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5457312591412885121}
   - component: {fileID: 5697087924653249612}
   - component: {fileID: -3293796350694664182}
+  - component: {fileID: 6963723384868096003}
   m_Layer: 8
   m_Name: FireBasic
   m_TagString: FireObject
@@ -4846,3 +4847,17 @@ MonoBehaviour:
   isGrowing: 1
   maxScale: {x: 2, y: 2, z: 2}
   growthSpeed: 0.2
+--- !u!114 &6963723384868096003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629569369108314097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f995c1969911d45ad9a0a1e9e4a648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredDistance: 3
+  targetScriptName: FirePropagation
