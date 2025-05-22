@@ -72,7 +72,7 @@ public class HackObject : MonoBehaviour
         }
         else
         {
-            Invoke(nameof(Desactivate), 1);
+            Invoke(nameof(Desactivate), 0.25f);
         }
     }
     #endregion

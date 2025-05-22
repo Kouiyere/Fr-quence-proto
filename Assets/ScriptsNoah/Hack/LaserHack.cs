@@ -10,14 +10,8 @@ public class LaserHack : MonoBehaviour
     private LineRenderer lineRenderer;
     private HackObject hackObject;
 
-    public float speed = 1000f;
-    public float rotationLimit = 45f;
-    private float currentYRotation = 0f;
-    private float initialYRotation;
-
     void Start()
     {
-        initialYRotation = transform.eulerAngles.y;
         lineRenderer = GetComponent<LineRenderer>();
         hackObject = GetComponent<HackObject>();
         lineRenderer.enabled = false;
@@ -28,7 +22,6 @@ public class LaserHack : MonoBehaviour
         if (hackObject.isHacked)
         {
             FireLaser();
-            MoveLaser();
         }
         else
         {
@@ -50,24 +43,6 @@ public class LaserHack : MonoBehaviour
 
         lineRenderer.SetPosition(0, laserOrigin.position);
         lineRenderer.SetPosition(1, laserEnd);
-    }
-
-    void MoveLaser()
-    {
-        float rotationAmount = speed * Time.deltaTime;
-
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            currentYRotation += rotationAmount;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            currentYRotation -= rotationAmount;
-        }
-
-        currentYRotation = Mathf.Clamp(currentYRotation, -rotationLimit, rotationLimit);
-
-        transform.rotation = Quaternion.Euler(0, initialYRotation + currentYRotation, 0);
     }
 
     void CheckHitObject(Collider hitCollider)
