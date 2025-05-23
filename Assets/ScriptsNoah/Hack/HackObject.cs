@@ -58,6 +58,8 @@ public class HackObject : MonoBehaviour
     {
         isHacked = true;
 
+        CancelInvoke(nameof(Timer));
+
         if (playSoundName != null)
             AudioManager.Instance.PlayLoopingSound(playSoundName);
 
@@ -69,6 +71,8 @@ public class HackObject : MonoBehaviour
     #region Desactivate
     public void Desactivate()
     {
+        CancelInvoke(nameof(Timer));
+
         timer = 0;
         isHacked = false;
 
