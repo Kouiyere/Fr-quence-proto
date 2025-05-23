@@ -20,9 +20,9 @@ public class HackObject : MonoBehaviour
     public string playSoundName;
 
     [Header("Hacking Progress")]
-    public float hackDuration = 2f;         // Temps nécessaire pour pirater
+    public float hackDuration = 2f; 
     [HideInInspector]
-    public float currentHackProgress = 0f;  // Temps cumulé de clic
+    public float currentHackProgress = 0f; 
 
     private bool isMouseOver = false;
     private bool isBeingHacked = false;
@@ -89,9 +89,19 @@ public class HackObject : MonoBehaviour
     #endregion
 
     private void OnMouseEnter() => isMouseOver = true;
+
     private void OnMouseExit()
     {
         isMouseOver = false;
         currentHackProgress = 0f;
+    }
+
+    private void OnMouseDown()
+    {
+        if (isHacked)
+        {
+            Desactivate();
+            AudioManager.Instance.PlaySound("HackObject", transform.position);
+        }
     }
 }
