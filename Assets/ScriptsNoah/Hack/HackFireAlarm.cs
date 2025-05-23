@@ -71,17 +71,15 @@ public class HackFireAlarm : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Sprinkler"))
         {
-            Debug.Log("Sprinler detected");
-            HackFireAlarm fireAlarm = other.gameObject.GetComponent<HackFireAlarm>();
-            if (fireAlarm != this)
+            Sprinkler sprinkler = other.gameObject.GetComponent<Sprinkler>();
+            if (sprinkler.fireAlarm != this)
             {
-                fireAlarm = this;               
+                sprinkler.fireAlarm = this;               
             }
         }
 
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Sprinler detected");
             GuardStateMachine guardStateMachine = other.gameObject.GetComponent<GuardStateMachine>();
             IngenierStateMachine ingenierStateMachine = other.gameObject.GetComponent<IngenierStateMachine>();
             WorkerStateMachine workerStateMachine = other.gameObject.GetComponent<WorkerStateMachine>();
@@ -101,7 +99,7 @@ public class HackFireAlarm : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public void ReleaseTrigger(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {

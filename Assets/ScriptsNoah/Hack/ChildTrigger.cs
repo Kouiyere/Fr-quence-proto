@@ -10,10 +10,21 @@ public class ChildTrigger : MonoBehaviour
         {
             gameObject.GetComponentInParent<HackDistraction>().PullTrigger(other);           
         }
+    }
 
+    private void OnTriggerStay(Collider other)
+    {
         if (gameObject.GetComponentInParent<HackFireAlarm>() != null)
         {
             gameObject.GetComponentInParent<HackFireAlarm>().PullTrigger(other);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (gameObject.GetComponentInParent<HackFireAlarm>() != null)
+        {
+            gameObject.GetComponentInParent<HackFireAlarm>().ReleaseTrigger(other);
         }
     }
 }
