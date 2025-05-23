@@ -8,12 +8,15 @@ public class HackDistraction : MonoBehaviour
     private HackObject hackObject;
     [HideInInspector]
     public Transform distractionPoint;
+    private GameObject areaEffect;
 
     // Start is called before the first frame update
     void Start()
     {
         hackObject = GetComponent<HackObject>();
         distractionPoint = transform.GetChild(0).GetComponent<Transform>();
+        areaEffect = transform.GetComponentInChildren<ChildTrigger>().gameObject;
+        areaEffect.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,6 +25,11 @@ public class HackDistraction : MonoBehaviour
         if (hackObject.isHacked)
         {
             //Play ringtone
+            areaEffect.SetActive(true);
+        }
+        else
+        {
+            areaEffect.SetActive(false);
         }
     }
 
