@@ -676,12 +676,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42544961}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.3, y: 0.2, z: -23.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 41.34, y: -0.14, z: -8.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 305744048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &51956354
 PrefabInstance:
@@ -8754,6 +8754,7 @@ Transform:
   - {fileID: 481150956}
   - {fileID: 448276952}
   - {fileID: 1263167370}
+  - {fileID: 42544962}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &308692692
@@ -17137,6 +17138,7 @@ GameObject:
   - component: {fileID: 1134198113}
   - component: {fileID: 1134198112}
   - component: {fileID: 1134198116}
+  - component: {fileID: 1134198117}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -17248,6 +17250,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1134198117
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134198111}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 02089fbf9a5f5a84398193faffcc4aad, type: 2}
+  - {fileID: 7400000, guid: 8cc3c1efa22514244a93db210eda833b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1135983572
 GameObject:
   m_ObjectHideFlags: 0
@@ -21455,6 +21474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cf106fa33ab6414492d4f0cf7f74c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distractionPoint: {fileID: 0}
 --- !u!1 &1478101581
 GameObject:
   m_ObjectHideFlags: 0
@@ -26936,11 +26956,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1d0dd707be1f6749ac1971ea9d52ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseAnimator: {fileID: 0}
-  showTriggerName: Show
-  hideTriggerName: Hide
-  showAnimationDuration: 0.5
-  hideAnimationDuration: 0.5
+  pauseCanvas: {fileID: 1134198111}
+  animationTarget: {fileID: 1134198111}
+  openAnimation: {fileID: 7400000, guid: 02089fbf9a5f5a84398193faffcc4aad, type: 2}
+  closeAnimation: {fileID: 7400000, guid: 02089fbf9a5f5a84398193faffcc4aad, type: 2}
 --- !u!1 &1543949281
 GameObject:
   m_ObjectHideFlags: 0
@@ -32154,7 +32173,6 @@ SceneRoots:
   - {fileID: 1898315736}
   - {fileID: 1650963142}
   - {fileID: 165034578}
-  - {fileID: 42544962}
   - {fileID: 1707145496}
   - {fileID: 993429770}
   - {fileID: 308692694}

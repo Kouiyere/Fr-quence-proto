@@ -4,62 +4,73 @@ using UnityEngine;
 
 public class PauseMenuController : MonoBehaviour
 {
-    public Animator pauseAnimator;
-    public string showTriggerName = "Show";
-    public string hideTriggerName = "Hide";
+    public GameObject pauseCanvas;
+    public GameObject animationTarget;
+    public AnimationClip openAnimation;
+    public AnimationClip closeAnimation;
 
-    public float showAnimationDuration = 0.5f; // Durée réelle de l'animation d'ouverture
-    public float hideAnimationDuration = 0.5f; // Durée réelle de l'animation de fermeture
-
+    private Animation anim;
     private bool isPaused = false;
-    private bool isAnimating = false;
+    private bool isTransitioning = false;
 
-    void Start()
+    private void Start()
     {
-        // Important : l'anim doit jouer même si timeScale = 0
-        if (pauseAnimator != null)
-            pauseAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        anim = animationTarget.GetComponent<Animation>();
+        if (anim == null)
+            anim = animationTarget.AddComponent<Animation>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isAnimating)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isTransitioning)
         {
             if (!isPaused)
-                StartCoroutine(ShowPauseMenu());
+            {
+                StartCoroutine(PlayPauseAnimation());
+            }
             else
-                StartCoroutine(HidePauseMenu());
+            {
+                ResumeGame(); // ✅ Reprend direct, anim après
+            }
         }
     }
 
-    private IEnumerator ShowPauseMenu()
+    private IEnumerator PlayPauseAnimation()
     {
-        isAnimating = true;
+        isTransitioning = true;
+        pauseCanvas.SetActive(true);
 
-        // Joue l'animation d’ouverture
-        pauseAnimator.SetTrigger(showTriggerName);
-
-        // Attends la durée réelle de l’animation, en ignorant timeScale
-        yield return new WaitForSecondsRealtime(showAnimationDuration);
+        if (openAnimation != null)
+        {
+            anim.AddClip(openAnimation, openAnimation.name);
+            anim.Play(openAnimation.name);
+            yield return new WaitForSeconds(openAnimation.length);
+        }
 
         Time.timeScale = 0f;
         isPaused = true;
-        isAnimating = false;
+        isTransitioning = false;
     }
 
-    private IEnumerator HidePauseMenu()
+    private void ResumeGame()
     {
-        isAnimating = true;
-
-        // On remet le temps à 1 pour permettre à l’anim de fermeture de jouer
         Time.timeScale = 1f;
-
-        pauseAnimator.SetTrigger(hideTriggerName);
-
-        // Attends la durée réelle de l’animation de fermeture
-        yield return new WaitForSecondsRealtime(hideAnimationDuration);
-
         isPaused = false;
-        isAnimating = false;
+        StartCoroutine(PlayResumeAnimation()); // ✅ Joue anim après
+    }
+
+    private IEnumerator PlayResumeAnimation()
+    {
+        isTransitioning = true;
+
+        if (closeAnimation != null)
+        {
+            anim.AddClip(closeAnimation, closeAnimation.name);
+            anim.Play(closeAnimation.name);
+            yield return new WaitForSeconds(closeAnimation.length);
+        }
+
+        pauseCanvas.SetActive(false);
+        isTransitioning = false;
     }
 }
