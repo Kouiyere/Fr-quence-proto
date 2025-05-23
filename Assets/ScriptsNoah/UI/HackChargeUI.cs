@@ -36,7 +36,6 @@ public class HackChargeUI : MonoBehaviour
             canvas.enabled = false;
         }
 
-        // Billboard effect (face the camera)
         if (Camera.main != null)
         {
             transform.LookAt(Camera.main.transform);
