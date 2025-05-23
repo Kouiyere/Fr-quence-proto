@@ -10,6 +10,8 @@ public class HackObject : MonoBehaviour
     public Material activatedMaterial;
     public Renderer objRenderer;
 
+    private CursorManager cursorManager;
+
     public bool isHacked = false;
     public bool attractAI = false;
     public bool autoDesactivation = true;
@@ -30,6 +32,7 @@ public class HackObject : MonoBehaviour
     public virtual void Start()
     {
         objRenderer = GetComponent<Renderer>();
+        cursorManager = FindObjectOfType<CursorManager>();
     }
 
     void Update()
@@ -92,12 +95,16 @@ public class HackObject : MonoBehaviour
     }
     #endregion
 
-    private void OnMouseEnter() => isMouseOver = true;
-
+    private void OnMouseEnter()
+    {
+        isMouseOver = true;
+        cursorManager.SetCursorClick(true);
+    }
     private void OnMouseExit()
     {
         isMouseOver = false;
         currentHackProgress = 0f;
+        cursorManager.SetCursorClick(false);
     }
 
     private void OnMouseDown()
