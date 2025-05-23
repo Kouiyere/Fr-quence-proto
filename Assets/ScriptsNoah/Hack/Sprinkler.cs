@@ -4,34 +4,33 @@ using UnityEngine;
 
 public class Sprinkler : MonoBehaviour
 {
-    private HackFireAlarm fireAlarm;
-    private HackObject fireAlarmHackObject;
+    public HackFireAlarm fireAlarm;
     public GameObject waterSprinkler;
     public bool waterOn;
     private float timer = 5;
 
-
-    private void Start()
-    {
-        fireAlarm = FindObjectOfType<HackFireAlarm>();
-        fireAlarmHackObject = fireAlarm.GetComponent<HackObject>();
-    }
-
     private void Update()
     {
-        if(fireAlarm.needWater==true && fireAlarmHackObject.isHacked == false)
+        if (fireAlarm != null)
         {
-            timer -= Time.deltaTime;
-            if(timer <=0)
+            if (fireAlarm.needWater==true && fireAlarm.GetComponent<HackObject>().isHacked == false)
             {
-                sprinklerActivate();
+                timer -= Time.deltaTime;
+                if(timer <=0)
+                {
+                    sprinklerActivate();
+                }
+            }
+            else
+            {
+                timer = 5;
+                waterSprinkler.SetActive(false);
+                waterOn = false;
             }
         }
         else
         {
-            timer = 5;
-            waterSprinkler.SetActive(false);
-            waterOn = false;
+            Debug.Log(this.name + " is not in range of a fire alarm");
         }
     }
 
