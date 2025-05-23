@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HackObject : MonoBehaviour
 {
@@ -18,33 +19,50 @@ public class HackObject : MonoBehaviour
 
     public string playSoundName;
 
+    [Header("Hacking Progress")]
+    public float hackDuration = 2f;         // Temps nécessaire pour pirater
+    [HideInInspector]
+    public float currentHackProgress = 0f;  // Temps cumulé de clic
+
+    private bool isMouseOver = false;
+    private bool isBeingHacked = false;
 
     public virtual void Start()
     {
         objRenderer = GetComponent<Renderer>();
+    }
 
-        /*
-        if (objRenderer != null && defaultMaterial != null)
+    void Update()
+    {
+        if (isMouseOver && !isHacked && Input.GetMouseButton(0))
         {
-            objRenderer.material = defaultMaterial;
+            isBeingHacked = true;
+            currentHackProgress += Time.deltaTime;
+
+            if (currentHackProgress >= hackDuration)
+            {
+                Activate();
+                isBeingHacked = false;
+                currentHackProgress = 0f;
+            }
         }
-        */
+        else if (!Input.GetMouseButton(0))
+        {
+            isBeingHacked = false;
+            currentHackProgress = 0f;
+        }
     }
 
     #region Activate
     public void Activate()
     {
         isHacked = true;
-        //objRenderer.material = activatedMaterial;
+
         if (playSoundName != null)
-        {
             AudioManager.Instance.PlayLoopingSound(playSoundName);
-        }
 
         if (autoDesactivation)
-        {
             Invoke(nameof(Timer), 1);
-        }
     }
     #endregion
 
@@ -53,12 +71,9 @@ public class HackObject : MonoBehaviour
     {
         timer = 0;
         isHacked = false;
-        //objRenderer.material = defaultMaterial;
 
         if (playSoundName != null)
-        {
             AudioManager.Instance.StopLoopingSound(playSoundName);
-        }
     }
     #endregion
 
@@ -67,27 +82,16 @@ public class HackObject : MonoBehaviour
     {
         timer++;
         if (timer < resetTimer)
-        {
             Invoke(nameof(Timer), 1);
-        }
         else
-        {
             Invoke(nameof(Desactivate), 0.25f);
-        }
     }
     #endregion
 
-    private void OnMouseDown()
+    private void OnMouseEnter() => isMouseOver = true;
+    private void OnMouseExit()
     {
-        if(isHacked)
-        {
-            Desactivate();
-        }
-        else
-        {
-            Activate();
-        }
-
-        AudioManager.Instance.PlaySound("HackObject", transform.position);
+        isMouseOver = false;
+        currentHackProgress = 0f;
     }
 }
