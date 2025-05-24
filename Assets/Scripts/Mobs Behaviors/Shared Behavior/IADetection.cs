@@ -10,6 +10,8 @@ public class IADetection : MonoBehaviour
     private Collider[] hacks;
     [HideInInspector]
     public FireScriptNew[] fireScripts;
+    [HideInInspector]
+    public GameObject[] trashPatches;
 
     void Update()
     {
@@ -80,6 +82,24 @@ public class IADetection : MonoBehaviour
             }
         }
         return fire;
+    }
+
+    public GameObject SeeTrash()
+    {
+        GameObject trash = null;
+        trashPatches = GameObject.FindGameObjectsWithTag("Trash");
+        foreach (GameObject trashPatch in trashPatches)
+        {
+            if (Vector3.Distance(transform.position, trashPatch.transform.position) <= distance)
+            {
+                if (Physics.Raycast(transform.position, trashPatch.transform.position, Mathf.Infinity))
+                {
+                    trash = trashPatch;
+                    return trash;
+                }
+            }
+        }
+        return trash;
     }
 
     private void DebugFov(float angle, float distance, Color color)

@@ -9,6 +9,7 @@ public class WorkerStateMachine : MonoBehaviour
     public HackFireAlarm fireAlarm;
     private Working working;
     private WorkerAlarm workerAlarm;
+    private IADetection iaDetection;
     public Transform exitPoint;
     [HideInInspector]
     public GameObject distraction;
@@ -32,6 +33,7 @@ public class WorkerStateMachine : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         working = GetComponent<Working>();
         workerAlarm = GetComponent<WorkerAlarm>();
+        iaDetection = GetComponent<IADetection>();
     }
 
     // Update is called once per frame
@@ -84,6 +86,10 @@ public class WorkerStateMachine : MonoBehaviour
         if (fireAlarm.alarmOn)
         {
             ChangeState(State.Alarm);
+        }
+        else if (iaDetection.SeeTrash())
+        {
+            ChangeState(State.Cleaning);
         }
         else
         {
