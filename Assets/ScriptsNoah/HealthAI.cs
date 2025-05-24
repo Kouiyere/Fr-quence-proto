@@ -9,7 +9,7 @@ public class HealthAI : MonoBehaviour
     public int currentHealth;
 
     [Header("Death Settings")]
-    public GameObject deathEffect; // optionnel : effet visuel à la mort
+    public GameObject deathEffect;
     public bool destroyOnDeath = true;
 
     public WorkerStateMachine stateMachine;
@@ -21,7 +21,6 @@ public class HealthAI : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    // Appelle cette méthode pour infliger des dégâts
     public void TakeDamage(int amount)
     {
         if (isDead) return;
@@ -40,7 +39,6 @@ public class HealthAI : MonoBehaviour
         isDead = true;
         stateMachine.enabled = false;
 
-        // Exemple d’effet de mort
         if (deathEffect != null)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -59,13 +57,11 @@ public class HealthAI : MonoBehaviour
         */
     }
 
-    // Permet de connaître l’état de l’ennemi
     public bool IsDead()
     {
         return isDead;
     }
 
-    // Réinitialise la vie (utile pour le respawn)
     public void ResetHealth()
     {
         currentHealth = maxHealth;

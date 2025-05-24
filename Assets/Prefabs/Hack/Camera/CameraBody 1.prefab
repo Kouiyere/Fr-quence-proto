@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8807993959350833690}
   - component: {fileID: 3440626900188071019}
   - component: {fileID: 6643642238608128362}
+  - component: {fileID: 3687214221273520919}
   m_Layer: 0
   m_Name: Camera 1
   m_TagString: MainCamera
@@ -200,6 +201,8 @@ MonoBehaviour:
   resetTimer: 10
   timer: 0
   playSoundName: 
+  hackDuration: 2
+  currentHackProgress: 0
 --- !u!114 &3440626900188071019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +242,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0242a9f65705de49971703800d9b7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3687214221273520919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6823795369579879950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a9d872844f8be46a6ec41dad64301f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraText: C
 --- !u!1 &7745869887023394259
 GameObject:
   m_ObjectHideFlags: 0
