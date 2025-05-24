@@ -9,6 +9,7 @@ public class LaserHack : MonoBehaviour
     public LayerMask hitLayers;
     private LineRenderer lineRenderer;
     private HackObject hackObject;
+    private List<Vector3> laserPos = new List<Vector3>();
 
     void Start()
     {
@@ -19,9 +20,10 @@ public class LaserHack : MonoBehaviour
 
     void Update()
     {
+        laserPos.Clear();
         if (hackObject.isHacked)
         {
-            FireLaser();
+            FireLaser(laserOrigin.position, laserOrigin.forward);
         }
         else
         {
@@ -29,32 +31,57 @@ public class LaserHack : MonoBehaviour
         }
     }
 
-    void FireLaser()
+    void FireLaser(Vector3 origine, Vector3 direction)
     {
         lineRenderer.enabled = true;
+        laserPos.Add(origine);
+
+        Ray ray = new Ray(origine, direction);
         RaycastHit hit;
-        Vector3 laserEnd = laserOrigin.position + laserOrigin.forward * laserRange;
 
-        if (Physics.Raycast(laserOrigin.position, laserOrigin.forward, out hit, laserRange, hitLayers))
+        if (Physics.Raycast(ray, out hit, laserRange, hitLayers))
         {
-            laserEnd = hit.point;
-            CheckHitObject(hit.collider);
+            CheckHitObject(hit, direction);
         }
-
-        lineRenderer.SetPosition(0, laserOrigin.position);
-        lineRenderer.SetPosition(1, laserEnd);
+        else
+        {
+            laserPos.Add(ray.GetPoint(laserRange));
+            UpdateLaser();
+        }
     }
 
-    void CheckHitObject(Collider hitCollider)
+    void UpdateLaser()
     {
-        if (hitCollider.CompareTag("FireObject"))
+        int count = 0;
+        lineRenderer.positionCount = laserPos.Count;
+
+        foreach (Vector3 pos in laserPos)
         {
-            hitCollider.gameObject.GetComponent<FireScriptNew>().SetOnFire();
+            lineRenderer.SetPosition(count, pos);
+            count++;
+        }
+    }
+
+    void CheckHitObject(RaycastHit hit, Vector3 direction)
+    {
+        if (hit.collider.CompareTag("FireObject"))
+        {
+            hit.collider.gameObject.GetComponent<FireScriptNew>().SetOnFire();
         }
 
-        if(hitCollider.CompareTag("Enemy"))
+        if(hit.collider.CompareTag("Enemy"))
         {
-            hitCollider.gameObject.GetComponent<HealthAI>().TakeDamage(100);
+            hit.collider.gameObject.GetComponent<HealthAI>().TakeDamage(100);
+        }
+
+        if (hit.collider.CompareTag("Mirror"))
+        {
+            FireLaser(hit.point, Vector3.Reflect(direction, hit.normal));
+        }
+        else
+        {
+            laserPos.Add(hit.point);
+            UpdateLaser();
         }
     }
 }
