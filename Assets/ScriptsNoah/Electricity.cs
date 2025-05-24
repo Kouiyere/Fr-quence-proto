@@ -7,8 +7,10 @@ public class Electricity : MonoBehaviour
     public GameObject particles;
     public bool isElectrical = false;
 
-    public float electricityDuration = 5f;
+    public float electricityDuration = 1f;
     private float timer = 0f;
+
+    private Electricity electricitySource = null;
 
     private void Start()
     {
@@ -17,7 +19,14 @@ public class Electricity : MonoBehaviour
 
     private void Update()
     {
-        if (isElectrical)
+        if(electricitySource != null)
+        {
+            if(electricitySource.isElectrical)
+            {
+                SetElectrical();
+            }
+        }
+        else
         {
             timer += Time.deltaTime;
             if (timer >= electricityDuration)
@@ -32,6 +41,16 @@ public class Electricity : MonoBehaviour
         if (particle.CompareTag("ElectricParticle") && particle != particles)
         {
             SetElectrical();
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Water"))
+        {
+            electricitySource = other.GetComponent<Electricity>();
+            print(electricitySource);
+
         }
     }
 
