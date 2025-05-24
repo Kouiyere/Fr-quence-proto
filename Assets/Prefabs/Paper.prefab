@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3315341657897507823}
   m_Layer: 6
   m_Name: Paper
-  m_TagString: Untagged
+  m_TagString: Paper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 6069222260802809570}
   m_Layer: 6
   m_Name: Fire (1)
-  m_TagString: Untagged
+  m_TagString: FireObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

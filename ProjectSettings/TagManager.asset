@@ -15,6 +15,7 @@ TagManager:
   - ElectricParticle
   - Floor
   - Sprinkler
+  - Paper
   layers:
   - Default
   - TransparentFX
