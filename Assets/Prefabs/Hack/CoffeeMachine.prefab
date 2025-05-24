@@ -4918,15 +4918,15 @@ PrefabInstance:
       objectReference: {fileID: 5768891745710045582}
     - target: {fileID: 5228921175548512366, guid: f1ea65ce1ebc9e84b90d8e0e0665f22f, type: 3}
       propertyPath: maxScale.x
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5228921175548512366, guid: f1ea65ce1ebc9e84b90d8e0e0665f22f, type: 3}
       propertyPath: maxScale.y
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5228921175548512366, guid: f1ea65ce1ebc9e84b90d8e0e0665f22f, type: 3}
       propertyPath: maxScale.z
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8444143786940235017, guid: f1ea65ce1ebc9e84b90d8e0e0665f22f, type: 3}
       propertyPath: m_LocalScale.x
@@ -5097,6 +5097,8 @@ MonoBehaviour:
   resetTimer: 10
   timer: 0
   playSoundName: 
+  hackDuration: 2
+  currentHackProgress: 0
 --- !u!114 &8299847732764443661
 MonoBehaviour:
   m_ObjectHideFlags: 0

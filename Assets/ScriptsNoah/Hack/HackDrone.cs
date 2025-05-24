@@ -25,7 +25,7 @@ public class HackDrone : MonoBehaviour
         hackObject = GetComponent<HackObject>();
         agent = GetComponent<NavMeshAgent>();
         agent.speed = movementSpeed;
-        InvokeRepeating(nameof(SpawnTrash),0.5f,0.5f);
+        InvokeRepeating(nameof(SpawnTrash),0.25f,0.25f);
         BrokenDrone();
         FireDrone(fire);
     }
