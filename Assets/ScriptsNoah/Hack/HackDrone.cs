@@ -172,7 +172,7 @@ public class HackDrone : MonoBehaviour
     {
         if (trash)
         {
-            Instantiate(trashPrefab, new Vector3(transform.position.x, transform.position.y-0.25f, transform.position.z), transform.rotation);
+            Instantiate(trashPrefab, new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z), transform.rotation);
         }
     }
     private void ResetTrash()

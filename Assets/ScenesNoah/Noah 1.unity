@@ -11323,6 +11323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeMachine
       objectReference: {fileID: 0}
+    - target: {fileID: 8027101702454786979, guid: 2d77260da7d5f1849ad77412dccb00a1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8515896958710322894, guid: 2d77260da7d5f1849ad77412dccb00a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.25

@@ -10053,7 +10053,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   sparklesParticle: {fileID: 2578138145525406165}
   fireParticle: {fileID: 571316082642908795}
-  trashPrefab: {fileID: 2239572161748449908, guid: 17475701633c9974bb551e50ebebfc78, type: 3}
+  trashPrefab: {fileID: 8604576861304716481, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
   trash: 0
   fire: 0
 --- !u!114 &9221328040618274197
@@ -10078,6 +10078,8 @@ MonoBehaviour:
   resetTimer: 10
   timer: 0
   playSoundName: 
+  hackDuration: 2
+  currentHackProgress: 0
 --- !u!136 &3503754019833893892
 CapsuleCollider:
   m_ObjectHideFlags: 0
