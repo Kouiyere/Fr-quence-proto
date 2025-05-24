@@ -142,9 +142,14 @@ public class WorkerStateMachine : MonoBehaviour
     }
     private void UpdateDistracted()
     {
+        if (agent.remainingDistance <= 0.05f && !agent.pathPending)
+        {
+            transform.LookAt(new Vector3(distraction.transform.position.x, transform.position.y, distraction.transform.position.z));
+        }
+
         if (fireAlarm != null && fireAlarm.alarmOn)
         {
-            ChangeState(State.Working);
+            ChangeState(State.Alarm);
         }
 
         if (!distraction.GetComponent<HackObject>().isHacked)
