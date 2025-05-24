@@ -5065,8 +5065,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 3005322767426976932}
-  isElectrical: 0
-  electricityDuration: 0.9
+  electricityDuration: 0.5
+  neighborCheckRadius: 2
 --- !u!65 &8029974037619598479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5080,7 +5080,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -5101,7 +5101,7 @@ GameObject:
   - component: {fileID: 1133234206289899462}
   m_Layer: 8
   m_Name: Particle System (1)
-  m_TagString: ElectricParticle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
