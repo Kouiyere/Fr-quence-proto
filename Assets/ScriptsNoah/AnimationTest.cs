@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class AnimationTest : MonoBehaviour
 {
-    public float movementThreshold = 0.1f; 
+    public float movementThreshold = 0.1f;
 
     private NavMeshAgent agent;
     public Animator animator;
@@ -13,10 +13,12 @@ public class AnimationTest : MonoBehaviour
     public FireCollisionAI fireCollision;
 
     public string walkParameter = "isWalking";
+    public string stunParameter = "isStun";
     public string fireParameter = "isOnFire";
     public string deathTrigger = "Die";
 
     private bool isDead = false;
+    public bool isStunned = false; // Nouvelle variable de stun
 
     void Start()
     {
@@ -25,25 +27,36 @@ public class AnimationTest : MonoBehaviour
 
     void Update()
     {
-        if (isDead) return;
+        if (isDead)
+            return;
 
-        if (health.currentHealth > 0)
+        if (health.currentHealth <= 0)
         {
-            bool isMoving = agent.velocity.magnitude > movementThreshold;
-            if (fireCollision.isOnFire)
-            {
-                animator.SetBool(fireParameter, isMoving);
-            }
-            else
-            {
-                animator.SetBool(walkParameter, isMoving);
-            }
+            HandleDeath();
+            return;
+        }
+
+        if (isStunned)
+        {
+            HandleStun();
+            return;
+        }
+        else if (!agent.enabled || agent.isStopped)
+        {
+            agent.enabled = true;
+            agent.isStopped = false;
+        }
+
+        bool isMoving = agent.velocity.magnitude > movementThreshold;
+
+        if (fireCollision.isOnFire)
+        {
+            animator.SetBool(fireParameter, isMoving);
         }
         else
         {
-            HandleDeath();
+            animator.SetBool(walkParameter, isMoving);
         }
-
     }
 
     void HandleDeath()
@@ -51,9 +64,24 @@ public class AnimationTest : MonoBehaviour
         isDead = true;
 
         animator.SetBool(walkParameter, false);
-        animator.SetTrigger(deathTrigger);      
+        animator.SetTrigger(deathTrigger);
 
-        agent.isStopped = true;                 
-        agent.enabled = false;                  
+        agent.isStopped = true;
+        agent.enabled = false;
+    }
+
+    void HandleStun()
+    {
+        agent.isStopped = true;
+
+        animator.SetBool(walkParameter, false);
+        animator.SetBool(fireParameter, false);
+        animator.SetBool(stunParameter, true);
+    }
+
+    public void ResetStun()
+    {
+        isStunned = false;
+        animator.SetBool(stunParameter, false);
     }
 }
