@@ -13,6 +13,14 @@ public class FireCollisionAI : MonoBehaviour
         fireEffect.SetActive(false);
     }
 
+    private void Update()
+    {
+        if(fireEffect.activeSelf == true && health.IsDead())
+        {
+            ResetFire();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.isTrigger)
@@ -25,5 +33,11 @@ public class FireCollisionAI : MonoBehaviour
 
             }
         }
+    }
+
+    public void ResetFire()
+    {
+        isOnFire = false;
+        fireEffect.SetActive(false);
     }
 }
