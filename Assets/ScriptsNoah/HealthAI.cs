@@ -15,10 +15,12 @@ public class HealthAI : MonoBehaviour
     public WorkerStateMachine stateMachine;
 
     private bool isDead = false;
+    public bool repeatDammage = false;
 
     void Start()
     {
         currentHealth = maxHealth;
+        InvokeRepeating(nameof(RepeatDammage), 1f, 1f);
     }
 
     public void TakeDamage(int amount)
@@ -31,6 +33,14 @@ public class HealthAI : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+        }
+    }
+
+    private void RepeatDammage()
+    {
+        if(repeatDammage)
+        {
+            TakeDamage(10);
         }
     }
 

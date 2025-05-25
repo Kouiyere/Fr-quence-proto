@@ -38,6 +38,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7905350721508529915}
+  - {fileID: 1777672446862175358}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &7994995198173086811
@@ -126,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireAlarm: {fileID: 0}
   exitPoint: {fileID: 0}
+  distraction: {fileID: 0}
   currentState: 0
   walkingSpeed: 3
   runningSpeed: 5
@@ -141,8 +143,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6590320bb0cac7e4d883f8c0561dfa86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  route: {fileID: 0}
+  workStation: {fileID: 0}
+  restStopsScript: {fileID: 0}
   workTime: 5
+  restTime: 0
+  currentState: 0
+  resting: 0
 --- !u!114 &2720411889841869813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +195,80 @@ MonoBehaviour:
   deathEffect: {fileID: 0}
   destroyOnDeath: 1
   stateMachine: {fileID: 4651683102287664353}
+--- !u!1001 &807500696138606584
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4036111293908882126}
+    m_Modifications:
+    - target: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.212
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6949957
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6949957
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.13031134
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.13031134
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629569369108314097, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_Name
+      value: FirePropagation
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234125518680437445, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: maxFlamesInArea
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234125518680437445, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: propagationRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234125518680437445, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: delayBetweenSpread
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fb71e50650117544c92d365649accb67, type: 3}
+--- !u!4 &1777672446862175358 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1413952397646023558, guid: fb71e50650117544c92d365649accb67, type: 3}
+  m_PrefabInstance: {fileID: 807500696138606584}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7656062078961692944
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,8 +10,10 @@ public class AnimationTest : MonoBehaviour
     private NavMeshAgent agent;
     public Animator animator;
     public HealthAI health;
+    public FireCollisionAI fireCollision;
 
     public string walkParameter = "isWalking";
+    public string fireParameter = "isOnFire";
     public string deathTrigger = "Die";
 
     private bool isDead = false;
@@ -28,7 +30,14 @@ public class AnimationTest : MonoBehaviour
         if (health.currentHealth > 0)
         {
             bool isMoving = agent.velocity.magnitude > movementThreshold;
-            animator.SetBool(walkParameter, isMoving);
+            if (fireCollision.isOnFire)
+            {
+                animator.SetBool(fireParameter, isMoving);
+            }
+            else
+            {
+                animator.SetBool(walkParameter, isMoving);
+            }
         }
         else
         {
