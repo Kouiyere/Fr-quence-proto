@@ -4956,6 +4956,7 @@ GameObject:
   - component: {fileID: 8936980131730729767}
   - component: {fileID: 1314258401084811647}
   - component: {fileID: -8990610807175487993}
+  - component: {fileID: 7520433065738344534}
   - component: {fileID: 8029974037619598479}
   m_Layer: 4
   m_Name: GarbageVisual
@@ -5067,6 +5068,21 @@ MonoBehaviour:
   particles: {fileID: 3005322767426976932}
   electricityDuration: 0.5
   neighborCheckRadius: 2
+  isSource: 0
+  isElectrified: 0
+--- !u!114 &7520433065738344534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604576861304716481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8734def70670144b299cdaba839bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricity: {fileID: -8990610807175487993}
 --- !u!65 &8029974037619598479
 BoxCollider:
   m_ObjectHideFlags: 0

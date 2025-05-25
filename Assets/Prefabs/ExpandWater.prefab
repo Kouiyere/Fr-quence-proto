@@ -98,6 +98,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1995149871900645761, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995149871900645761, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1995149871900645761, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7223183341861525460, guid: ec074809a1e638e4b8f352cfa265a6ca, type: 3}
       propertyPath: CollisionModule.enabled
       value: 1

@@ -12,7 +12,7 @@ public class Electricity : MonoBehaviour
     private static List<Electricity> allElectricObjects = new List<Electricity>();
 
     public bool isSource = false;
-    private bool isElectrified = false;
+    public bool isElectrified = false;
 
     private void Start()
     {
