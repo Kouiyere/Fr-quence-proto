@@ -26174,6 +26174,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 451181560}
     - target: {fileID: 3931465353175522650, guid: bc980045c7929ad419b5d5f03e643400, type: 3}
+      propertyPath: stunEffect
+      value: 
+      objectReference: {fileID: 1182203713}
+    - target: {fileID: 3931465353175522650, guid: bc980045c7929ad419b5d5f03e643400, type: 3}
       propertyPath: deathTrigger
       value: Death
       objectReference: {fileID: 0}

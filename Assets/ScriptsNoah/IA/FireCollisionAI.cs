@@ -6,6 +6,7 @@ public class FireCollisionAI : MonoBehaviour
 {
     public bool isOnFire = false;
     public GameObject fireEffect;
+
     public HealthAI health;
 
     private void Start()

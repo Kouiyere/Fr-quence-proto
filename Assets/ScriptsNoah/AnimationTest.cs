@@ -12,17 +12,20 @@ public class AnimationTest : MonoBehaviour
     public HealthAI health;
     public FireCollisionAI fireCollision;
 
+    public GameObject stunEffect;
+
     public string walkParameter = "isWalking";
     public string stunParameter = "isStun";
     public string fireParameter = "isOnFire";
     public string deathTrigger = "Die";
 
     private bool isDead = false;
-    public bool isStunned = false; // Nouvelle variable de stun
+    public bool isStunned = false;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        stunEffect.SetActive(false);
     }
 
     void Update()
@@ -77,11 +80,15 @@ public class AnimationTest : MonoBehaviour
         animator.SetBool(walkParameter, false);
         animator.SetBool(fireParameter, false);
         animator.SetBool(stunParameter, true);
+
+        stunEffect.SetActive(true);
     }
 
     public void ResetStun()
     {
         isStunned = false;
         animator.SetBool(stunParameter, false);
+
+        stunEffect.SetActive(false);
     }
 }
