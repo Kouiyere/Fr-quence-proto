@@ -5,7 +5,7 @@ using UnityEngine;
 public class HackFireAlarm : MonoBehaviour
 {
     public GameObject fireAlarm;
-    public FireScriptNew[] fireObjects;
+    public List<FireScriptNew> fireScripts = new List<FireScriptNew>();
     public Material fireAlarmActivated;
     public Material fireAlarmDefault;
 
@@ -22,12 +22,11 @@ public class HackFireAlarm : MonoBehaviour
     private void Start()
     {
         hackObject = GetComponent<HackObject>();
-        fireObjects = FindObjectsByType<FireScriptNew>(FindObjectsSortMode.None);
     }
 
     private void Update()
     {
-        foreach(FireScriptNew fireObject in fireObjects)
+        foreach(FireScriptNew fireObject in fireScripts)
         {
             if (fireObject.isOnFire == true)
             {
@@ -96,6 +95,11 @@ public class HackFireAlarm : MonoBehaviour
             {
                 workerStateMachine.fireAlarm = this;
             }
+        }
+
+        if (other.gameObject.GetComponent<FireScriptNew>() != null && !fireScripts.Contains(other.gameObject.GetComponent<FireScriptNew>()))
+        {
+            fireScripts.Add(other.gameObject.GetComponent<FireScriptNew>());
         }
     }
 

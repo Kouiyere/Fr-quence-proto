@@ -9,9 +9,12 @@ public class WorkerStateMachine : MonoBehaviour
     public HackFireAlarm fireAlarm;
     private Working working;
     private WorkerAlarm workerAlarm;
+    private IADetection iaDetection;
+    private Cleaning cleaning;
     public Transform exitPoint;
     [HideInInspector]
     public GameObject distraction;
+    private GameObject trash;
 
     public enum State
     {
@@ -32,6 +35,8 @@ public class WorkerStateMachine : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         working = GetComponent<Working>();
         workerAlarm = GetComponent<WorkerAlarm>();
+        iaDetection = GetComponent<IADetection>();
+        cleaning = GetComponent<Cleaning>();
     }
 
     // Update is called once per frame
@@ -85,6 +90,10 @@ public class WorkerStateMachine : MonoBehaviour
         {
             ChangeState(State.Alarm);
         }
+        else if (iaDetection.SeeTrash())
+        {
+            ChangeState(State.Cleaning);
+        }
         else
         {
             working.Work();
@@ -121,12 +130,20 @@ public class WorkerStateMachine : MonoBehaviour
     #region Cleaning
     private void EnterCleaning()
     {
-
+        trash = iaDetection.SeeTrash();
+        cleaning.trash = trash;
     }
 
     private void UpdateCleaning()
     {
-
+        if (trash == null)
+        {
+            ChangeState(State.Working);
+        }
+        else
+        {
+            cleaning.CleanTrash();
+        }
     }
 
     private void ExitCleaning()
