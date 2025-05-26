@@ -6,6 +6,7 @@ public class DetectionIcon : MonoBehaviour
 {
     public GameObject iconDetection;
     private IADetection detection;
+    public WorkerStateMachine cleaning;
 
     private void Start()
     {
@@ -23,7 +24,19 @@ public class DetectionIcon : MonoBehaviour
             iconDetection.SetActive(false);
         }
 
-        if (Camera.main != null)
+        if (cleaning != null)
+        {
+            if(cleaning.currentState == WorkerStateMachine.State.Cleaning)
+            {
+                iconDetection.SetActive(true);
+            }
+            else
+            {
+                iconDetection.SetActive(false);
+            }
+        }
+
+            if (Camera.main != null)
         {
             iconDetection.transform.LookAt(Camera.main.transform);
             iconDetection.transform.rotation = Quaternion.LookRotation(iconDetection.transform.position - Camera.main.transform.position);
