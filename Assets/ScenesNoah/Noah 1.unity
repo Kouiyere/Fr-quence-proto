@@ -24765,6 +24765,22 @@ PrefabInstance:
       propertyPath: electricityParticles
       value: 
       objectReference: {fileID: 1495848543}
+    - target: {fileID: 4891254497262414609, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
+      propertyPath: m_Size.x
+      value: 2.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891254497262414609, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
+      propertyPath: m_Size.y
+      value: 3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891254497262414609, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
+      propertyPath: m_Size.z
+      value: 2.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891254497262414609, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
+      propertyPath: m_Center.y
+      value: -0.63
+      objectReference: {fileID: 0}
     - target: {fileID: 6483292617497047366, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
       propertyPath: autoDesactivation
       value: 0
@@ -24776,7 +24792,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2185053541853686214, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2062062501}
   m_SourcePrefab: {fileID: 100100000, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
 --- !u!1 &1263167369
 GameObject:
@@ -38094,6 +38113,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6854757169713057240, guid: 5562436fcd417f842917f65598fadf11, type: 3}
   m_PrefabInstance: {fileID: 297657720}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2062062497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2185053541853686214, guid: 25c2013e4023aae4b82a73b21c3dacb3, type: 3}
+  m_PrefabInstance: {fileID: 1260138932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2062062501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062062497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7abc21139115f458360ac66101ac61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stunDuration: 5
 --- !u!4 &2064833771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b6337ea2595f2664592c4e84deb113c0, type: 3}
