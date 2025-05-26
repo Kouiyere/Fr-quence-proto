@@ -10,9 +10,11 @@ public class WorkerStateMachine : MonoBehaviour
     private Working working;
     private WorkerAlarm workerAlarm;
     private IADetection iaDetection;
+    private Cleaning cleaning;
     public Transform exitPoint;
     [HideInInspector]
     public GameObject distraction;
+    private GameObject trash;
 
     public enum State
     {
@@ -34,6 +36,7 @@ public class WorkerStateMachine : MonoBehaviour
         working = GetComponent<Working>();
         workerAlarm = GetComponent<WorkerAlarm>();
         iaDetection = GetComponent<IADetection>();
+        cleaning = GetComponent<Cleaning>();
     }
 
     // Update is called once per frame
@@ -127,12 +130,20 @@ public class WorkerStateMachine : MonoBehaviour
     #region Cleaning
     private void EnterCleaning()
     {
-
+        trash = iaDetection.SeeTrash();
+        cleaning.trash = trash;
     }
 
     private void UpdateCleaning()
     {
-
+        if (trash == null)
+        {
+            ChangeState(State.Working);
+        }
+        else
+        {
+            cleaning.CleanTrash();
+        }
     }
 
     private void ExitCleaning()
