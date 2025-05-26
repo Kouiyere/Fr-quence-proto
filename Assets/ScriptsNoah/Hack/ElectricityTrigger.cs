@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ElectricityTrigger : MonoBehaviour
 {
-    public HackElecticity electricalPannel;
+    public HackObject electricalPannel;
     public GameObject electricityParticles;
 
     private void OnTriggerEnter(Collider other)
