@@ -11,11 +11,14 @@ public class ElectricityTrigger : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            GuardStateMachine ai = other.GetComponentInParent<GuardStateMachine>();
             if (electricalPannel.isHacked)
             {
-                print("enter");
-                ai.ChangeState(GuardStateMachine.State.Frozen);
+                if(other.GetComponentInParent<GuardStateMachine>())
+                {
+                    GuardStateMachine ai = other.GetComponentInParent<GuardStateMachine>();
+                    ai.ChangeState(GuardStateMachine.State.Frozen);
+                }
+
                 electricalPannel.isHacked = false;
             }
         }

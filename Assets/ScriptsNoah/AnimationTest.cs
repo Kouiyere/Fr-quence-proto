@@ -17,10 +17,12 @@ public class AnimationTest : MonoBehaviour
     public string walkParameter = "isWalking";
     public string stunParameter = "isStun";
     public string fireParameter = "isOnFire";
+    public string cleanParameter = "isCleaning";
     public string deathTrigger = "Die";
 
     private bool isDead = false;
     public bool isStunned = false;
+    public bool isCleaning = false;
 
     void Start()
     {
@@ -30,7 +32,7 @@ public class AnimationTest : MonoBehaviour
 
     void Update()
     {
-        if (isDead)
+        if (isDead || isCleaning)
             return;
 
         if (health.currentHealth <= 0)
@@ -43,11 +45,6 @@ public class AnimationTest : MonoBehaviour
         {
             HandleStun();
             return;
-        }
-        else if (!agent.enabled || agent.isStopped)
-        {
-            agent.enabled = true;
-            agent.isStopped = false;
         }
 
         bool isMoving = agent.velocity.magnitude > movementThreshold;
@@ -90,5 +87,24 @@ public class AnimationTest : MonoBehaviour
         animator.SetBool(stunParameter, false);
 
         stunEffect.SetActive(false);
+    }
+
+    public void PlayCleanAnimation(float duration)
+    {
+        StartCoroutine(CleanCoroutine(duration));
+    }
+
+    IEnumerator CleanCoroutine(float duration)
+    {
+        isCleaning = true;
+        agent.isStopped = true;
+        animator.SetBool(walkParameter, false);
+        animator.SetBool(cleanParameter, true);
+
+        yield return new WaitForSeconds(duration);
+
+        animator.SetBool(cleanParameter, false);
+        agent.isStopped = false;
+        isCleaning = false;
     }
 }
