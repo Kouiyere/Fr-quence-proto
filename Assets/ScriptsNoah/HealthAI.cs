@@ -12,7 +12,9 @@ public class HealthAI : MonoBehaviour
     public GameObject deathEffect;
     public bool destroyOnDeath = true;
 
-    public WorkerStateMachine stateMachine;
+    public WorkerStateMachine workerStateMachine;
+    public IngenierStateMachine ingeStateMachine;
+    public GuardStateMachine guardStateMachine;
 
     private bool isDead = false;
     public bool repeatDammage = false;
@@ -47,7 +49,18 @@ public class HealthAI : MonoBehaviour
     private void Die()
     {
         isDead = true;
-        stateMachine.enabled = false;
+        if(workerStateMachine != null)
+        {
+            workerStateMachine.enabled = false;
+        }
+        if (ingeStateMachine != null)
+        {
+            ingeStateMachine.enabled = false;
+        }
+        if (guardStateMachine != null)
+        {
+            guardStateMachine.enabled = false;
+        }
 
         if (deathEffect != null)
         {
