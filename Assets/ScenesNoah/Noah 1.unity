@@ -13046,11 +13046,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 72479677}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &666502442 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3726176826118436791, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
-  m_PrefabInstance: {fileID: 72479677}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &666502443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13114,7 +13109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 666502442}
+  volumeTrigger: {fileID: 29628813}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -13656,7 +13651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &703717036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14553,11 +14548,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 423433090}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &761285052 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3726176826118436791, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
-  m_PrefabInstance: {fileID: 423433090}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &761285053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14621,7 +14611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 761285052}
+  volumeTrigger: {fileID: 29628813}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -15462,11 +15452,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 717995363}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &873035620 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3726176826118436791, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
-  m_PrefabInstance: {fileID: 717995363}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &873035621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15530,7 +15515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 873035620}
+  volumeTrigger: {fileID: 29628813}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -16109,11 +16094,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 1818552288}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &945050216 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3726176826118436791, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
-  m_PrefabInstance: {fileID: 1818552288}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &945050217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16177,7 +16157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 945050216}
+  volumeTrigger: {fileID: 29628813}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -17485,11 +17465,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 51956354}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1055287873 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3726176826118436791, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
-  m_PrefabInstance: {fileID: 51956354}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1055287874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17553,7 +17528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 1055287873}
+  volumeTrigger: {fileID: 29628813}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -17609,11 +17584,6 @@ Transform:
 --- !u!1 &1060050656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
-  m_PrefabInstance: {fileID: 757812781}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1060050657 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3726176826118436791, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 757812781}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1060050658
@@ -17679,7 +17649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 1060050657}
+  volumeTrigger: {fileID: 29628813}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -25204,11 +25174,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 664513458}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1294112277 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3726176826118436791, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
-  m_PrefabInstance: {fileID: 664513458}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1294112278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25272,7 +25237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 1294112277}
+  volumeTrigger: {fileID: 29628813}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -25547,11 +25512,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 648964390}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1345060341 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3726176826118436791, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
-  m_PrefabInstance: {fileID: 648964390}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1345060342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25615,7 +25575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 1345060341}
+  volumeTrigger: {fileID: 29628813}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -35971,7 +35931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1771010659}
-  fullText: 'Mission : Eliminate all the ennemies !'
+  fullText: 'Mission : Eliminate all the agents !'
   delay: 0.05
 --- !u!114 &1771010659
 MonoBehaviour:
@@ -35993,7 +35953,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mission : Eliminate all the ennemies !'
+  m_text: 'Mission : Eliminate all the agents !'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -39111,11 +39071,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6823795369579879950, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
   m_PrefabInstance: {fileID: 1746719573}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2146825889 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3726176826118436791, guid: ec87964c86535ca4c8bb31744490b376, type: 3}
-  m_PrefabInstance: {fileID: 1746719573}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2146825890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39179,7 +39134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 2146825889}
+  volumeTrigger: {fileID: 29628813}
   volumeLayer:
     serializedVersion: 2
     m_Bits: 8
