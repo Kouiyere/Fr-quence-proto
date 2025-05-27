@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3491419772542570557}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ElecticalPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114262378487717194}
   - component: {fileID: 4891254497262414609}
   - component: {fileID: 4015913044684682077}
-  m_Layer: 2
+  m_Layer: 6
   m_Name: ElecticalPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 8397022946777763507}
   - component: {fileID: 4654171404990400962}
   - component: {fileID: 6257058295208807643}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ElectricalLight
   m_TagString: Trap
   m_Icon: {fileID: 0}

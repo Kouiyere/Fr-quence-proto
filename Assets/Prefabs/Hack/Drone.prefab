@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4897602655553128037}
   - component: {fileID: 5584771805496273339}
   - component: {fileID: 6849887903121864555}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4841,7 +4841,7 @@ GameObject:
   - component: {fileID: 1743742544737047242}
   - component: {fileID: 1569504071812809716}
   - component: {fileID: 2945860706242083501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4925,7 +4925,7 @@ GameObject:
   - component: {fileID: 2757437040436153987}
   - component: {fileID: 7889174549951509951}
   - component: {fileID: 6429815496775106834}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9754,7 +9754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5506053374018236325}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WheelAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9786,7 +9786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7025282562758694538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drone
   m_TagString: Drone
   m_Icon: {fileID: 0}
@@ -9820,7 +9820,7 @@ GameObject:
   - component: {fileID: 4034134310829099997}
   - component: {fileID: 4880519165304564336}
   - component: {fileID: 876503944561426845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9904,7 +9904,7 @@ GameObject:
   - component: {fileID: 5374357252805896466}
   - component: {fileID: 2962312332518772617}
   - component: {fileID: 3052598447117624747}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9991,7 +9991,7 @@ GameObject:
   - component: {fileID: 9221328040618274197}
   - component: {fileID: 871536972728451075}
   - component: {fileID: 3503754019833893892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10160,7 +10160,7 @@ GameObject:
   - component: {fileID: 8527984721367085120}
   - component: {fileID: 4674528546098202887}
   - component: {fileID: 7485869713113491239}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10244,7 +10244,7 @@ GameObject:
   - component: {fileID: 7001109945277390838}
   - component: {fileID: 1488736417297671318}
   - component: {fileID: 5737775635669889369}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10328,7 +10328,7 @@ GameObject:
   - component: {fileID: 4287397815467702169}
   - component: {fileID: 4046117516904091492}
   - component: {fileID: 8891941218174422902}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}

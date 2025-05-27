@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7540384719761273294}
   - component: {fileID: 6137977344699539603}
   - component: {fileID: 2901247166291046698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 9145263353929119387}
   - component: {fileID: 2855066856633152087}
   - component: {fileID: 3904019489289141847}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AlarmHack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 4720798255055674361}
   - component: {fileID: 5977590565235070457}
   - component: {fileID: 7263750613288888793}
-  m_Layer: 2
+  m_Layer: 6
   m_Name: Area Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 4010534191722620107}
   - component: {fileID: 7521205767995211426}
   - component: {fileID: 8509593051003035391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AlarmVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
