@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 8069164625296617349}
   m_Layer: 7
   m_Name: Console
-  m_TagString: FireObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1799,6 +1799,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1629569369108314097, guid: fb71e50650117544c92d365649accb67, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7234125518680437445, guid: fb71e50650117544c92d365649accb67, type: 3}
       propertyPath: firePrefab
       value: 
@@ -1809,7 +1813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7234125518680437445, guid: fb71e50650117544c92d365649accb67, type: 3}
       propertyPath: propagationRadius
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -6,6 +6,7 @@ public class Paper : MonoBehaviour
 {
     private Rigidbody rb;
     public float force = 500f;
+    public float upForce = 5f;
 
     public void Start()
     {
@@ -17,7 +18,7 @@ public class Paper : MonoBehaviour
 
         // Ajoute une dispersion aléatoire autour de cette direction
         Vector3 randomOffset = transform.right * Random.Range(-300f, 100f) +
-                               transform.up * Random.Range(-200f, 200f);
+                               transform.up * upForce;
 
         rb.AddForce(forwardDirection + randomOffset);
     }

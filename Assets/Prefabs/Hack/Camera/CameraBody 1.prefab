@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 144867754680410580}
   - component: {fileID: 7598902252108663149}
   - component: {fileID: -1602550344067975666}
+  - component: {fileID: 4170041101902177317}
   - component: {fileID: 3010041657699044364}
   m_Layer: 0
   m_Name: Camera 1
@@ -115,6 +116,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!114 &4170041101902177317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6823795369579879950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15df0cd8830110499c9106732041da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomSpeed: 15
+  minZoom: 60
+  maxZoom: 80
 --- !u!114 &3010041657699044364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +153,8 @@ MonoBehaviour:
   resetTimer: 10
   timer: 0
   playSoundName: 
+  hackDuration: 2
+  currentHackProgress: 0
 --- !u!1 &7745869887023394259
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 0.17339697, g: 0.61006284, b: 0.09400327, a: 1}
-  outlineWidth: 4
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -364,7 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 0.17339697, g: 0.61006284, b: 0.09400327, a: 1}
-  outlineWidth: 4
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -387,7 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 0.17339697, g: 0.61006284, b: 0.09400327, a: 1}
-  outlineWidth: 4
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -410,7 +428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 0.17339697, g: 0.61006284, b: 0.09400327, a: 1}
-  outlineWidth: 4
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -433,7 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
+  outlineWidth: 0
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -461,7 +479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 0.17339697, g: 0.61006284, b: 0.09400327, a: 1}
-  outlineWidth: 4
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -484,7 +502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 0.17339697, g: 0.61006284, b: 0.09400327, a: 1}
-  outlineWidth: 4
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []

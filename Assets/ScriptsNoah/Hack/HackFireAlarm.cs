@@ -5,7 +5,7 @@ using UnityEngine;
 public class HackFireAlarm : MonoBehaviour
 {
     public GameObject fireAlarm;
-    public List<FireScriptNew> fireScripts = new List<FireScriptNew>();
+    public List<GameObject> fireGOs = new List<GameObject>();
     public Material fireAlarmActivated;
     public Material fireAlarmDefault;
 
@@ -26,9 +26,13 @@ public class HackFireAlarm : MonoBehaviour
 
     private void Update()
     {
-        foreach(FireScriptNew fireObject in fireScripts)
+        foreach (GameObject fireObject in fireGOs)
         {
-            if (fireObject.isOnFire == true)
+            if (fireObject == null)
+            {
+                fireGOs.Remove(fireObject);
+            }
+            else if (fireObject.activeSelf == true)
             {
                 needWater = true;
                 alarmOn = true;
@@ -97,9 +101,9 @@ public class HackFireAlarm : MonoBehaviour
             }
         }
 
-        if (other.gameObject.GetComponent<FireScriptNew>() != null && !fireScripts.Contains(other.gameObject.GetComponent<FireScriptNew>()))
+        if (other.gameObject.CompareTag("FireObject") && !fireGOs.Contains(other.gameObject))
         {
-            fireScripts.Add(other.gameObject.GetComponent<FireScriptNew>());
+            fireGOs.Add(other.gameObject);
         }
     }
 

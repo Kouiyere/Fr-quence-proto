@@ -144,15 +144,8 @@ public class HackDrone : MonoBehaviour
         {
             waste.AttractRobot = false;
             currentTarget = null;
-            if(fireScriptNew.isOnFire == false)
-            {
-                Destroy(waste.transform.gameObject);
-            }
-            else
-            {
-                fireScript.isOnFire = true;
-            }
-
+            Destroy(waste.transform.gameObject);
+            /*
             if (fireScript.isOnFire == true)
             {
                 fire = true;
@@ -160,6 +153,7 @@ public class HackDrone : MonoBehaviour
                 //Invoke(nameof(ResestFire), 15f);
 
             }
+            */
         }
 
         if (other.gameObject.CompareTag("Trash"))

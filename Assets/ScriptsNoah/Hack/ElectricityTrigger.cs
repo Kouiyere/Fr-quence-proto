@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class ElectricityTrigger : MonoBehaviour
 {
-    public HackElecticity electricalPannel;
+    public HackObject electricalPannel;
     public GameObject electricityParticles;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
-            GuardStateMachine ai = other.GetComponentInParent<GuardStateMachine>();
             if (electricalPannel.isHacked)
             {
-                print("enter");
-                ai.ChangeState(GuardStateMachine.State.Frozen);
+                if(other.GetComponentInParent<GuardStateMachine>())
+                {
+                    GuardStateMachine ai = other.GetComponentInParent<GuardStateMachine>();
+                    ai.ChangeState(GuardStateMachine.State.Frozen);
+                }
+
                 electricalPannel.isHacked = false;
             }
         }

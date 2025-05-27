@@ -5,36 +5,58 @@ using UnityEngine.AI;
 
 public class AnimationTest : MonoBehaviour
 {
-    public float movementThreshold = 0.1f; 
+    public float movementThreshold = 0.1f;
 
     private NavMeshAgent agent;
     public Animator animator;
     public HealthAI health;
+    public FireCollisionAI fireCollision;
+
+    public GameObject stunEffect;
 
     public string walkParameter = "isWalking";
+    public string stunParameter = "isStun";
+    public string fireParameter = "isOnFire";
+    public string cleanParameter = "isCleaning";
     public string deathTrigger = "Die";
 
     private bool isDead = false;
+    public bool isStunned = false;
+    public bool isCleaning = false;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        stunEffect.SetActive(false);
     }
 
     void Update()
     {
-        if (isDead) return;
+        if (isDead || isCleaning)
+            return;
 
-        if (health.currentHealth > 0)
+        if (health.currentHealth <= 0)
         {
-            bool isMoving = agent.velocity.magnitude > movementThreshold;
-            animator.SetBool(walkParameter, isMoving);
+            HandleDeath();
+            return;
+        }
+
+        if (isStunned)
+        {
+            HandleStun();
+            return;
+        }
+
+        bool isMoving = agent.velocity.magnitude > movementThreshold;
+
+        if (fireCollision.isOnFire)
+        {
+            animator.SetBool(fireParameter, isMoving);
         }
         else
         {
-            HandleDeath();
+            animator.SetBool(walkParameter, isMoving);
         }
-
     }
 
     void HandleDeath()
@@ -42,9 +64,47 @@ public class AnimationTest : MonoBehaviour
         isDead = true;
 
         animator.SetBool(walkParameter, false);
-        animator.SetTrigger(deathTrigger);      
+        animator.SetTrigger(deathTrigger);
 
-        agent.isStopped = true;                 
-        agent.enabled = false;                  
+        agent.isStopped = true;
+        agent.enabled = false;
+    }
+
+    void HandleStun()
+    {
+        agent.isStopped = true;
+
+        animator.SetBool(walkParameter, false);
+        animator.SetBool(fireParameter, false);
+        animator.SetBool(stunParameter, true);
+
+        stunEffect.SetActive(true);
+    }
+
+    public void ResetStun()
+    {
+        isStunned = false;
+        animator.SetBool(stunParameter, false);
+
+        stunEffect.SetActive(false);
+    }
+
+    public void PlayCleanAnimation(float duration)
+    {
+        StartCoroutine(CleanCoroutine(duration));
+    }
+
+    IEnumerator CleanCoroutine(float duration)
+    {
+        isCleaning = true;
+        agent.isStopped = true;
+        animator.SetBool(walkParameter, false);
+        animator.SetBool(cleanParameter, true);
+
+        yield return new WaitForSeconds(duration);
+
+        animator.SetBool(cleanParameter, false);
+        agent.isStopped = false;
+        isCleaning = false;
     }
 }

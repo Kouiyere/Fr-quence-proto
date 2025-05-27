@@ -12,7 +12,7 @@ public class GuardStateMachine : MonoBehaviour
     private IADetection iaDetection;
     public JobList jobList;
     [HideInInspector]
-    public FireScriptNew fire;
+    public GameObject fireGO;
     private float timer;
     private CalledGuard called;
     private FireControl fireControl;
@@ -243,13 +243,13 @@ public class GuardStateMachine : MonoBehaviour
 
     private void EnterFireControl()
     {
-        fire = iaDetection.SeeFire().GetComponent<FireScriptNew>();
-        fireControl.fire = fire;
+        fireGO = iaDetection.SeeFire();
+        fireControl.fire = fireGO;
     }
 
     private void UpdateFireControl()
     {
-        if (fire.isOnFire == false)
+        if (fireGO == null || fireGO.activeSelf == false)
         {
             ChangeState(State.Alarm);
         }

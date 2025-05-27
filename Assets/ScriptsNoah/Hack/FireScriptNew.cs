@@ -54,6 +54,15 @@ public class FireScriptNew : MonoBehaviour
         OnCollisionEnter(collision);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        FireScriptNew otherFire = other.gameObject.GetComponent<FireScriptNew>();
+        if (otherFire != null && otherFire.isOnFire)
+        {
+            SetOnFire();
+        }
+    }
+
     public void SetOnFire()
     {
         if (isExplosive && explosionPrefab != null && isOnFire == false)

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5697087924653249612}
   - component: {fileID: -3293796350694664182}
   - component: {fileID: 6963723384868096003}
+  - component: {fileID: 2230906670140331961}
   m_Layer: 8
   m_Name: FireBasic
   m_TagString: FireObject
@@ -4861,3 +4862,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredDistance: 3
   targetScriptName: FirePropagation
+  minDelay: 0.5
+  maxDelay: 1
+--- !u!135 &2230906670140331961
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629569369108314097}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
