@@ -9,7 +9,7 @@ public class IADetection : MonoBehaviour
     private Color color = Color.white;
     private Collider[] hacks;
     [HideInInspector]
-    public FireScriptNew[] fireScripts;
+    public GameObject[] fireGOs;
     [HideInInspector]
     public GameObject[] trashPatches;
 
@@ -69,14 +69,14 @@ public class IADetection : MonoBehaviour
     public GameObject SeeFire()
     {
         GameObject fire = null;
-        fireScripts = FindObjectsByType<FireScriptNew>(FindObjectsSortMode.None);
-        foreach (var fireScript in fireScripts)
+        fireGOs = GameObject.FindGameObjectsWithTag("FireObject");
+        foreach (var fireGO in fireGOs)
         {
-            if (fireScript.isOnFire && Vector3.Distance(transform.position, fireScript.transform.position) <= distance)
+            if (fireGO.GetComponent<FireScriptNew>().isOnFire && Vector3.Distance(transform.position, fireGO.transform.position) <= distance)
             {
-                if (Physics.Raycast(transform.position, fireScript.transform.position, Mathf.Infinity))
+                if (Physics.Raycast(transform.position, fireGO.transform.position, Mathf.Infinity))
                 {
-                    fire = fireScript.gameObject;
+                    fire = fireGO.gameObject;
                     return fire;
                 }
             }
