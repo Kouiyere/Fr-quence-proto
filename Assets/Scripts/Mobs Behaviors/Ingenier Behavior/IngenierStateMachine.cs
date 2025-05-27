@@ -189,14 +189,13 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void ExitAlarm()
     {
-
+        agent.speed = walkingSpeed;
     }
     #endregion
 
     #region JobDone
     private void EnterJobDone()
     {
-        agent.speed = walkingSpeed;
         agent.SetDestination(waitPoint.position);                
     }
 
@@ -232,6 +231,7 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void ExitStuck()
     {
+        agent.speed = walkingSpeed;
         stuck.CancelCall();
     }
     #endregion
