@@ -6,6 +6,7 @@ public class Sprinkler : MonoBehaviour
 {
     public HackFireAlarm fireAlarm;
     public GameObject waterSprinkler;
+    public GameObject effectZone;
     public bool waterOn;
     private float timer = 5;
 
@@ -25,6 +26,7 @@ public class Sprinkler : MonoBehaviour
             {
                 timer = 5;
                 waterSprinkler.SetActive(false);
+                effectZone.SetActive(false);
                 waterOn = false;
             }
         }
@@ -36,6 +38,7 @@ public class Sprinkler : MonoBehaviour
 
     private void sprinklerActivate()
     {
+        effectZone.SetActive(true);
         waterSprinkler.SetActive(true);
         waterOn = true;
     }

@@ -4841,7 +4841,6 @@ GameObject:
   - component: {fileID: 8159043528753092624}
   - component: {fileID: 1945529432681947095}
   - component: {fileID: 5756283149819880880}
-  - component: {fileID: 5338419309487943239}
   m_Layer: 0
   m_Name: AlarmSprinkler
   m_TagString: Sprinkler
@@ -4864,6 +4863,7 @@ Transform:
   m_Children:
   - {fileID: 1224268859356688997}
   - {fileID: 2267831152098206123}
+  - {fileID: 1888899370167752145}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1945529432681947095
@@ -4880,6 +4880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireAlarm: {fileID: 0}
   waterSprinkler: {fileID: 3133252687494284880}
+  effectZone: {fileID: 5916930944406981726}
   waterOn: 0
 --- !u!54 &5756283149819880880
 Rigidbody:
@@ -4908,13 +4909,46 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &5338419309487943239
-SphereCollider:
+--- !u!1 &5916930944406981726
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5226014322996581683}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1888899370167752145}
+  - component: {fileID: 707001220793191007}
+  - component: {fileID: 5061734396295960456}
+  m_Layer: 0
+  m_Name: EffectZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1888899370167752145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5916930944406981726}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8159043528753092624}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &707001220793191007
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5916930944406981726}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -4923,12 +4957,26 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.15
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Radius: 4.01
+  m_Height: 7.85
+  m_Direction: 1
+  m_Center: {x: 0, y: -2.39, z: 0}
+--- !u!114 &5061734396295960456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5916930944406981726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3f1a1cd178cd14397009fd2b6899ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6110692320812557798
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,8 +46,23 @@ public class DetectionIcon : MonoBehaviour
                     iconDetection.SetActive(false);
                 }
             }
-
-
+            else
+            {
+                if (detection.SeeFire() != null)
+                {
+                    iconDetection.SetActive(true);
+                    spriteIcon.sprite = fireTexture;
+                }
+                else if (detection.CanSeeHack())
+                {
+                    iconDetection.SetActive(true);
+                    spriteIcon.sprite = defaultTexture;
+                }
+                else
+                {
+                    iconDetection.SetActive(false);
+                }
+            }
         }
 
             if (Camera.main != null)

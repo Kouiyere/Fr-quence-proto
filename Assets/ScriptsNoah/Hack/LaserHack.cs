@@ -71,7 +71,7 @@ public class LaserHack : MonoBehaviour
 
         if(hit.collider.CompareTag("Enemy"))
         {
-            hit.collider.gameObject.GetComponent<HealthAI>().TakeDamage(100);
+            hit.collider.gameObject.GetComponent<AnimationTest>().isStunned = true;
         }
 
         if (hit.collider.CompareTag("Mirror"))
