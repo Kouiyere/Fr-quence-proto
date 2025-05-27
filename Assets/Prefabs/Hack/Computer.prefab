@@ -5059,7 +5059,7 @@ GameObject:
   - component: {fileID: 2643691039531625300}
   m_Layer: 0
   m_Name: Computer
-  m_TagString: FireObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5184,7 +5184,7 @@ GameObject:
   - component: {fileID: 4108398421574117540}
   m_Layer: 0
   m_Name: Computer
-  m_TagString: FireObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5243,7 +5243,7 @@ MonoBehaviour:
   resetTimer: 10
   timer: 0
   playSoundName: 
-  hackDuration: 10
+  hackDuration: 1
   currentHackProgress: 0
 --- !u!114 &3079308372310196984
 MonoBehaviour:

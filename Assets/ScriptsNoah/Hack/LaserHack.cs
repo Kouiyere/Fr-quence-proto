@@ -64,7 +64,7 @@ public class LaserHack : MonoBehaviour
 
     void CheckHitObject(RaycastHit hit, Vector3 direction)
     {
-        if (hit.collider.CompareTag("FireObject"))
+        if (hit.collider.gameObject.GetComponent<FireScriptNew>())
         {
             hit.collider.gameObject.GetComponent<FireScriptNew>().SetOnFire();
         }

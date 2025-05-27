@@ -229,8 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireAlarm: {fileID: 2422973325445040094}
-  fireObjects:
-  - {fileID: 0}
+  fireGOs: []
   fireAlarmActivated: {fileID: 2100000, guid: 33a8c3ca0ce7f8448b879f12c10b0a96, type: 2}
   fireAlarmDefault: {fileID: 2100000, guid: 16695392f058aad4b8da0d50a4e06d19, type: 2}
   alarmOn: 0
@@ -258,6 +257,8 @@ MonoBehaviour:
   resetTimer: 10
   timer: 0
   playSoundName: 
+  hackDuration: 2
+  currentHackProgress: 0
 --- !u!1 &4081204247680181253
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +270,7 @@ GameObject:
   - component: {fileID: 5150920199193462411}
   - component: {fileID: 4720798255055674361}
   - component: {fileID: 5977590565235070457}
+  - component: {fileID: 7263750613288888793}
   m_Layer: 2
   m_Name: Area Effect
   m_TagString: Untagged
@@ -324,6 +326,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea25178aea6a9d246abe531650db7992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &7263750613288888793
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4081204247680181253}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5609453504043306099
 GameObject:
   m_ObjectHideFlags: 0

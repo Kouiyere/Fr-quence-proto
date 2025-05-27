@@ -72,7 +72,7 @@ public class IADetection : MonoBehaviour
         fireGOs = GameObject.FindGameObjectsWithTag("FireObject");
         foreach (var fireGO in fireGOs)
         {
-            if (fireGO.GetComponent<FireScriptNew>().isOnFire && Vector3.Distance(transform.position, fireGO.transform.position) <= distance)
+            if (fireGO.activeSelf && Vector3.Distance(transform.position, fireGO.transform.position) <= distance)
             {
                 if (Physics.Raycast(transform.position, fireGO.transform.position, Mathf.Infinity))
                 {
