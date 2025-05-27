@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2480336391756744687}
   - component: {fileID: 182689542397417521}
   - component: {fileID: 4879191404715025629}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 8505800296682353949}
   - component: {fileID: 7516524232853960363}
   - component: {fileID: 1093142973467267675}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 4955621656145446239}
   - component: {fileID: 4727311861747943185}
   - component: {fileID: 7991937648730981069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Printer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,9 +295,13 @@ MonoBehaviour:
   activatedMaterial: {fileID: 2100000, guid: 7373d4a6d6396e2458b2a4d403e30d22, type: 2}
   objRenderer: {fileID: 0}
   isHacked: 0
+  attractAI: 0
   autoDesactivation: 1
   resetTimer: 10
   timer: 0
+  playSoundName: 
+  hackDuration: 2
+  currentHackProgress: 0
 --- !u!1 &5466718518379784131
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +314,7 @@ GameObject:
   - component: {fileID: 3891846885677013667}
   - component: {fileID: 5896039912871488616}
   - component: {fileID: 5650440380677506810}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3529494852810483833}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Paper Spawn
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
