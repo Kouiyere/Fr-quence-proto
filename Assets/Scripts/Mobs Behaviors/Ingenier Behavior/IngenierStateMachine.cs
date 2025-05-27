@@ -11,7 +11,7 @@ public class IngenierStateMachine : MonoBehaviour
     private AlarmSearch alarmSearch;
     private IADetection iaDetection;
     [HideInInspector]
-    public FireScriptNew fire;
+    public GameObject fireGO;
     private JobList jobList;
     private CalledInge called;
     public Transform waitPoint;
@@ -240,13 +240,13 @@ public class IngenierStateMachine : MonoBehaviour
 
     private void EnterFireControl()
     {
-        fire = iaDetection.SeeFire().GetComponent<FireScriptNew>();
-        fireControl.fire = fire;
+        fireGO = iaDetection.SeeFire();
+        fireControl.fire = fireGO;
     }
 
     private void UpdateFireControl()
     {
-        if (fire.isOnFire == false)
+        if (fireGO == null || fireGO.activeSelf == false)
         {
             ChangeState(State.Alarm);
         }

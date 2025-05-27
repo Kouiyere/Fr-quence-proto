@@ -2945,9 +2945,17 @@ PrefabInstance:
       propertyPath: fireScriptNew
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1530385901468856449, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1952498447317309514, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
       propertyPath: m_Name
       value: Computer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2120615587007738503, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2643691039531625300, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
       propertyPath: m_LocalScale.x
@@ -3000,6 +3008,18 @@ PrefabInstance:
     - target: {fileID: 3015333337805630031, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
       propertyPath: playOnAwake
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250197532663388768, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232946444359723728, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196562152506967587, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24772,7 +24792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fov: 45
   distance: 5
-  fireScripts: []
+  fireGOs: []
   trashPatches: []
 --- !u!114 &1223039029 stripped
 MonoBehaviour:
@@ -27203,7 +27223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fov: 45
   distance: 5
-  fireScripts: []
+  fireGOs: []
   trashPatches: []
 --- !u!114 &1417044619
 MonoBehaviour:
@@ -35799,10 +35819,6 @@ PrefabInstance:
     - target: {fileID: 773364544254390699, guid: 0b6b22d71493fa741804cf47407f727a, type: 3}
       propertyPath: m_Name
       value: Console (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5976067606994636579, guid: 0b6b22d71493fa741804cf47407f727a, type: 3}
-      propertyPath: propagationRadius
-      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -48086,10 +48102,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 709518489}
     m_Modifications:
-    - target: {fileID: 2855066856633152087, guid: f036ef98e98ebaa41aed61d3f467a309, type: 3}
-      propertyPath: fireObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3713828193497487200, guid: f036ef98e98ebaa41aed61d3f467a309, type: 3}
       propertyPath: m_Name
       value: AlarmHack

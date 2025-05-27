@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class FireControl : MonoBehaviour
 {
     NavMeshAgent agent;
-    [HideInInspector]
-    public FireScriptNew fire;
+    //[HideInInspector]
+    public GameObject fire;
 
     void Start()
     {
@@ -20,7 +20,14 @@ public class FireControl : MonoBehaviour
         if (agent.remainingDistance <= 3f)
         {
             //Trigger fire extinguisher animation
-            fire.ResetFire();
+            if (fire.GetComponent<FireGrowth>())
+            {
+                Destroy(fire);
+            }
+            if (fire.GetComponent<FirePropagation>())
+            {
+                fire.GetComponentInParent<FireScriptNew>().ResetFire();
+            }
         }
     }
 }
