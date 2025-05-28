@@ -58056,6 +58056,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4cd682e06aee21849838e2608fe939e7, type: 3}
   m_PrefabInstance: {fileID: 1868855504}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1085397166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1085397168}
+  - component: {fileID: 1085397167}
+  m_Layer: 0
+  m_Name: MusicStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1085397167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085397166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 310344669
+      Data2: 1089428615
+      Data3: 1289990557
+      Data4: 1424462368
+    Path: event:/MusicEvolutive
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1085397168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085397166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.2277594, y: -0.5383134, z: 5.8592415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1091142795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64242,7 +64305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2782871cd1bab2947ae8ca6350a1ee50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parameterName: MyParam
+  parameterName: ModulationMusic
   parameterValue: 0
 --- !u!4 &1237286313
 Transform:
@@ -111156,3 +111219,4 @@ SceneRoots:
   - {fileID: 852419949}
   - {fileID: 313349591}
   - {fileID: 287846021}
+  - {fileID: 1085397168}
