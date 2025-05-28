@@ -76,7 +76,7 @@ public class HUD_Manager : MonoBehaviour
         Debug.Log("Animation terminée !");
         if(eventName == "Play")
         {
-            SceneManager.LoadScene("Noah 1");
+            SceneManager.LoadScene("LD Natan");
         }
         else if(eventName == "Quit")
         {
