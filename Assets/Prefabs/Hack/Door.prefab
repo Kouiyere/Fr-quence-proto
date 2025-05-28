@@ -1358,7 +1358,7 @@ MonoBehaviour:
   initalMat: {fileID: 2100000, guid: ecbd141b8282beb4a99871b43237bb41, type: 2}
   activatedMat: {fileID: 2100000, guid: 729b18446a76e7d4dbb7519def31ef37, type: 2}
   meshRenderer: {fileID: 3236165898116716431}
-  hackObject: {fileID: 0}
+  hackObject: {fileID: 3120945975631453719}
 --- !u!4 &4369062704571559136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 10f8933fc23867d4298be1bc1cdba136, type: 3}
@@ -1466,7 +1466,7 @@ MonoBehaviour:
   initalMat: {fileID: 2100000, guid: ecbd141b8282beb4a99871b43237bb41, type: 2}
   activatedMat: {fileID: 2100000, guid: 729b18446a76e7d4dbb7519def31ef37, type: 2}
   meshRenderer: {fileID: 5070785259417986695}
-  hackObject: {fileID: 0}
+  hackObject: {fileID: 3120945975631453719}
 --- !u!1001 &7207919386662130530
 PrefabInstance:
   m_ObjectHideFlags: 0

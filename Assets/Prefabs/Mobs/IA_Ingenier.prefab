@@ -21,6 +21,9 @@ GameObject:
   - component: {fileID: 1804820570150477762}
   - component: {fileID: 946628124535090525}
   - component: {fileID: 7567670535961041609}
+  - component: {fileID: 2719096924046305755}
+  - component: {fileID: 2265078647905764197}
+  - component: {fileID: 4658923308428346926}
   m_Layer: 0
   m_Name: IA_Ingenier
   m_TagString: Enemy
@@ -38,8 +41,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5855273107124852108}
   - {fileID: 8602017467572009928}
@@ -130,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireAlarm: {fileID: 0}
-  fire: {fileID: 0}
+  fireGO: {fileID: 0}
   waitPoint: {fileID: 0}
   currentState: 0
   walkingSpeed: 3
@@ -199,7 +202,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fov: 45
   distance: 5
-  fireScripts: []
+  fireGOs: []
+  trashPatches: []
 --- !u!114 &1804820570150477762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +230,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iconDetection: {fileID: 8005341342145410101}
+  spriteIcon: {fileID: 0}
+  defaultTexture: {fileID: 0}
+  cleanTexture: {fileID: 0}
+  talkieTexture: {fileID: 0}
+  fireTexture: {fileID: 0}
+  cleaning: {fileID: 0}
 --- !u!114 &7567670535961041609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,8 +256,61 @@ MonoBehaviour:
   walkParameter: isWalking
   stunParameter: isStun
   fireParameter: isOnFire
+  cleanParameter: isCleaning
   deathTrigger: Die
   isStunned: 0
+  isCleaning: 0
+--- !u!114 &2719096924046305755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343694588791529249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b11ca6ab8b984c344a94b429c42fdc1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnFire: 0
+  fireEffect: {fileID: 0}
+  health: {fileID: 2265078647905764197}
+--- !u!114 &2265078647905764197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343694588791529249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6cfda2b68e06c54980a1c1484c1b1ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  deathEffect: {fileID: 0}
+  destroyOnDeath: 1
+  workerStateMachine: {fileID: 0}
+  ingeStateMachine: {fileID: 5185649750640868377}
+  guardStateMachine: {fileID: 0}
+  repeatDammage: 0
+--- !u!114 &4658923308428346926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343694588791529249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf84df92dc895448a726b31ab1f1bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fov: 45
+  distance: 5
+  fireGOs: []
+  trashPatches: []
 --- !u!1 &5614445048404027173
 GameObject:
   m_ObjectHideFlags: 0
