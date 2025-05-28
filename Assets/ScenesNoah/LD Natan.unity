@@ -70186,6 +70186,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5825628899817977993, guid: 7eabfc0d88e460c4b990da9e48815fdc, type: 3}
+      propertyPath: hackObject
+      value: 
+      objectReference: {fileID: 1561989663}
     - target: {fileID: 7809445623574762399, guid: 7eabfc0d88e460c4b990da9e48815fdc, type: 3}
       propertyPath: m_Name
       value: porte (4)
@@ -85310,6 +85314,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: bf79cb5249b52fe44990056d74498286, type: 3}
+--- !u!114 &1561989663 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3120945975631453719, guid: 7eabfc0d88e460c4b990da9e48815fdc, type: 3}
+  m_PrefabInstance: {fileID: 1355880885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3d5c0fbb3229241bd23744e393b64b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1564218238
 PrefabInstance:
   m_ObjectHideFlags: 0
