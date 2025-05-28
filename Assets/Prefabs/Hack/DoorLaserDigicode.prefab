@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d15c5d8f433f049976c67b61c1f0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  digiCode: {fileID: 0}
+  digiCode: {fileID: 2640939921431745556, guid: 26dc15691ad345d48a1b6354a8dd55d0, type: 3}
 --- !u!65 &2515726403953363236
 BoxCollider:
   m_ObjectHideFlags: 0
