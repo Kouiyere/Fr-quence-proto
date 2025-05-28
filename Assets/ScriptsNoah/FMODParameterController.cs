@@ -7,10 +7,10 @@ using FMOD.Studio;
 public class FMODParameterController : MonoBehaviour
 {
     public string parameterName = "MyParam";
-    [Range(0f, 1f)]
+    [Range(0f, 4f)]
     public float parameterValue = 0.0f;
 
-    private StudioEventEmitter emitter;
+    public StudioEventEmitter emitter;
     private EventInstance instance;
 
     void Update()
@@ -20,7 +20,6 @@ public class FMODParameterController : MonoBehaviour
 
         if (emitter == null || emitter.gameObject != cam.gameObject)
         {
-            emitter = cam.GetComponent<StudioEventEmitter>();
             if (emitter != null)
             {
                 instance = emitter.EventInstance;
