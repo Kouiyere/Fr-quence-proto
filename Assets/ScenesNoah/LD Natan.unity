@@ -11141,7 +11141,7 @@ PrefabInstance:
     - target: {fileID: 753519752281100262, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
       propertyPath: fireScriptNew
       value: 
-      objectReference: {fileID: 1466081536}
+      objectReference: {fileID: 0}
     - target: {fileID: 1952498447317309514, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
       propertyPath: m_Name
       value: Computer (1)
@@ -63490,7 +63490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fov: 45
   distance: 5
-  fireScripts: []
+  fireGOs: []
   trashPatches: []
 --- !u!1 &1229110210
 GameObject:
@@ -75463,17 +75463,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae4bf49d0a5005c43901ecfc2d1629a8, type: 3}
---- !u!114 &1466081536 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1668481865452394780, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
-  m_PrefabInstance: {fileID: 199036521}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d0369426c7c534a804261189976d04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1466081543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2643691039531625300, guid: a64a703cdd6b928448a61ce863eed5c0, type: 3}
@@ -83459,7 +83448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 0.08627451, g: 0.54901963, b: 0, a: 1}
-  outlineWidth: 4
+  outlineWidth: 10
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
