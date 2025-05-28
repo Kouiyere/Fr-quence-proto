@@ -81,25 +81,25 @@ public class HackFireAlarm : MonoBehaviour
             }
         }
 
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            GuardStateMachine guardStateMachine = other.gameObject.GetComponent<GuardStateMachine>();
-            IngenierStateMachine ingenierStateMachine = other.gameObject.GetComponent<IngenierStateMachine>();
-            WorkerStateMachine workerStateMachine = other.gameObject.GetComponent<WorkerStateMachine>();
+        //if (other.gameObject.CompareTag("Enemy"))
+        //{
+        //    GuardStateMachine guardStateMachine = other.gameObject.GetComponent<GuardStateMachine>();
+        //    IngenierStateMachine ingenierStateMachine = other.gameObject.GetComponent<IngenierStateMachine>();
+        //    WorkerStateMachine workerStateMachine = other.gameObject.GetComponent<WorkerStateMachine>();
 
-            if (guardStateMachine != null)
-            {
-                guardStateMachine.fireAlarm = this;
-            }
-            if (ingenierStateMachine != null)
-            {
-                ingenierStateMachine.fireAlarm = this;
-            }
-            if (workerStateMachine != null)
-            {
-                workerStateMachine.fireAlarm = this;
-            }
-        }
+        //    if (guardStateMachine != null)
+        //    {
+        //        guardStateMachine.fireAlarm = this;
+        //    }
+        //    if (ingenierStateMachine != null)
+        //    {
+        //        ingenierStateMachine.fireAlarm = this;
+        //    }
+        //    if (workerStateMachine != null)
+        //    {
+        //        workerStateMachine.fireAlarm = this;
+        //    }
+        //}
 
         if (other.gameObject.CompareTag("FireObject") && !fireGOs.Contains(other.gameObject))
         {
@@ -109,24 +109,24 @@ public class HackFireAlarm : MonoBehaviour
 
     public void ReleaseTrigger(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            GuardStateMachine guardStateMachine = other.gameObject.GetComponent<GuardStateMachine>();
-            IngenierStateMachine ingenierStateMachine = other.gameObject.GetComponent<IngenierStateMachine>();
-            WorkerStateMachine workerStateMachine = other.gameObject.GetComponent<WorkerStateMachine>();
+        //if (other.gameObject.CompareTag("Enemy"))
+        //{
+        //    GuardStateMachine guardStateMachine = other.gameObject.GetComponent<GuardStateMachine>();
+        //    IngenierStateMachine ingenierStateMachine = other.gameObject.GetComponent<IngenierStateMachine>();
+        //    WorkerStateMachine workerStateMachine = other.gameObject.GetComponent<WorkerStateMachine>();
 
-            if (guardStateMachine != null && guardStateMachine.currentState != GuardStateMachine.State.Alarm)
-            {
-                guardStateMachine.fireAlarm = null;
-            }
-            if (ingenierStateMachine != null && ingenierStateMachine.currentState != IngenierStateMachine.State.Alarm)
-            {
-                ingenierStateMachine.fireAlarm = null;
-            }
-            if (workerStateMachine != null && workerStateMachine.currentState != WorkerStateMachine.State.Alarm)
-            {
-                workerStateMachine.fireAlarm = null;
-            }
-        }
+        //    if (guardStateMachine != null && guardStateMachine.currentState != GuardStateMachine.State.Alarm)
+        //    {
+        //        guardStateMachine.fireAlarm = null;
+        //    }
+        //    if (ingenierStateMachine != null && ingenierStateMachine.currentState != IngenierStateMachine.State.Alarm)
+        //    {
+        //        ingenierStateMachine.fireAlarm = null;
+        //    }
+        //    if (workerStateMachine != null && workerStateMachine.currentState != WorkerStateMachine.State.Alarm)
+        //    {
+        //        workerStateMachine.fireAlarm = null;
+        //    }
+        //}
     }
 }
