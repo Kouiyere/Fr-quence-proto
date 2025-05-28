@@ -81,7 +81,7 @@ public class HUD_Manager : MonoBehaviour
         else if(eventName == "Quit")
         {
             Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
         }
 
         
