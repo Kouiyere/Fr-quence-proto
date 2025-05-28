@@ -44947,6 +44947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD_Digicode
       objectReference: {fileID: 0}
+    - target: {fileID: 2640939921431745556, guid: 26dc15691ad345d48a1b6354a8dd55d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3369061902882848925, guid: 26dc15691ad345d48a1b6354a8dd55d0, type: 3}
       propertyPath: laserHacks.Array.data[0]
       value: 
