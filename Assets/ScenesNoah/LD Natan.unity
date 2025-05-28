@@ -64307,6 +64307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameterName: ModulationMusic
   parameterValue: 0
+  emitter: {fileID: 1085397167}
 --- !u!4 &1237286313
 Transform:
   m_ObjectHideFlags: 0
