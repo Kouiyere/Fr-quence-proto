@@ -67,6 +67,7 @@ public class FireScriptNew : MonoBehaviour
     {
         if (isExplosive && explosionPrefab != null && isOnFire == false)
         {
+            AudioManager.Instance.PlaySound("Explosion", transform.position);
             Instantiate(explosionPrefab, explosionPosition.position, Quaternion.identity);
         }
 

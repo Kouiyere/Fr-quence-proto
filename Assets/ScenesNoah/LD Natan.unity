@@ -63646,6 +63646,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4cd682e06aee21849838e2608fe939e7, type: 3}
   m_PrefabInstance: {fileID: 1236783837}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1237286311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237286313}
+  - component: {fileID: 1237286312}
+  m_Layer: 0
+  m_Name: FMOD_MusicParamManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1237286312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237286311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2782871cd1bab2947ae8ca6350a1ee50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameterName: MyParam
+  parameterValue: 0
+--- !u!4 &1237286313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237286311}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 55.95437, y: 2.6643832, z: -160.37065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1238991816
 GameObject:
   m_ObjectHideFlags: 0
@@ -64557,22 +64603,14 @@ MonoBehaviour:
         Data3: 1989820583
         Data4: -816751959
       Path: event:/Hack/CameraRotation
-  - name: PrintPaper
+  - name: Fire
     eventRef:
       Guid:
-        Data1: -781868760
-        Data2: 1198747792
-        Data3: 758482316
-        Data4: 1270361478
-      Path: event:/PrintPaper
-  - name: OpenDoor
-    eventRef:
-      Guid:
-        Data1: 1639858071
-        Data2: 1305492259
-        Data3: -256158327
-        Data4: -645275905
-      Path: event:/DoorOpen
+        Data1: 1266775241
+        Data2: 1206211135
+        Data3: -857491787
+        Data4: -158135520
+      Path: event:/FireSound
   - name: ClosedDoor
     eventRef:
       Guid:
@@ -64581,6 +64619,22 @@ MonoBehaviour:
         Data3: 2005206189
         Data4: 1002590962
       Path: event:/DoorClosed
+  - name: Laser
+    eventRef:
+      Guid:
+        Data1: -314824105
+        Data2: 1157714007
+        Data3: 2023840929
+        Data4: 1692174092
+      Path: event:/Laser
+  - name: Fan
+    eventRef:
+      Guid:
+        Data1: 57086962
+        Data2: 1314722910
+        Data3: 545123730
+        Data4: -1830943503
+      Path: event:/Fan
 --- !u!4 &1248398397
 Transform:
   m_ObjectHideFlags: 0
@@ -110077,3 +110131,4 @@ SceneRoots:
   - {fileID: 1134198115}
   - {fileID: 726772990}
   - {fileID: 76396201}
+  - {fileID: 1237286313}
