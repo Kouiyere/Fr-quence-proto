@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fire: {fileID: 4743374750947797392}
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 5814372485415741768, guid: c29da794a8fb9d9459ca0f30d643920f, type: 3}
   explosionPosition: {fileID: 0}
   isOnFire: 0
   isExplosive: 0

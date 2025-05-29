@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1331985808512756957}
+  - component: {fileID: 3718876698497284314}
   m_Layer: 6
   m_Name: Printer
   m_TagString: Untagged
@@ -33,6 +34,22 @@ Transform:
   - {fileID: 3529494852810483833}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &3718876698497284314
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892709097975291863}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 1.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.15, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8051235686785862633
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,6 +132,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fbe33bc2c5bea7746b882d8053800f32, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3477864577585124648, guid: fbe33bc2c5bea7746b882d8053800f32, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fbe33bc2c5bea7746b882d8053800f32, type: 3}
       propertyPath: m_Name
